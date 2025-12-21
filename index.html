@@ -9,14 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
     <style>
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        /* Additional inline styles for this specific page */
         :root {
             --primary-color: #1a1a1a;
             --secondary-color: #333333;
@@ -29,609 +26,14 @@
             --border-radius: 16px;
         }
         
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--light-color);
-            color: var(--text-color);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            border: 2px solid var(--accent-color);
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: transparent;
-            color: var(--accent-color);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            color: var(--accent-color);
-            border: 2px solid var(--accent-color);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--accent-color);
-            color: white;
-        }
-        
-        section {
-            padding: 100px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2.8rem;
-            color: var(--primary-color);
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-            color: var(--text-light);
-            font-size: 1.1rem;
-        }
-        
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--accent-color);
-        }
-        
-        .logo span {
-            color: var(--primary-color);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 2.5rem;
-        }
-        
-        nav ul li a {
-            font-weight: 500;
-            font-size: 1rem;
-            position: relative;
-            padding: 5px 0;
-        }
-        
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--accent-color);
-            left: 0;
-            bottom: 0;
-            transition: var(--transition);
-        }
-        
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
+        /* Hero Section Background */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 180px 0 120px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #000, #1a1a1a), 
+                        url('Banner.jpg') no-repeat center center/cover;
         }
         
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80') no-repeat center center/cover;
-            opacity: 0.15;
-            z-index: 0;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.9;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
-        
-        .hero-tagline {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 30px auto;
-            opacity: 0.8;
-            letter-spacing: normal;
-            text-transform: none;
-            font-weight: 300;
-        }
-        
-        /* Grid Layout */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 40px;
-        }
-        
-        /* Logo Card */
-        .logo-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .logo-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-        
-        .logo-img-container {
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 25px;
-            background-color: #f8fafc;
-            border-radius: 12px;
-            padding: 20px;
-        }
-        
-        .logo-card img {
-            max-width: 180px;
-            max-height: 140px;
-            object-fit: contain;
-        }
-        
-        .logo-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-            color: var(--primary-color);
-        }
-        
-        .logo-card p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-        
-        /* Work Image */
-        .work-img-container {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            height: 320px;
-        }
-        
-        .work-img-container:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .work-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .work-img-container:hover .work-img {
-            transform: scale(1.05);
-        }
-        
-        .img-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 25px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            color: white;
-            opacity: 0;
-            transition: var(--transition);
-        }
-        
-        .work-img-container:hover .img-overlay {
-            opacity: 1;
-        }
-        
-        .img-overlay h4 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-        
-        /* About Section */
-        .about {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 70px 60px;
-            box-shadow: var(--shadow);
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .about::before {
-            content: '';
-            position: absolute;
-            width: 5px;
-            height: 100px;
-            background: var(--accent-color);
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 0 5px 5px 0;
-        }
-        
-        .about-content {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: var(--text-color);
-        }
-        
-        .about-highlights {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-        
-        .highlight-item {
-            text-align: center;
-            padding: 0 20px;
-            flex: 1;
-            min-width: 200px;
-        }
-        
-        .highlight-item .number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 5px;
-            font-family: 'Playfair Display', serif;
-        }
-        
-        .highlight-item .label {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-        
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        
-        .cta-content {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .cta h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        .cta p {
-            max-width: 600px;
-            margin: 0 auto 40px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-        }
-        
-        /* Contact Section */
-        .contact {
-            background: white;
-            padding: 100px 0;
-        }
-        
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 50px;
-        }
-        
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 30px;
-            background: var(--light-color);
-            border-radius: var(--border-radius);
-            width: 220px;
-            transition: var(--transition);
-        }
-        
-        .contact-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow);
-        }
-        
-        .contact-icon {
-            font-size: 2.2rem;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-        }
-        
-        .contact-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        
-        .contact-item p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.95rem;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .social-icons a {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-        
-        .social-icons a:hover {
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            margin-top: 30px;
-            width: 100%;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3.2rem;
-            }
-            
-            .section-title {
-                font-size: 2.4rem;
-            }
-            
-            .about {
-                padding: 50px 40px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            }
-            
-            nav ul.active {
-                display: flex;
-            }
-            
-            nav ul li {
-                margin: 0;
-                padding: 15px 0;
-                border-bottom: 1px solid #eee;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero {
-                padding: 150px 0 80px;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-            }
-            
-            .about {
-                padding: 40px 30px;
-            }
-            
-            .about-highlights {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
-            .highlight-item {
-                min-width: 100%;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2.4rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta h2 {
-                font-size: 2.2rem;
-            }
-            
-            section {
-                padding: 70px 0;
-            }
+            background: none; /* Remove the previous background */
         }
     </style>
 </head>
@@ -663,15 +65,20 @@
             <h1>Amit Sharma</h1>
             <p>Graphic Designer · Brand Identity · Print & Digital</p>
             <p class="hero-tagline">Creating compelling visual identities that communicate brand values and connect with audiences across all media.</p>
-            <a href="#portfolio" class="btn">View My Work</a>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Hire Me</a>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">Passionate about creating visual solutions that make an impact</p>
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p class="section-subtitle">Passionate about creating visual solutions that make an impact</p>
+            </div>
             
             <div class="about">
                 <div class="about-content">
@@ -700,73 +107,80 @@
     <!-- Logo Design -->
     <section id="portfolio" class="section">
         <div class="container">
-            <h2 class="section-title">Logo Design</h2>
-            <p class="section-subtitle">
-                Carefully crafted brand identities designed to communicate clarity, trust, and purpose.
-            </p>
+            <div class="section-header">
+                <h2>Logo Design</h2>
+                <p class="section-subtitle">Carefully crafted brand identities designed to communicate clarity, trust, and purpose.</p>
+            </div>
 
             <div class="grid">
-                <div class="logo-card">
-                    <div class="logo-img-container">
-                        <!-- Replace with your actual logo images -->
-                        <div style="width: 180px; height: 140px; background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">BI</div>
+                <div class="work">
+                    <img src="beginIDEAS.jpg" alt="Begin Ideas Logo" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Logo Design</span>
+                        <h3>Begin Ideas</h3>
+                        <p>Startup-focused logo designed around creativity, innovation, and idea generation using a lightbulb concept. Modern and memorable brand identity.</p>
+                        <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Begin Ideas</h3>
-                    <p>
-                        Startup-focused logo designed around creativity, innovation, and idea generation using a lightbulb concept.
-                    </p>
                 </div>
 
-                <div class="logo-card">
-                    <div class="logo-img-container">
-                        <div style="width: 180px; height: 140px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">SC</div>
+                <div class="work">
+                    <img src="SMARTCLICK.jpg" alt="Smart Click Logo" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Logo Design</span>
+                        <h3>Smart Click</h3>
+                        <p>Fintech brand identity expressing growth, trust, and digital efficiency through modern visual language. Clean and professional design.</p>
+                        <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Smart Click</h3>
-                    <p>
-                        Fintech brand identity expressing growth, trust, and digital efficiency through modern visual language.
-                    </p>
                 </div>
 
-                <div class="logo-card">
-                    <div class="logo-img-container">
-                        <div style="width: 180px; height: 140px; background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">SPEAK</div>
+                <div class="work">
+                    <img src="SPEAK.jpg" alt="SPEAK Logo" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Logo Design</span>
+                        <h3>SPEAK</h3>
+                        <p>Voice-based brand identity designed for podcasts and speakers, combining communication and confidence. Bold and impactful design.</p>
+                        <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>SPEAK</h3>
-                    <p>
-                        Voice-based brand identity designed for podcasts and speakers, combining communication and confidence.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Flyers -->
-    <section class="section">
+    <section class="section muted">
         <div class="container">
-            <h2 class="section-title">Flyer Design</h2>
-            <p class="section-subtitle">High-impact promotional designs for print marketing.</p>
+            <div class="section-header">
+                <h2>Flyer Design</h2>
+                <p class="section-subtitle">High-impact promotional designs for print marketing.</p>
+            </div>
             <div class="grid">
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #8360c3 0%, #2ebf91 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Event Promotion</h4>
-                        <p>Vibrant design for maximum visibility</p>
+                <div class="work">
+                    <img src="Flyer1.jpg" alt="Flyer Design 1" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Flyer</span>
+                        <h3>Event Promotion</h3>
+                        <p>Modern flyer design for corporate events with clean typography and visual hierarchy.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Product Launch</h4>
-                        <p>Clean layout with compelling visuals</p>
+                <div class="work">
+                    <img src="Flyer2.jpg" alt="Flyer Design 2" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Flyer</span>
+                        <h3>Product Launch</h3>
+                        <p>Vibrant promotional flyer for new product launch with eye-catching colors.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Business Announcement</h4>
-                        <p>Professional and informative design</p>
+                <div class="work">
+                    <img src="Flyer3.jpg" alt="Flyer Design 3" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Flyer</span>
+                        <h3>Special Offer</h3>
+                        <p>Sales promotion flyer with clear call-to-action and compelling visuals.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -776,22 +190,28 @@
     <!-- Brochure -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Brochure Design</h2>
-            <p class="section-subtitle">Structured layouts designed for clarity and storytelling.</p>
+            <div class="section-header">
+                <h2>Brochure Design</h2>
+                <p class="section-subtitle">Structured layouts designed for clarity and storytelling.</p>
+            </div>
             <div class="grid">
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Corporate Brochure</h4>
-                        <p>Three-fold professional layout</p>
+                <div class="work">
+                    <img src="Brochure1.jpg" alt="Brochure Design 1" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Brochure</span>
+                        <h3>Corporate Brochure</h3>
+                        <p>Professional trifold brochure design for corporate presentation and marketing.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Product Catalog</h4>
-                        <p>Multi-page product showcase</p>
+                <div class="work">
+                    <img src="Brochure2.jpg" alt="Brochure Design 2" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Brochure</span>
+                        <h3>Product Catalog</h3>
+                        <p>Comprehensive product catalog with organized layout and professional photography.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -799,32 +219,40 @@
     </section>
 
     <!-- Posters -->
-    <section class="section">
+    <section class="section muted">
         <div class="container">
-            <h2 class="section-title">Posters & Banners</h2>
-            <p class="section-subtitle">Large-format designs for strong visual presence.</p>
+            <div class="section-header">
+                <h2>Posters & Banners</h2>
+                <p class="section-subtitle">Large-format designs for strong visual presence.</p>
+            </div>
             <div class="grid">
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Concert Poster</h4>
-                        <p>Eye-catching event promotion</p>
+                <div class="work">
+                    <img src="Poster.jpg" alt="Poster Design" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Poster</span>
+                        <h3>Event Poster</h3>
+                        <p>Large format event poster with bold typography and striking visual elements.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Roll-up Banner</h4>
-                        <p>Portable exhibition display</p>
+                <div class="work">
+                    <img src="Roll-up banner.jpg" alt="Roll-up Banner" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Banner</span>
+                        <h3>Roll-up Banner</h3>
+                        <p>Portable exhibition banner design for trade shows and corporate events.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Store Banner</h4>
-                        <p>Large retail display</p>
+                <div class="work">
+                    <img src="Social media.jpg" alt="Social Media Banner" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Digital</span>
+                        <h3>Social Media Banner</h3>
+                        <p>Custom social media banner designs optimized for various platforms.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -834,22 +262,129 @@
     <!-- Packaging -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Packaging Design</h2>
-            <p class="section-subtitle">Packaging that balances branding and usability.</p>
+            <div class="section-header">
+                <h2>Packaging Design</h2>
+                <p class="section-subtitle">Packaging that balances branding and usability.</p>
+            </div>
             <div class="grid">
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Product Box</h4>
-                        <p>Eco-friendly packaging design</p>
+                <div class="work">
+                    <img src="Packaging1.jpg" alt="Packaging Design 1" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Packaging</span>
+                        <h3>Product Packaging</h3>
+                        <p>Creative packaging design that enhances product appeal and brand recognition.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="work-img-container">
-                    <div class="work-img" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);"></div>
-                    <div class="img-overlay">
-                        <h4>Bottle Label</h4>
-                        <p>Premium product labeling</p>
+                <div class="work">
+                    <img src="Packaging2.jpg" alt="Packaging Design 2" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Packaging</span>
+                        <h3>Box Design</h3>
+                        <p>Eco-friendly and visually appealing box packaging for retail products.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photoshop Work -->
+    <section class="section muted">
+        <div class="container">
+            <div class="section-header">
+                <h2>Photoshop Artwork</h2>
+                <p class="section-subtitle">Creative digital artwork and photo manipulations.</p>
+            </div>
+            <div class="grid">
+                <div class="work">
+                    <img src="Photoshop1.jpg" alt="Photoshop Artwork 1" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Digital Art</span>
+                        <h3>Creative Composition</h3>
+                        <p>Advanced Photoshop composition showcasing creative photo manipulation skills.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="work">
+                    <img src="Photoshop2.jpg" alt="Photoshop Artwork 2" class="work-img">
+                    <div class="work-content">
+                        <span class="work-category">Digital Art</span>
+                        <h3>Photo Retouching</h3>
+                        <p>Professional photo retouching and enhancement for commercial use.</p>
+                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Expertise</h2>
+                <p class="section-subtitle">Professional skills developed over 15+ years in graphic design</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h4>Logo Design</h4>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4>Brand Identity</h4>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h4>Print Design</h4>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 92%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h4>Packaging</h4>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section muted">
+        <div class="container">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    "Amit's designs transformed our brand identity. His attention to detail and creative approach resulted in a logo and branding package that perfectly represents our company values. Professional, timely, and exceeded expectations!"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SC</div>
+                    <div class="author-info">
+                        <h4>Sarah Chen</h4>
+                        <p>Marketing Director, TechVision Inc.</p>
                     </div>
                 </div>
             </div>
@@ -861,15 +396,20 @@
         <div class="container cta-content">
             <h2>Start a Project Like This</h2>
             <p>If you're looking for reliable, professional graphic design support that combines creative excellence with strategic thinking — let's connect.</p>
-            <a href="#contact" class="btn">Contact Me</a>
+            <div class="hero-cta">
+                <a href="#contact" class="btn">Contact Me</a>
+                <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+            </div>
         </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container contact-container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Ready to bring your vision to life? Let's discuss your next project.</p>
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">Ready to bring your vision to life? Let's discuss your next project.</p>
+            </div>
             
             <div class="contact-info">
                 <div class="contact-item">
@@ -900,20 +440,28 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="logo">Amit<span>Sharma</span></div>
+                <a href="#" class="footer-logo">Amit<span>Sharma</span></a>
                 
-                <div class="social-icons">
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                
+                <div class="footer-social">
                     <a href="#"><i class="fab fa-behance"></i></a>
                     <a href="#"><i class="fab fa-dribbble"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
                 
-                <div class="copyright">
-                    © 2025 Amit Sharma · Professional Graphic Designer
+                <div class="footer-copyright">
+                    © 2025 Amit Sharma · Professional Graphic Designer. All rights reserved.
                 </div>
             </div>
         </div>
@@ -977,6 +525,25 @@
                 header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.05)';
             }
+        });
+        
+        // Add fade-in animation to elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all work items
+        document.querySelectorAll('.work').forEach(item => {
+            observer.observe(item);
         });
     </script>
 </body>
