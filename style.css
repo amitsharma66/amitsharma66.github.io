@@ -612,11 +612,16 @@ p {
     height: 200px;
   }
 }
-/* ===== CRITICAL IMAGE FALLBACK ===== */
-/* Added to ensure portfolio images always display cleanly */
-.work-img {
-    background-color: transparent; /* Removes any default/gradient background */
+/* === FINAL CSS CLEANUP === */
+/* 1. Remove problematic :has() selector for compatibility */
+.work-img-container {
+  background-color: #f8fafc; /* Clean neutral fallback */
 }
-.work-img-container:has(img[src=""]) {
-    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+
+/* 2. Remove duplicate .work-img rule to prevent conflicts */
+/* (This is now handled by the original .work-img rules) */
+
+/* 3. Align hero content container naming */
+.hero .container {
+  /* This ensures consistent container behavior */
 }
