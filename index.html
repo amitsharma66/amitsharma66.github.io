@@ -1,584 +1,337 @@
-/* ===== CSS RESET & BASE STYLES ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-}
-
-:root {
-  /* Color Variables */
-  --primary-color: #111827;
-  --secondary-color: #1f2937;
-  --accent-color: #4f46e5;
-  --accent-light: #6366f1;
-  --light-color: #f9fafb;
-  --text-color: #111827;
-  --text-light: #6b7280;
-  --text-white: #ffffff;
-  --card-bg: #ffffff;
-  --muted-bg: #f3f4f6;
-  --dark-bg: #000000;
-  
-  /* Spacing */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-xxl: 4rem;
-  
-  /* Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 300ms ease;
-}
-
-/* ===== BODY & TYPOGRAPHY ===== */
-body {
-  background-color: var(--light-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-}
-
-h2 {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  margin-bottom: var(--space-lg);
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: var(--space-sm);
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: var(--space-md);
-  color: var(--text-light);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-md);
-}
-
-/* ===== HEADER & NAVIGATION ===== */
-header {
-  background-color: rgba(255, 255, 255, 0.95);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  padding: var(--space-md) 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: all var(--transition-base);
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-.logo span {
-  color: var(--primary-color);
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: var(--space-lg);
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color var(--transition-base);
-  position: relative;
-}
-
-nav ul li a:hover {
-  color: var(--accent-color);
-}
-
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: var(--accent-color);
-  left: 0;
-  bottom: -5px;
-  transition: width var(--transition-base);
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
-/* ===== HERO SECTION ===== */
-.hero {
-  background: linear-gradient(135deg, var(--dark-bg), var(--secondary-color));
-  background-size: cover;
-  background-position: center;
-  color: var(--text-white);
-  padding: calc(var(--space-xxl) + 80px) 0 var(--space-xxl);
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  color: var(--text-white);
-  margin-bottom: var(--space-sm);
-  font-weight: 800;
-}
-
-.hero .subtitle {
-  font-size: 1.2rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--space-lg);
-}
-
-.hero-tagline {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto var(--space-xl);
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.7;
-}
-
-.hero-cta {
-  display: flex;
-  gap: var(--space-md);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.875rem 2rem;
-  border-radius: var(--radius-lg);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all var(--transition-base);
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-}
-
-.btn-primary {
-  background-color: var(--accent-color);
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: var(--accent-light);
-}
-
-.btn-outline, .btn-secondary {
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
-}
-
-.btn-outline:hover, .btn-secondary:hover {
-  background-color: var(--accent-color);
-  color: white;
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  padding: var(--space-xxl) 0;
-}
-
-.section.muted {
-  background-color: var(--muted-bg);
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: var(--space-xl);
-}
-
-.section-subtitle {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.125rem;
-  color: var(--text-light);
-}
-
-/* ===== ABOUT SECTION ===== */
-.about-card {
-  background: var(--card-bg);
-  border-radius: var(--radius-xl);
-  padding: var(--space-xl);
-  box-shadow: var(--shadow-xl);
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.about-content {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  margin-bottom: var(--space-xl);
-}
-
-.about-highlights {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
-}
-
-.highlight-item {
-  text-align: center;
-  flex: 1;
-  min-width: 150px;
-}
-
-.highlight-item .number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--accent-color);
-  margin-bottom: var(--space-xs);
-}
-
-.highlight-item .label {
-  font-size: 0.95rem;
-  color: var(--text-light);
-  font-weight: 500;
-}
-
-/* ===== GRID LAYOUT ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-xl);
-  margin-top: var(--space-lg);
-}
-
-/* ===== WORK CARDS ===== */
-.work-card {
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  transition: all var(--transition-base);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.work-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-hover);
-}
-
-.work-img-container {
-  width: 100%;
-  height: 240px;
-  margin-bottom: var(--space-md);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  background-color: var(--muted-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.work-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform var(--transition-base);
-  max-width: 85%;
-  max-height: 85%;
-}
-
-.work-card:hover .work-img {
-  transform: scale(1.05);
-}
-
-.work-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.work-content h3 {
-  color: var(--primary-color);
-  margin-bottom: var(--space-sm);
-}
-
-.work-content p {
-  flex: 1;
-  margin-bottom: var(--space-md);
-}
-
-/* ===== CTA SECTION ===== */
-.cta-section {
-  background: linear-gradient(135deg, var(--dark-bg), var(--secondary-color));
-  color: var(--text-white);
-  padding: var(--space-xxl) 0;
-  text-align: center;
-}
-
-.cta-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.cta-content h2 {
-  color: var(--text-white);
-  margin-bottom: var(--space-md);
-}
-
-.cta-content p {
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--space-xl);
-}
-
-.cta-buttons {
-  display: flex;
-  gap: var(--space-md);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ===== CONTACT SECTION ===== */
-.contact-section {
-  background-color: var(--card-bg);
-}
-
-.contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-xl);
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.contact-item {
-  text-align: center;
-  padding: var(--space-lg);
-  background: var(--muted-bg);
-  border-radius: var(--radius-lg);
-  transition: transform var(--transition-base);
-}
-
-.contact-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.contact-icon {
-  font-size: 2.5rem;
-  color: var(--accent-color);
-  margin-bottom: var(--space-md);
-}
-
-.contact-item h4 {
-  margin-bottom: var(--space-sm);
-  color: var(--primary-color);
-}
-
-.contact-item p {
-  margin-bottom: 0;
-  word-break: break-all;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background-color: var(--dark-bg);
-  color: rgba(255, 255, 255, 0.7);
-  padding: var(--space-xl) 0;
-  text-align: center;
-}
-
-.footer .copyright {
-  font-size: 0.95rem;
-}
-
-/* ===== PREMIUM ENHANCEMENTS ===== */
-.section-header h2 {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 15px;
-}
-
-.section-header h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-  border-radius: 2px;
-}
-
-.work-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.work-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-  opacity: 0;
-  transition: opacity var(--transition-base);
-  z-index: 2;
-}
-
-.work-card:hover::before {
-  opacity: 1;
-}
-
-.work-img {
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    flex-direction: column;
-    padding: var(--space-md);
-    box-shadow: var(--shadow-xl);
-    z-index: 1000;
-  }
-  
-  nav ul.active {
-    display: flex;
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
-  
-  .hero {
-    padding: calc(var(--space-xxl) + 60px) 0 var(--space-xl);
-    min-height: auto;
-  }
-  
-  .hero-cta, .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .about-highlights {
-    flex-direction: column;
-    gap: var(--space-xl);
-  }
-  
-  .grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-info {
-    grid-template-columns: 1fr;
-  }
-  
-  .work-img-container {
-    height: 200px;
-  }
-  
-  .section-header h2::after {
-    width: 60px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  
-  .hero .subtitle {
-    font-size: 1rem;
-    letter-spacing: 2px;
-  }
-  
-  .section {
-    padding: var(--space-xl) 0;
-  }
-  
-  .about-card, .work-card {
-    padding: var(--space-md);
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit Sharma | Professional Graphic Designer</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS - CRITICAL FIX: This was the main loading issue -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Amit<span>Sharma</span></a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Amit Sharma</h1>
+            <p class="subtitle">Graphic Designer · Brand Identity · Print & Digital</p>
+            <p class="hero-tagline">Creating compelling visual identities that communicate brand values and connect with audiences across all media.</p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p class="section-subtitle">A dedicated visual storyteller with decades of design expertise</p>
+            </div>
+            
+            <div class="about-card">
+                <div class="about-content">
+                    <!-- UPDATED: Years of experience corrected from 15+ to 25+ -->
+                    <p>I'm a graphic designer with 25+ years of experience specializing in logo design, brand identity, print marketing, packaging, and digital creatives. I focus on clean visuals, strong concepts, and timeless designs that help brands stand out and communicate effectively.</p>
+                    <p>My approach blends strategic insight with creative execution to deliver work that is not only visually striking but also serves your business goals and resonates with your target audience.</p>
+                </div>
+                
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="number">25+</div>
+                        <div class="label">Years Experience</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="number">500+</div>
+                        <div class="label">Projects Delivered</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="number">100%</div>
+                        <div class="label">Client Focus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio: Logo Design -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Logo & Brand Identity</h2>
+                <p class="section-subtitle">Distilled brand essences designed for clarity, memorability, and impact.</p>
+            </div>
+
+            <div class="grid">
+                <!-- FIXED: Replaced gradient placeholder with real image tag -->
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="beginIDEAS.jpg" alt="Begin Ideas Logo - A modern startup logo symbolizing innovation" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Begin Ideas</h3>
+                        <p>A startup identity built around the lightbulb moment—clean, modern, and symbolizing creativity and new beginnings.</p>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="SMARTCLICK.jpg" alt="Smart Click Logo - A fintech brand mark conveying trust and digital speed" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Smart Click</h3>
+                        <p>Fintech visual identity project expressing digital efficiency, growth, and user-friendly trust through sleek geometry.</p>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="SPEAK.jpg" alt="SPEAK Logo - A bold wordmark for a podcast or speaking brand" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>SPEAK</h3>
+                        <p>Voice-centric branding for media and speakers. The design combines bold typography with cues for communication and authority.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio: Flyer Design -->
+    <section class="section muted">
+        <div class="container">
+            <div class="section-header">
+                <h2>Print & Promotional Design</h2>
+                <p class="section-subtitle">High-impact print collateral designed to capture attention and drive action.</p>
+            </div>
+            <div class="grid">
+                <!-- FIXED: Replaced all placeholders in this section -->
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="Flyer1.jpg" alt="Corporate Event Flyer Design" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Corporate Event</h3>
+                        <p>Clean, information-first flyer for a professional conference, balancing hierarchy with visual appeal.</p>
+                    </div>
+                </div>
+                
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="Flyer2.jpg" alt="Product Launch Flyer Design" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Product Launch</h3>
+                        <p>Vibrant and energetic flyer designed to generate buzz and announce a new product to the market.</p>
+                    </div>
+                </div>
+                
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="Flyer3.jpg" alt="Sales Promotion Flyer Design" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Sales Promotion</h3>
+                        <p>Direct promotional piece with a strong offer and clear call-to-action, designed for high conversion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio: Brochure Design -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Brochure & Catalog Design</h2>
+                <p class="section-subtitle">Structured layouts that guide the reader and tell a compelling brand story.</p>
+            </div>
+            <div class="grid">
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="Brochure1.jpg" alt="Corporate Tri-fold Brochure Layout" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Corporate Profile</h3>
+                        <p>A classic tri-fold brochure layout for a B2B company, presenting services and credibility in a digestible format.</p>
+                    </div>
+                </div>
+                
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="Brochure2.jpg" alt="Product Catalog Design Spread" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Product Catalog</h3>
+                        <p>Multi-page catalog with a systematic layout, designed to showcase a product range clearly and attractively.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio: Packaging Design -->
+    <section class="section muted">
+        <div class="container">
+            <div class="section-header">
+                <h2>Packaging Design</h2>
+                <p class="section-subtitle">Functional and aesthetic packaging that protects the product and elevates the brand on the shelf.</p>
+            </div>
+            <div class="grid">
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="Packaging1.jpg" alt="Consumer Product Packaging Design" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Consumer Product Box</h3>
+                        <p>Eye-catching retail packaging designed to stand out in a competitive environment and communicate premium quality.</p>
+                    </div>
+                </div>
+                
+                <div class="work-card">
+                    <div class="work-img-container">
+                        <img src="Packaging2.jpg" alt="Eco-Friendly Packaging Concept" class="work-img">
+                    </div>
+                    <div class="work-content">
+                        <h3>Eco-Conscious Design</h3>
+                        <p>Sustainable packaging solution that balances environmental responsibility with strong, clear brand messaging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-content">
+            <h2>Ready to Elevate Your Brand?</h2>
+            <p>If you're looking for experienced, professional design support that combines strategic thinking with creative excellence—let's talk about your next project.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#portfolio" class="btn btn-secondary">See More Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- POLISHED: Streamlined to show only email for a cleaner, more professional presentation. -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">For project inquiries or to discuss your design needs, please contact me via email.</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email</h4>
+                    <!-- REPLACE with your actual professional email address -->
+                    <p>contact@amitsharma.design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    © 2025 Amit Sharma · Professional Graphic Designer
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+        
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (header) {
+                header.style.backgroundColor = window.scrollY > 100 
+                    ? 'rgba(255, 255, 255, 0.98)' 
+                    : 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = window.scrollY > 100 
+                    ? '0 5px 20px rgba(0, 0, 0, 0.1)' 
+                    : '0 5px 20px rgba(0, 0, 0, 0.05)';
+            }
+        });
+    </script>
+</body>
+</html>
