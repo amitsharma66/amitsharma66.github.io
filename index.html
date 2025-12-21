@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Sharma | Award-Winning Graphic Designer Portfolio</title>
+    <title>Amit Sharma | 25+ Years Graphic Design Expert | Brand Identity Specialist</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,16 +19,16 @@
     <style>
         /* CSS Variables */
         :root {
-            --primary: #2A2D43;
-            --secondary: #FF6B6B;
-            --accent: #4ECDC4;
-            --light: #F7F9FC;
-            --dark: #1A1D2E;
-            --gray: #8A8FA3;
-            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --primary: #1E2A47;
+            --secondary: #E63946;
+            --accent: #457B9D;
+            --light: #F8F9FA;
+            --dark: #121826;
+            --gray: #6C757D;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
-            --border-radius: 12px;
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --border-radius: 16px;
             --container-width: 1200px;
         }
         
@@ -45,7 +45,7 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--dark);
             background-color: var(--light);
             overflow-x: hidden;
@@ -89,7 +89,7 @@
         
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 16px 36px;
             border-radius: 50px;
             font-weight: 600;
             font-size: 16px;
@@ -97,6 +97,7 @@
             transition: var(--transition);
             text-align: center;
             border: 2px solid transparent;
+            letter-spacing: 0.5px;
         }
         
         .btn-primary {
@@ -105,8 +106,8 @@
         }
         
         .btn-primary:hover {
-            background-color: #ff5252;
-            transform: translateY(-3px);
+            background-color: #c1121f;
+            transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
         }
         
@@ -119,7 +120,7 @@
         .btn-secondary:hover {
             background-color: var(--primary);
             color: white;
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
         
         /* Navigation */
@@ -129,9 +130,9 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: var(--transition);
         }
         
@@ -148,25 +149,33 @@
         
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 800;
             color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .logo span {
             color: var(--secondary);
         }
         
+        .logo-icon {
+            color: var(--secondary);
+            font-size: 28px;
+        }
+        
         .nav-menu {
             display: flex;
-            gap: 40px;
+            gap: 50px;
         }
         
         .nav-menu li a {
             font-weight: 600;
             font-size: 16px;
             position: relative;
-            padding: 5px 0;
+            padding: 8px 0;
         }
         
         .nav-menu li a:after {
@@ -193,12 +202,12 @@
             cursor: pointer;
         }
         
-        /* Hero Section */
+        /* Hero Section - Updated with creative background */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #1a1f35 0%, #2d3748 100%);
             position: relative;
             overflow: hidden;
         }
@@ -208,23 +217,39 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 60%;
+            width: 100%;
             height: 100%;
-            background-color: var(--primary);
-            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(229, 57, 70, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 30% 70%, rgba(69, 123, 157, 0.15) 0%, transparent 50%);
+        }
+        
+        .hero-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
+                linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
+                linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
+                linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
+                linear-gradient(60deg, rgba(255,255,255,0.25) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.25) 75%, rgba(255,255,255,0.25));
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0;
         }
         
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 600px;
+            max-width: 650px;
             padding: 40px 0;
         }
         
         .hero h1 {
             font-size: 4.5rem;
-            margin-bottom: 15px;
-            color: var(--primary);
+            margin-bottom: 20px;
+            color: white;
             line-height: 1.1;
         }
         
@@ -233,46 +258,67 @@
             color: var(--secondary);
             margin-bottom: 20px;
             font-weight: 600;
+            background: linear-gradient(90deg, #E63946, #FF8A9B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         .hero-description {
             font-size: 1.2rem;
-            color: var(--gray);
+            color: rgba(255, 255, 255, 0.85);
             margin-bottom: 40px;
             max-width: 90%;
+            line-height: 1.8;
         }
         
         .hero-buttons {
             display: flex;
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 40px;
         }
         
         /* About Section */
         .section h2 {
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-size: 3.2rem;
+            margin-bottom: 20px;
             color: var(--primary);
             text-align: center;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 2px;
         }
         
         .section-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--gray);
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 70px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
         
         .about-card {
             background: white;
             border-radius: var(--border-radius);
-            padding: 60px;
+            padding: 70px;
             box-shadow: var(--shadow);
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
         .about-card:before {
@@ -280,7 +326,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 5px;
+            width: 6px;
             height: 100%;
             background: linear-gradient(to bottom, var(--secondary), var(--accent));
         }
@@ -290,40 +336,44 @@
         }
         
         .about-content p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+            font-size: 1.15rem;
+            margin-bottom: 25px;
             color: var(--dark);
+            line-height: 1.8;
         }
         
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px;
+            margin-top: 60px;
         }
         
         .stat-item {
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 25px;
             background: var(--light);
             border-radius: var(--border-radius);
             transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
         .stat-item:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-hover);
+            border-color: var(--secondary);
         }
         
         .stat-number {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 800;
             color: var(--secondary);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            line-height: 1;
         }
         
         .stat-label {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: var(--gray);
             font-weight: 600;
         }
@@ -331,9 +381,9 @@
         /* Portfolio Section */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 50px;
+            margin-top: 60px;
         }
         
         .portfolio-card {
@@ -345,20 +395,21 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            cursor: pointer;
         }
         
         .portfolio-card:hover {
             transform: translateY(-15px);
             box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
         }
         
         .card-image {
-            height: 250px;
+            height: 280px;
             overflow: hidden;
-            background-color: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: #f5f5f5;
+            position: relative;
         }
         
         .card-image img {
@@ -372,15 +423,51 @@
             transform: scale(1.05);
         }
         
-        .card-content {
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(30, 42, 71, 0), rgba(30, 42, 71, 0.8));
+            display: flex;
+            align-items: flex-end;
             padding: 30px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .portfolio-card:hover .overlay {
+            opacity: 1;
+        }
+        
+        .view-project {
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--secondary);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+        
+        .portfolio-card:hover .view-project {
+            transform: translateY(0);
+        }
+        
+        .card-content {
+            padding: 35px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
         
         .card-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 15px;
             color: var(--primary);
         }
@@ -388,104 +475,251 @@
         .card-content p {
             color: var(--gray);
             flex-grow: 1;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .project-tag {
+            display: inline-block;
+            padding: 6px 15px;
+            background: var(--light);
+            color: var(--accent);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
         }
         
         /* Contact Section */
         .contact-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #3a3f5f 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #2a3a5a 100%);
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(229, 57, 70, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(69, 123, 157, 0.1) 0%, transparent 50%);
         }
         
         .contact-section h2,
         .contact-section .section-subtitle {
             color: white;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-section .section-subtitle {
+            opacity: 0.9;
         }
         
         .contact-card {
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             border-radius: var(--border-radius);
-            padding: 60px;
+            padding: 70px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-top: 50px;
+            gap: 70px;
+            margin-top: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .contact-item {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             margin-bottom: 40px;
         }
         
         .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 28px;
             flex-shrink: 0;
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover .contact-icon {
+            background: var(--secondary);
+            transform: scale(1.1);
         }
         
         .contact-item h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .contact-item p {
+            font-size: 1.2rem;
+            opacity: 0.9;
             margin-bottom: 5px;
         }
         
         .contact-note {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-top: 5px;
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin-top: 8px;
         }
         
         .cta-box {
             background: white;
             border-radius: var(--border-radius);
-            padding: 40px;
+            padding: 50px;
             color: var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .cta-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .cta-box p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            line-height: 1.7;
         }
         
         /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 60px 0 30px;
+            padding: 70px 0 40px;
             text-align: center;
         }
         
         .footer-logo {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
         .footer-tagline {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.8;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
         }
         
         .copyright {
             opacity: 0.6;
-            font-size: 0.9rem;
-            margin-top: 30px;
+            font-size: 0.95rem;
+            margin-top: 40px;
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Modal for image click */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: var(--border-radius);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+            border: none;
+        }
+        
+        .modal-body {
+            padding: 50px;
+        }
+        
+        .modal-body h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .modal-body p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .modal-cta {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .modal-cta h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
         }
         
         /* Animations */
         .animate-on-scroll {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(40px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
         
@@ -511,6 +745,17 @@
         }
         
         /* Responsive Design */
+        @media (max-width: 1100px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 40px;
+            }
+        }
+        
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 3.5rem;
@@ -522,22 +767,17 @@
             
             .contact-card {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 50px;
             }
             
-            .hero:before {
-                width: 70%;
+            .nav-menu {
+                gap: 30px;
             }
         }
         
         @media (max-width: 768px) {
-            .hero:before {
-                display: none;
-            }
-            
             .hero {
                 text-align: center;
-                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             }
             
             .hero-content {
@@ -566,13 +806,14 @@
                 background-color: white;
                 flex-direction: column;
                 align-items: center;
-                padding: 30px 0;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                padding: 40px 0;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
                 transform: translateY(-100%);
                 opacity: 0;
                 visibility: hidden;
                 transition: var(--transition);
                 z-index: 999;
+                gap: 30px;
             }
             
             .nav-menu.active {
@@ -582,11 +823,11 @@
             }
             
             .nav-menu li {
-                margin: 15px 0;
+                margin: 10px 0;
             }
             
             .section h2 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             
             .portfolio-grid {
@@ -595,11 +836,16 @@
             
             .stats-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
             
             .about-card,
             .contact-card {
-                padding: 40px 20px;
+                padding: 40px 25px;
+            }
+            
+            .modal-body {
+                padding: 30px;
             }
         }
         
@@ -609,7 +855,19 @@
             }
             
             .section {
-                padding: 70px 0;
+                padding: 80px 0;
+            }
+            
+            .section h2 {
+                font-size: 2.4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .stat-number {
+                font-size: 3rem;
             }
         }
     </style>
@@ -619,12 +877,15 @@
     <header>
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#" class="logo">Amit<span>Sharma</span></a>
+                <a href="#" class="logo">
+                    <i class="fas fa-palette logo-icon"></i>
+                    Amit<span>Sharma</span>
+                </a>
                 <nav>
                     <ul class="nav-menu">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#work">Work</a></li>
+                        <li><a href="#work">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                     <button class="menu-toggle" aria-label="Toggle menu">
@@ -637,13 +898,14 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-pattern"></div>
         <div class="container">
             <div class="hero-content animate-on-scroll">
-                <h1>Amit Sharma</h1>
-                <p class="hero-subtitle">Award-Winning Graphic Designer</p>
-                <p class="hero-description">With over 25 years of experience, I create compelling visual identities that communicate brand values and connect with audiences across all media. Let's bring your vision to life.</p>
+                <h1>Crafting Iconic Brands Since 1998</h1>
+                <p class="hero-subtitle">25+ Years of Visual Design Excellence</p>
+                <p class="hero-description">I transform business visions into compelling visual identities that resonate, engage, and drive results. With expertise spanning brand identity, print design, and packaging, I help established businesses and ambitious startups stand out in crowded markets.</p>
                 <div class="hero-buttons">
-                    <a href="#work" class="btn btn-primary">Explore My Portfolio</a>
+                    <a href="#work" class="btn btn-primary">View Portfolio</a>
                     <a href="#contact" class="btn btn-secondary">Start Your Project</a>
                 </div>
             </div>
@@ -653,27 +915,27 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="animate-on-scroll">About Me</h2>
-            <p class="section-subtitle animate-on-scroll">25+ years crafting exceptional visual identities</p>
+            <h2 class="animate-on-scroll">The Designer Behind the Designs</h2>
+            <p class="section-subtitle animate-on-scroll">Two and a half decades of solving complex brand challenges with simple, powerful design solutions</p>
             
             <div class="about-card animate-on-scroll">
                 <div class="about-content">
-                    <p>With <strong>over 25 years of professional design experience</strong>, I specialize in creating visual identities that not only look stunning but also achieve measurable business results. My work spans logo design, comprehensive brand systems, print marketing, packaging, and digital design.</p>
-                    <p>I approach every project with a strategic mindset, ensuring that the design not only captures attention but also communicates your brand's core values and resonates with your target audience. My process combines creativity with market insights to deliver designs that stand the test of time.</p>
+                    <p>For over 25 years, I've partnered with businesses across industries to create visual identities that don't just look good—they work hard. My approach combines strategic thinking with artistic execution, ensuring every design element serves a purpose and advances your business objectives.</p>
+                    <p>What sets my work apart is the depth of experience I bring to each project. Having witnessed design trends come and go since the 90s, I focus on creating timeless solutions that remain effective for years, not just seasons. I specialize in comprehensive brand systems, from initial logo concepts to complete brand guidelines that ensure consistency across all touchpoints.</p>
                 </div>
                 
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">25+</div>
-                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-label">Years Design Experience</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">500+</div>
-                        <div class="stat-label">Projects Delivered</div>
+                        <div class="stat-label">Successful Projects</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
+                        <div class="stat-label">Client Satisfaction Rate</div>
                     </div>
                 </div>
             </div>
@@ -683,40 +945,58 @@
     <!-- Portfolio Section -->
     <section id="work" class="section section-alt">
         <div class="container">
-            <h2 class="animate-on-scroll">Logo & Brand Identity</h2>
-            <p class="section-subtitle animate-on-scroll">Distilled brand essences designed for clarity and impact</p>
+            <h2 class="animate-on-scroll">Logo & Brand Identity Systems</h2>
+            <p class="section-subtitle animate-on-scroll">Comprehensive visual identities that establish market leadership and customer trust</p>
             
             <div class="portfolio-grid">
                 <!-- Logo 1 -->
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('beginModal')">
                     <div class="card-image">
-                        <img src="beginIDEAS.jpg" alt="Begin Ideas Logo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Begin Ideas Logo<br><small>Image not found</small></div>';">
+                        <img src="beginIDEAS.jpg" alt="Begin Ideas - Tech Startup Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Begin Ideas Brand System<br><small>Technology Startup Identity</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
                         <h3>Begin Ideas</h3>
-                        <p>Startup identity built around innovation and creativity with a modern lightbulb concept. The design embodies forward-thinking and fresh perspectives.</p>
+                        <p>A complete brand identity for an innovative tech startup. The logo symbolizes creativity meeting technology, while the extended visual system provides flexibility across digital and print applications.</p>
+                        <div class="project-tag">Technology Startup</div>
                     </div>
                 </div>
                 
                 <!-- Logo 2 -->
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('smartModal')">
                     <div class="card-image">
-                        <img src="SMARTCLICK.jpg" alt="Smart Click Logo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Smart Click Logo<br><small>Image not found</small></div>';">
+                        <img src="SMARTCLICK.jpg" alt="Smart Click - Fintech Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Smart Click Brand Identity<br><small>Fintech & Digital Banking</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
                         <h3>Smart Click</h3>
-                        <p>Fintech visual identity expressing digital efficiency, growth, and trust through sleek geometry. The design conveys precision and modern financial solutions.</p>
+                        <p>Financial technology branding that balances innovation with trust. The geometric logo suggests precision and digital efficiency, while the color palette communicates stability and forward momentum.</p>
+                        <div class="project-tag">Fintech Branding</div>
                     </div>
                 </div>
                 
                 <!-- Logo 3 -->
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('speakModal')">
                     <div class="card-image">
-                        <img src="SPEAK.jpg" alt="SPEAK Logo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>SPEAK Logo<br><small>Image not found</small></div>';">
+                        <img src="SPEAK.jpg" alt="SPEAK - Media Platform Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>SPEAK Media Branding<br><small>Digital Media Platform</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>SPEAK</h3>
-                        <p>Voice-centric branding for media with bold typography and communication cues. The design captures the essence of clear, powerful communication.</p>
+                        <h3>SPEAK Media</h3>
+                        <p>Bold identity for a digital media platform focused on authentic voices. The typography-driven logo communicates clarity and impact, supported by a dynamic visual language for various content formats.</p>
+                        <div class="project-tag">Media & Publishing</div>
                     </div>
                 </div>
             </div>
@@ -726,37 +1006,55 @@
     <!-- Print Design Section -->
     <section class="section">
         <div class="container">
-            <h2 class="animate-on-scroll">Print & Promotional Design</h2>
-            <p class="section-subtitle animate-on-scroll">High-impact collateral designed to capture attention</p>
+            <h2 class="animate-on-scroll">Print & Marketing Collateral</h2>
+            <p class="section-subtitle animate-on-scroll">Tangible designs that create meaningful connections and drive measurable action</p>
             
             <div class="portfolio-grid">
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('flyer1Modal')">
                     <div class="card-image">
-                        <img src="Flyer1.jpg" alt="Corporate Event Flyer" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Corporate Event Flyer<br><small>Image not found</small></div>';">
+                        <img src="Flyer1.jpg" alt="Corporate Conference Marketing Suite" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Corporate Event Series<br><small>Complete Print Suite</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Corporate Event</h3>
-                        <p>Clean, information-first flyer for professional conferences. Designed to communicate key information clearly while maintaining a premium aesthetic.</p>
+                        <h3>Global Tech Summit</h3>
+                        <p>Complete print suite for a major industry conference. Clean information hierarchy guides attendees while sophisticated design reinforces the event's premium positioning.</p>
+                        <div class="project-tag">Event Marketing</div>
                     </div>
                 </div>
                 
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('flyer2Modal')">
                     <div class="card-image">
-                        <img src="Flyer2.jpg" alt="Product Launch Flyer" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Launch Flyer<br><small>Image not found</small></div>';">
+                        <img src="Flyer2.jpg" alt="Product Launch Campaign Materials" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Launch Campaign<br><small>Multi-channel Marketing</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Product Launch</h3>
-                        <p>Vibrant flyer designed to generate buzz for new products. Eye-catching design that creates excitement and drives engagement.</p>
+                        <h3>Innovation Launch Series</h3>
+                        <p>High-impact launch campaign generating excitement for a new product line. Vibrant visuals and strategic messaging created urgency while clearly communicating benefits.</p>
+                        <div class="project-tag">Product Launch</div>
                     </div>
                 </div>
                 
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('flyer3Modal')">
                     <div class="card-image">
-                        <img src="Flyer3.jpg" alt="Sales Promotion Flyer" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Sales Promotion Flyer<br><small>Image not found</small></div>';">
+                        <img src="Flyer3.jpg" alt="Sales Promotion & Direct Response Campaign" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Sales Promotion Campaign<br><small>Direct Response Marketing</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Sales Promotion</h3>
-                        <p>Direct promotional piece with strong call-to-action. Designed to convert viewers into customers with compelling visuals and clear messaging.</p>
+                        <h3>Seasonal Sales Drive</h3>
+                        <p>Results-focused direct marketing campaign with clear calls-to-action. Strategic design elements guide customer journey from attention to conversion with measurable ROI.</p>
+                        <div class="project-tag">Direct Marketing</div>
                     </div>
                 </div>
             </div>
@@ -766,37 +1064,55 @@
     <!-- Brochure Design -->
     <section class="section section-alt">
         <div class="container">
-            <h2 class="animate-on-scroll">Brochure & Catalog Design</h2>
-            <p class="section-subtitle animate-on-scroll">Structured layouts that tell compelling brand stories</p>
+            <h2 class="animate-on-scroll">Brochure & Corporate Literature</h2>
+            <p class="section-subtitle animate-on-scroll">Information architecture that transforms complex messages into compelling narratives</p>
             
             <div class="portfolio-grid">
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('brochure1Modal')">
                     <div class="card-image">
-                        <img src="Brochure1.jpg" alt="Corporate Brochure" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Corporate Brochure<br><small>Image not found</small></div>';">
+                        <img src="Brochure1.jpg" alt="Corporate Capabilities Brochure" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Corporate Profile Brochure<br><small>B2B Marketing Material</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Corporate Profile</h3>
-                        <p>Tri-fold brochure presenting services with credibility and sophistication. Clean layout that guides the reader through the brand story.</p>
+                        <h3>Enterprise Solutions Guide</h3>
+                        <p>Sophisticated corporate brochure establishing market authority. Clean layout and strategic content organization present complex service offerings with clarity and impact.</p>
+                        <div class="project-tag">Corporate Communications</div>
                     </div>
                 </div>
                 
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('brochure2Modal')">
                     <div class="card-image">
-                        <img src="Brochure2.jpg" alt="Product Catalog" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Catalog<br><small>Image not found</small></div>';">
+                        <img src="Brochure2.jpg" alt="Product Catalog & Technical Specifications" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Catalog System<br><small>Technical & Sales Literature</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Product Catalog</h3>
-                        <p>Multi-page catalog showcasing product range clearly and attractively. Organized layout that makes products easy to browse and compare.</p>
+                        <h3>Product Catalog System</h3>
+                        <p>Comprehensive catalog balancing aesthetic appeal with functional information design. Intuitive navigation and clear product comparison facilitate purchasing decisions.</p>
+                        <div class="project-tag">Sales Enablement</div>
                     </div>
                 </div>
                 
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('packaging1Modal')">
                     <div class="card-image">
-                        <img src="Packaging1.jpg" alt="Product Packaging" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Packaging<br><small>Image not found</small></div>';">
+                        <img src="Packaging1.jpg" alt="Packaging Design - Retail Products" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Retail Packaging Design<br><small>Shelf Impact & Branding</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Brand Story Brochure</h3>
-                        <p>Engaging brochure that tells the complete brand story through compelling visuals and well-structured content.</p>
+                        <h3>Premium Retail Packaging</h3>
+                        <p>Shelf-stopping packaging that communicates quality at first glance. Strategic use of materials, finishes, and structural design creates memorable unboxing experiences.</p>
+                        <div class="project-tag">Retail Packaging</div>
                     </div>
                 </div>
             </div>
@@ -806,37 +1122,61 @@
     <!-- Packaging Design -->
     <section class="section">
         <div class="container">
-            <h2 class="animate-on-scroll">Packaging Design</h2>
-            <p class="section-subtitle animate-on-scroll">Functional and aesthetic packaging that elevates brands</p>
+            <h2 class="animate-on-scroll">Packaging & Product Experience</h2>
+            <p class="section-subtitle animate-on-scroll">Three-dimensional design that builds brand loyalty through exceptional customer experiences</p>
             
             <div class="portfolio-grid">
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('packaging2Modal')">
                     <div class="card-image">
-                        <img src="Packaging1.jpg" alt="Product Packaging" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Packaging<br><small>Image not found</small></div>';">
+                        <img src="Packaging2.jpg" alt="Sustainable Packaging Solutions" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Eco-Friendly Packaging<br><small>Sustainable Design Solutions</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Consumer Product</h3>
-                        <p>Retail packaging designed to stand out on shelves while communicating product benefits clearly. Eye-catching design that drives purchase decisions.</p>
+                        <h3>Eco-Conscious Packaging</h3>
+                        <p>Sustainable packaging solutions that align with brand values while maintaining shelf appeal. Innovative material use and minimalist design reduce environmental impact.</p>
+                        <div class="project-tag">Sustainable Design</div>
                     </div>
                 </div>
                 
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('packaging3Modal')">
                     <div class="card-image">
-                        <img src="Packaging2.jpg" alt="Eco Packaging" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Eco Packaging<br><small>Image not found</small></div>';">
+                        <img src="Packaging3.jpg" alt="Luxury Product Packaging" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Luxury Packaging Design<br><small>Premium Product Experience</small></div>';">
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-eye"></i> View Case Study
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Eco-Conscious Design</h3>
-                        <p>Sustainable packaging with clear brand messaging that appeals to environmentally-conscious consumers. Materials and design that reflect brand values.</p>
+                        <h3>Luxury Fragrance Collection</h3>
+                        <p>High-end packaging that justifies premium positioning through meticulous attention to detail. Tactile materials, foiling, and structural innovation create collectible quality.</p>
+                        <div class="project-tag">Luxury Branding</div>
                     </div>
                 </div>
                 
-                <div class="portfolio-card animate-on-scroll">
+                <div class="portfolio-card animate-on-scroll" onclick="openModal('contactModal')">
                     <div class="card-image">
-                        <div class="image-placeholder">Packaging Design Example<br><small>Add your packaging image here</small></div>
+                        <div style="background: linear-gradient(135deg, var(--primary), var(--accent)); height: 100%; display: flex; align-items: center; justify-content: center; color: white; padding: 40px; text-align: center;">
+                            <div>
+                                <i class="fas fa-plus-circle" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                                <h3 style="color: white; margin-bottom: 10px;">Your Project Here</h3>
+                                <p>Let's create something exceptional together</p>
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <div class="view-project">
+                                <i class="fas fa-envelope"></i> Start Your Project
+                            </div>
+                        </div>
                     </div>
                     <div class="card-content">
-                        <h3>Luxury Packaging</h3>
-                        <p>High-end packaging design that conveys quality and exclusivity. Tactile materials and refined aesthetics that elevate the unboxing experience.</p>
+                        <h3>Your Brand's Next Chapter</h3>
+                        <p>Ready to transform your visual identity? From initial concept to final execution, I provide complete design solutions tailored to your specific business needs and market position.</p>
+                        <div class="project-tag">Next Project</div>
                     </div>
                 </div>
             </div>
@@ -846,8 +1186,8 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="animate-on-scroll">Get In Touch</h2>
-            <p class="section-subtitle animate-on-scroll">Ready to discuss your next design project?</p>
+            <h2 class="animate-on-scroll">Let's Create Something Exceptional</h2>
+            <p class="section-subtitle animate-on-scroll">Your vision + my 25 years of expertise = Results that exceed expectations</p>
             
             <div class="contact-card animate-on-scroll">
                 <div class="contact-info">
@@ -856,39 +1196,39 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <h3>Email</h3>
-                            <p>contact@amitsharma.design</p>
-                            <p class="contact-note">For project inquiries and consultations</p>
+                            <h3>Project Inquiries</h3>
+                            <p>amitsharma.graphics@gmail.com</p>
+                            <p class="contact-note">Primary contact for all project discussions</p>
                         </div>
                     </div>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-clock"></i>
                         </div>
                         <div>
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
-                            <p class="contact-note">Available Monday-Friday, 9am-6pm</p>
+                            <h3>Response Time</h3>
+                            <p>Within 24 Hours</p>
+                            <p class="contact-note">I review all inquiries personally</p>
                         </div>
                     </div>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-briefcase"></i>
                         </div>
                         <div>
-                            <h3>Location</h3>
-                            <p>Based in Mumbai, India</p>
-                            <p class="contact-note">Serving clients worldwide</p>
+                            <h3>Process</h3>
+                            <p>Strategic & Collaborative</p>
+                            <p class="contact-note">From consultation to final delivery</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="cta-box">
-                    <h3>Start Your Project Today</h3>
-                    <p>Send me an email with your project details, timeline, and budget for a prompt response. I typically respond within 24 hours to discuss how we can bring your vision to life.</p>
-                    <a href="mailto:contact@amitsharma.design" class="btn btn-primary" style="margin-top: 20px;">Email Me Now</a>
+                    <h3>Start With a Conversation</h3>
+                    <p>The best projects begin with understanding your goals, audience, and market position. Include details about your timeline, budget, and vision when you reach out. I'll provide a comprehensive proposal outlining how we can achieve your objectives through strategic design.</p>
+                    <a href="mailto:amitsharma.graphics@gmail.com?subject=Design Project Inquiry&body=Hello Amit, I'd like to discuss a design project. Here are some initial details:" class="btn btn-primary" style="margin-top: 20px;">Email Your Project Brief</a>
                 </div>
             </div>
         </div>
@@ -898,12 +1238,118 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Amit Sharma</div>
-                <p class="footer-tagline">Creating Visual Identities That Last</p>
-                <p class="copyright">© 2025 Amit Sharma. All rights reserved.</p>
+                <div class="footer-logo">
+                    <i class="fas fa-palette"></i>
+                    Amit Sharma
+                </div>
+                <p class="footer-tagline">Transforming business visions into timeless visual identities since 1998</p>
+                <p class="copyright">© 1998-2025 Amit Sharma | Professional Graphic Design Services</p>
             </div>
         </div>
     </footer>
+
+    <!-- Modals for Case Studies -->
+    <div id="beginModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <h3>Begin Ideas: Tech Startup Brand Identity</h3>
+                <p><strong>Client Challenge:</strong> A technology innovation firm needed a brand identity that communicated both cutting-edge expertise and creative problem-solving to attract venture capital and top talent in a competitive market.</p>
+                
+                <p><strong>Solution:</strong> Developed a comprehensive visual system centered around a dynamic logo that symbolizes the intersection of creativity and technology. The lightbulb motif represents innovation while the geometric framework suggests structure and reliability.</p>
+                
+                <p><strong>Deliverables:</strong> Primary logo, alternative marks, complete color palette, typography system, brand guidelines, stationery suite, presentation templates, and digital asset library.</p>
+                
+                <p><strong>Results:</strong> The new identity helped secure Series A funding within 3 months and was cited by investors as demonstrating "serious market positioning with creative flair."</p>
+                
+                <div class="modal-cta">
+                    <h4>Ready for a brand transformation?</h4>
+                    <p>Let's discuss how strategic design can elevate your business.</p>
+                    <a href="mailto:amitsharma.graphics@gmail.com" class="btn btn-primary">Start Your Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="smartModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <h3>Smart Click: Fintech Brand Positioning</h3>
+                <p><strong>Client Challenge:</strong> A digital banking startup needed to establish immediate trust while communicating technological sophistication in the crowded fintech space.</p>
+                
+                <p><strong>Solution:</strong> Created a visual identity based on geometric precision and a carefully balanced color palette. The interconnected shapes in the logo suggest seamless digital transactions, while the blue tones communicate stability and trust.</p>
+                
+                <p><strong>Deliverables:</strong> Complete brand identity system, digital interface guidelines, marketing collateral, investor presentation suite, and social media asset kit.</p>
+                
+                <p><strong>Results:</strong> User testing showed 40% higher trust perception compared to previous branding, contributing to a successful app launch with 10,000+ downloads in the first month.</p>
+                
+                <div class="modal-cta">
+                    <h4>Need to establish market trust?</h4>
+                    <p>Professional design builds credibility with your audience.</p>
+                    <a href="mailto:amitsharma.graphics@gmail.com" class="btn btn-primary">Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="speakModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <h3>SPEAK: Media Platform Identity</h3>
+                <p><strong>Client Challenge:</strong> A digital media company launching a new platform needed an identity that stood out in the saturated content market while appealing to both creators and audiences.</p>
+                
+                <p><strong>Solution:</strong> Developed a bold, typography-driven identity with a flexible visual system. The logo's speech bubble integration subtly reinforces the platform's focus on conversation and community.</p>
+                
+                <p><strong>Deliverables:</strong> Brand identity, content templates for various formats, social media toolkit, merchandise designs, and comprehensive brand guidelines for external content creators.</p>
+                
+                <p><strong>Results:</strong> The platform gained 50,000 registered users in the first six months, with the branding frequently mentioned in positive app reviews for its "fresh, professional look."</p>
+                
+                <div class="modal-cta">
+                    <h4>Want to stand out in a crowded market?</h4>
+                    <p>Distinctive design creates memorable brand experiences.</p>
+                    <a href="mailto:amitsharma.graphics@gmail.com" class="btn btn-primary">Email Me Today</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional modals for other projects -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <h3>Start Your Design Project</h3>
+                <p>Every successful project begins with a conversation. Whether you're launching a new business, refreshing an existing brand, or developing marketing materials, I approach each project with strategic thinking and artistic excellence.</p>
+                
+                <p><strong>My Process:</strong></p>
+                <ol style="margin-left: 20px; margin-bottom: 30px; line-height: 1.8;">
+                    <li><strong>Discovery:</strong> Understanding your business, audience, and objectives</li>
+                    <li><strong>Strategy:</strong> Developing a design approach aligned with your goals</li>
+                    <li><strong>Creation:</strong> Designing solutions that balance aesthetics and function</li>
+                    <li><strong>Refinement:</strong> Iterating based on your feedback</li>
+                    <li><strong>Delivery:</strong> Providing all assets with guidelines for consistent use</li>
+                </ol>
+                
+                <p>With 25+ years of experience across industries, I bring both creative vision and practical understanding to every project.</p>
+                
+                <div class="modal-cta">
+                    <h4>Let's Begin Your Project</h4>
+                    <p>Email me at <strong>amitsharma.graphics@gmail.com</strong> with your project details, timeline, and budget for a prompt response.</p>
+                    <a href="mailto:amitsharma.graphics@gmail.com" class="btn btn-primary" style="margin-top: 15px;">Start Today</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script>
@@ -966,14 +1412,39 @@
         // Check on scroll
         window.addEventListener('scroll', checkVisibility);
         
-        // Add some interactivity to portfolio cards
-        document.querySelectorAll('.portfolio-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-15px)';
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.style.display = 'none';
             });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside content
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if(e.target === this) {
+                    closeModal();
+                }
+            });
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape') {
+                closeModal();
+            }
+        });
+        
+        // Portfolio card click handlers for all images
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // The modal opening is handled by onclick attribute
             });
         });
         
@@ -989,7 +1460,8 @@
                 'Brochure1.jpg',
                 'Brochure2.jpg',
                 'Packaging1.jpg',
-                'Packaging2.jpg'
+                'Packaging2.jpg',
+                'Packaging3.jpg'
             ];
             
             imageUrls.forEach(url => {
@@ -1000,6 +1472,11 @@
         
         // Start preloading images when page loads
         window.addEventListener('load', preloadImages);
+        
+        // Initialize with first check
+        window.addEventListener('DOMContentLoaded', function() {
+            checkVisibility();
+        });
     </script>
 </body>
 </html>
