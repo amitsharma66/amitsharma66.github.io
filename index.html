@@ -3,168 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <title>Amit Sharma | Graphic Designer</title>
+<link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
-    color: #222;
-}
-
-/* HEADER */
-header {
-    padding: 25px 20px;
-    text-align: center;
-    background: #111;
-    color: #fff;
-}
-header h1 {
-    margin: 0;
-    font-size: 32px;
-}
-header p {
-    margin-top: 6px;
-    font-size: 15px;
-    opacity: 0.85;
-}
-
-
-/* SECTIONS */
-section {
-    padding: 60px 5%;
-    background: #fff;
-    margin-bottom: 30px;
-}
-section h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-.grid img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* CTA */
-.cta {
-    text-align: center;
-    padding: 60px 20px;
-    background: #111;
-    color: #fff;
-}
-.cta a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 32px;
-    background: #00c853;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 30px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    color: #aaa;
-    font-size: 14px;
-}
-</style>
 </head>
-
 <body>
 
 <!-- HERO -->
-<header>
-    <h1>Amit Sharma</h1>
-    <p>Graphic Designer | Brand Identity | Print & Digital Design</p>
+<header class="hero">
+  <h1>Amit Sharma</h1>
+  <p>Graphic Designer • Brand Identity • Print & Digital Design</p>
 </header>
 
-<!-- LOGOS -->
-<section>
-<h2>Logo Design</h2>
-<div class="grid">
-    <img src="beginIDEAS.jpg" alt="Begin Ideas Logo">
-    <img src="SMARTCLICK.jpg" alt="Smart Click Logo">
-    <img src="SPEAK.jpg" alt="Speak Logo">
-</div>
+<!-- LOGO DESIGN -->
+<section class="section">
+  <h2>Logo Design</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="images/beginIDEAS.jpg">
+      <h3>Begin Ideas</h3>
+      <p>Startup logo designed to represent creativity, innovation, and fresh thinking.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/SMARTCLICK.jpg">
+      <h3>Smart Click</h3>
+      <p>Technology-driven brand identity with a modern and digital-first approach.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/SPEAK.jpg">
+      <h3>SPEAK</h3>
+      <p>Voice-based platform logo combining communication, confidence, and clarity.</p>
+    </div>
+  </div>
 </section>
 
 <!-- FLYERS -->
-<section>
-<h2>Flyer Design</h2>
-<div class="grid">
-    <img src="Flyer1.jpg">
-    <img src="Flyer2.jpg">
-    <img src="Flyer3.jpg">
-</div>
+<section class="section alt">
+  <h2>Flyer Design</h2>
+
+  <div class="grid">
+    <div class="card"><img src="images/Flyer1.jpg"></div>
+    <div class="card"><img src="images/Flyer2.jpg"></div>
+    <div class="card"><img src="images/Flyer3.jpg"></div>
+  </div>
+
+  <p class="section-desc">
+    Promotional flyers designed for events, nightlife, and marketing campaigns with strong visual impact.
+  </p>
 </section>
 
 <!-- BROCHURES -->
-<section>
-<h2>Brochure Design</h2>
-<div class="grid">
-    <img src="Brochure1.jpg">
-    <img src="Brochure2.jpg">
-</div>
+<section class="section">
+  <h2>Brochure Design</h2>
+
+  <div class="grid two">
+    <div class="card"><img src="images/Brochure1.jpg"></div>
+    <div class="card"><img src="images/Brochure2.jpg"></div>
+  </div>
+
+  <p class="section-desc">
+    Multi-page brochure designs focused on layout clarity, typography, and brand storytelling.
+  </p>
 </section>
 
 <!-- POSTERS & BANNERS -->
-<section>
-<h2>Posters & Banners</h2>
-<div class="grid">
-    <img src="Poster.jpg">
-    <img src="Banner.jpg">
-    <img src="Roll-up banner.jpg">
-</div>
+<section class="section alt">
+  <h2>Posters & Banners</h2>
+
+  <div class="grid">
+    <div class="card"><img src="images/Poster.jpg"></div>
+    <div class="card"><img src="images/Banner.jpg"></div>
+  </div>
+
+  <p class="section-desc">
+    Large-format designs created for outdoor advertising, events, and brand promotions.
+  </p>
 </section>
 
 <!-- PACKAGING -->
-<section>
-<h2>Packaging Design</h2>
-<div class="grid">
-    <img src="Packaging1.jpg">
-    <img src="Packaging2.jpg">
-</div>
+<section class="section">
+  <h2>Packaging Design</h2>
+
+  <div class="grid two">
+    <div class="card"><img src="images/Packaging1.jpg"></div>
+    <div class="card"><img src="images/Packaging2.jpg"></div>
+  </div>
+
+  <p class="section-desc">
+    Clean and market-ready packaging designs focused on shelf appeal and branding.
+  </p>
 </section>
 
 <!-- PHOTO MANIPULATION -->
-<section>
-<h2>Photo Manipulation</h2>
-<div class="grid">
-    <img src="Photoshop1.jpg">
-    <img src="Photoshop2.jpg">
-</div>
+<section class="section alt">
+  <h2>Photo Manipulation</h2>
+
+  <div class="grid two">
+    <div class="card"><img src="images/Photoshop1.jpg"></div>
+    <div class="card"><img src="images/Photoshop2.jpg"></div>
+  </div>
+
+  <p class="section-desc">
+    Professional retouching and photo manipulation for advertising and creative visuals.
+  </p>
 </section>
 
 <!-- SOCIAL MEDIA -->
-<section>
-<h2>Social Media Creative</h2>
-<div class="grid">
-    <img src="Social media.jpg">
-</div>
+<section class="section">
+  <h2>Social Media Creatives</h2>
+
+  <div class="grid one">
+    <div class="card"><img src="images/Social media.jpg"></div>
+  </div>
+
+  <p class="section-desc">
+    Social media visuals designed for campaigns, branding, and online engagement.
+  </p>
 </section>
 
 <!-- CTA -->
-<div class="cta">
-    <h2>Start a Project Like This</h2>
-    <a href="#contact">Contact Me</a>
-</div>
+<section class="cta">
+  <h2>Start a Project Like This</h2>
+  <a href="#contact">Contact Me</a>
+</section>
 
 <footer>
-© 2025 Amit Sharma | Graphic Designer
+  © 2025 Amit Sharma | Graphic Designer
 </footer>
 
 </body>
