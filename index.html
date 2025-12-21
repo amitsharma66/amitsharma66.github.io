@@ -3,100 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Sharma | Professional Graphic Designer</title>
-
+    <title>Amit Sharma | Professional Graphic Designer Portfolio</title>
+    
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- External Stylesheet -->
+    
+    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://api.iconify.design/mdi:palette.svg">
+    
+    <style>
+        /* Temporary inline CSS to ensure basic styling loads immediately */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background: #f9fafb;
+            color: #111827;
+        }
+    </style>
 </head>
-
 <body>
-<header>
-    <div class="container header-container">
-        <a href="#home" class="logo">Amit<span>Sharma</span></a>
-
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation" aria-expanded="false">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <nav>
-            <ul id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<section id="home" class="hero">
-    <div class="container hero-content">
-        <h1>Amit Sharma</h1>
-        <p class="subtitle">Graphic Designer · Brand Identity · Print & Digital</p>
-        <p class="hero-tagline">Creating compelling visual identities that communicate brand values and connect with audiences across all media.</p>
-
-        <div class="hero-cta">
-            <a href="#portfolio" class="btn">View My Work</a>
-            <a href="#contact" class="btn btn-outline">Start a Project</a>
-        </div>
-    </div>
-</section>
-
-<section id="about" class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>About Me</h2>
-            <p class="section-subtitle">A dedicated visual storyteller with decades of design expertise</p>
-        </div>
-
-        <div class="about-card">
-            <p>I'm a graphic designer with <strong>25+ years</strong> of experience specializing in logo design, brand identity, print marketing, packaging, and digital creatives.</p>
-            <p>My approach blends strategic insight with creative execution to deliver work that is visually strong and commercially effective.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Portfolio sections remain unchanged -->
-
-<section id="contact" class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Get In Touch</h2>
-            <p class="section-subtitle">For project inquiries, please contact me via email.</p>
-        </div>
-
-        <div class="contact-info">
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <p>contact@amitsharma.design</p>
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">Amit<span>Sharma</span></a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<footer class="footer">
-    <div class="container">
-        <p>© 2025 Amit Sharma · Professional Graphic Designer</p>
-    </div>
-</footer>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Amit Sharma</h1>
+                <p class="hero-subtitle">Graphic Designer · Brand Identity · Print & Digital</p>
+                <p class="hero-description">Creating compelling visual identities that communicate brand values and connect with audiences across all media.</p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Start a Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navMenu = document.getElementById('navMenu');
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="section-subtitle">25+ years of professional design experience</p>
+            
+            <div class="about-card">
+                <div class="about-content">
+                    <p>With <strong>25+ years of experience</strong>, I specialize in creating visual identities that stand the test of time. My expertise spans logo design, brand systems, print marketing, packaging, and digital design.</p>
+                    <p>I believe in strategic design that not only looks beautiful but also achieves business objectives and resonates with target audiences.</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Projects Delivered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-if (mobileMenuBtn && navMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenuBtn.setAttribute(
-            'aria-expanded',
-            navMenu.classList.contains('active')
-        );
-    });
-}
-</script>
+    <!-- Portfolio Section -->
+    <section id="work" class="section section-alt">
+        <div class="container">
+            <h2>Logo & Brand Identity</h2>
+            <p class="section-subtitle">Distilled brand essences designed for clarity and impact</p>
+            
+            <div class="portfolio-grid">
+                <!-- Logo 1 -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="beginIDEAS.jpg" alt="Begin Ideas Logo" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Begin Ideas</h3>
+                        <p>Startup identity built around innovation and creativity with a modern lightbulb concept.</p>
+                    </div>
+                </div>
+                
+                <!-- Logo 2 -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="SMARTCLICK.jpg" alt="Smart Click Logo" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Smart Click</h3>
+                        <p>Fintech visual identity expressing digital efficiency, growth, and trust through sleek geometry.</p>
+                    </div>
+                </div>
+                
+                <!-- Logo 3 -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="SPEAK.jpg" alt="SPEAK Logo" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>SPEAK</h3>
+                        <p>Voice-centric branding for media with bold typography and communication cues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Print Design Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Print & Promotional Design</h2>
+            <p class="section-subtitle">High-impact collateral designed to capture attention</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="Flyer1.jpg" alt="Corporate Event Flyer" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Corporate Event</h3>
+                        <p>Clean, information-first flyer for professional conferences.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="Flyer2.jpg" alt="Product Launch Flyer" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Product Launch</h3>
+                        <p>Vibrant flyer designed to generate buzz for new products.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="Flyer3.jpg" alt="Sales Promotion Flyer" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sales Promotion</h3>
+                        <p>Direct promotional piece with strong call-to-action.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Design -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Brochure & Catalog Design</h2>
+            <p class="section-subtitle">Structured layouts that tell compelling brand stories</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="Brochure1.jpg" alt="Corporate Brochure" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Corporate Profile</h3>
+                        <p>Tri-fold brochure presenting services with credibility.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="Brochure2.jpg" alt="Product Catalog" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Product Catalog</h3>
+                        <p>Multi-page catalog showcasing product range clearly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packaging Design -->
+    <section class="section">
+        <div class="container">
+            <h2>Packaging Design</h2>
+            <p class="section-subtitle">Functional and aesthetic packaging that elevates brands</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="Packaging1.jpg" alt="Product Packaging" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Consumer Product</h3>
+                        <p>Retail packaging designed to stand out on shelves.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="Packaging2.jpg" alt="Eco Packaging" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Eco-Conscious Design</h3>
+                        <p>Sustainable packaging with clear brand messaging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Ready to discuss your next design project?</p>
+            
+            <div class="contact-card">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@amitsharma.design</p>
+                            <p class="contact-note">For project inquiries and consultations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-box">
+                    <h3>Start Your Project Today</h3>
+                    <p>Send me an email with your project details, timeline, and budget for a prompt response.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Amit Sharma</div>
+                <p class="footer-tagline">Professional Graphic Designer</p>
+                <p class="copyright">© 2025 Amit Sharma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            this.setAttribute('aria-expanded', 
+                this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+            );
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-menu').classList.remove('active');
+                    document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
