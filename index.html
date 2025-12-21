@@ -1,106 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amit Sharma | Graphic Designer</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amit Sharma | Graphic Designer</title>
+
+<style>
+/* ================= RESET & FIX SCROLL ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🔴 FIX SIDE SCROLL */
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f7f9;
+  color: #111;
+}
+
+/* ================= GLOBAL ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 70px 0;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: linear-gradient(90deg, #000, #111);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  opacity: 0.8;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.card h3 {
+  margin-top: 15px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.75;
+  margin-top: 6px;
+}
+
+/* ================= IMAGE SECTIONS ================= */
+.image-box img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+/* ================= CTA ================= */
+.cta {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 34px;
+  background: #00c853;
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header class="hero">
+<!-- ================= HEADER ================= -->
+<header>
   <h1>Amit Sharma</h1>
   <p>Graphic Designer · Brand Identity · Print & Digital</p>
 </header>
 
-<!-- LOGO DESIGN -->
-<section class="section">
+<!-- ================= LOGO DESIGN ================= -->
+<section class="container">
   <h2>Logo Design</h2>
   <div class="grid">
     <div class="card">
       <img src="beginIDEAS.jpg" alt="Begin Ideas Logo">
-      <h3>Begin Ideas</h3>
-      <p>Startup logo focused on creativity & innovation.</p>
+      <h3>Begin IDEAS</h3>
+      <p>Startup-focused logo built around creativity and clarity.</p>
     </div>
-
     <div class="card">
       <img src="SMARTCLICK.jpg" alt="Smart Click Logo">
       <h3>Smart Click</h3>
-      <p>Fintech-style logo with digital growth concept.</p>
+      <p>Fintech identity expressing growth and trust.</p>
     </div>
-
     <div class="card">
       <img src="SPEAK.jpg" alt="Speak Logo">
       <h3>SPEAK</h3>
-      <p>Podcast & voice branding with strong identity.</p>
+      <p>Voice-based brand identity focused on communication.</p>
     </div>
   </div>
 </section>
 
-<!-- FLYER DESIGN -->
-<section class="section light">
+<!-- ================= FLYER DESIGN ================= -->
+<section class="container">
   <h2>Flyer Design</h2>
   <div class="grid">
-    <div class="card"><img src="Flyer1.jpg"></div>
-    <div class="card"><img src="Flyer2.jpg"></div>
-    <div class="card"><img src="Flyer3.jpg"></div>
+    <div class="image-box"><img src="Flyer1.jpg"></div>
+    <div class="image-box"><img src="Flyer2.jpg"></div>
+    <div class="image-box"><img src="Flyer3.jpg"></div>
   </div>
 </section>
 
-<!-- BROCHURE -->
-<section class="section">
+<!-- ================= BROCHURE DESIGN ================= -->
+<section class="container">
   <h2>Brochure Design</h2>
-  <div class="grid two">
-    <div class="card"><img src="Brochure1.jpg"></div>
-    <div class="card"><img src="Brochure2.jpg"></div>
+  <div class="grid">
+    <div class="image-box"><img src="Brochure1.jpg"></div>
+    <div class="image-box"><img src="Brochure2.jpg"></div>
   </div>
 </section>
 
-<!-- POSTERS -->
-<section class="section light">
+<!-- ================= POSTERS & BANNERS ================= -->
+<section class="container">
   <h2>Posters & Banners</h2>
   <div class="grid">
-    <div class="card"><img src="Poster.jpg"></div>
-    <div class="card"><img src="Banner.jpg"></div>
-    <div class="card"><img src="Roll-up banner.jpg"></div>
+    <div class="image-box"><img src="Poster.jpg"></div>
+    <div class="image-box"><img src="Banner.jpg"></div>
+    <div class="image-box"><img src="Roll-up banner.jpg"></div>
   </div>
 </section>
 
-<!-- PACKAGING -->
-<section class="section">
+<!-- ================= PACKAGING ================= -->
+<section class="container">
   <h2>Packaging Design</h2>
-  <div class="grid two">
-    <div class="card"><img src="Packaging1.jpg"></div>
-    <div class="card"><img src="Packaging2.jpg"></div>
+  <div class="grid">
+    <div class="image-box"><img src="Packaging1.jpg"></div>
+    <div class="image-box"><img src="Packaging2.jpg"></div>
   </div>
 </section>
 
-<!-- PHOTO MANIPULATION -->
-<section class="section light">
+<!-- ================= PHOTO MANIPULATION ================= -->
+<section class="container">
   <h2>Photo Manipulation</h2>
-  <div class="grid two">
-    <div class="card"><img src="Photoshop1.jpg"></div>
-    <div class="card"><img src="Photoshop2.jpg"></div>
+  <div class="grid">
+    <div class="image-box"><img src="Photoshop1.jpg"></div>
+    <div class="image-box"><img src="Photoshop2.jpg"></div>
   </div>
 </section>
 
-<!-- SOCIAL MEDIA -->
-<section class="section">
+<!-- ================= SOCIAL MEDIA ================= -->
+<section class="container">
   <h2>Social Media Creative</h2>
-  <div class="grid one">
-    <div class="card"><img src="Social media.jpg"></div>
+  <div class="image-box">
+    <img src="Social media.jpg">
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<!-- ================= CTA ================= -->
+<div class="cta">
   <h2>Start a Project Like This</h2>
   <a href="#contact">Contact Me</a>
-</section>
+</div>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer>
   © 2025 Amit Sharma · Graphic Designer
 </footer>
