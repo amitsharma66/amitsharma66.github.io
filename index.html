@@ -6,147 +6,158 @@
 <title>Amit Sharma | Graphic Designer</title>
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box}
 
-body {
-  font-family: 'Inter', sans-serif;
+body{
+  font-family:'Inter',sans-serif;
   background:#f4f5f7;
   color:#111;
-  line-height:1.6;
+  line-height:1.7;
 }
 
 /* HERO */
-.hero {
-  background: linear-gradient(135deg,#000,#1a1a1a);
+.hero{
+  background:linear-gradient(135deg,#000,#1a1a1a);
   color:#fff;
   padding:90px 20px;
   text-align:center;
 }
-.hero h1 {
-  font-family:'Playfair Display', serif;
-  font-size:46px;
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  margin-bottom:10px;
 }
-.hero p {
-  margin-top:10px;
-  font-size:14px;
-  letter-spacing:1px;
+.hero p{
+  font-size:13px;
+  letter-spacing:2px;
   text-transform:uppercase;
-  opacity:.8;
+  opacity:.85;
 }
 
 /* SECTIONS */
-.section {
+.section{
   max-width:1200px;
   margin:auto;
-  padding:80px 20px;
+  padding:90px 20px;
 }
-.section h2 {
-  font-family:'Playfair Display', serif;
-  font-size:34px;
+.section h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:15px;
 }
-.section .subtitle {
+.section .subtitle{
   text-align:center;
-  max-width:700px;
+  max-width:720px;
   margin:0 auto 60px;
   color:#555;
+  font-size:15px;
 }
 
 /* GRID */
-.grid {
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:35px;
 }
 
-/* CARD */
-.card {
+/* LOGO CARD */
+.logo-card{
   background:#fff;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  padding:45px 35px;
+  border-radius:20px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
   text-align:center;
 }
-.card img {
+
+.logo-card img{
   width:100%;
-  max-height:140px;
-  object-fit:contain;
-  margin-bottom:20px;
+  max-width:220px;
+  height:auto;
+  margin-bottom:25px;
 }
-.card h3 { font-size:18px; margin-bottom:10px; }
-.card p { font-size:14px; color:#555; }
+
+.logo-card h3{
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.logo-card p{
+  font-size:14px;
+  color:#555;
+}
 
 /* IMAGE WORK */
-.work-img {
+.work-img{
   width:100%;
-  height:260px;
+  height:280px;
   object-fit:cover;
-  border-radius:16px;
-  box-shadow:0 10px 25px rgba(0,0,0,.12);
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
 }
 
 /* ABOUT */
-.about {
+.about{
   background:#fff;
-  border-radius:20px;
-  padding:50px;
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  border-radius:22px;
+  padding:55px;
   max-width:900px;
   margin:0 auto;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
   text-align:center;
+  font-size:16px;
 }
 
 /* CTA */
-.cta {
+.cta{
   background:#000;
   color:#fff;
   padding:90px 20px;
   text-align:center;
 }
-.cta h2 {
-  font-family:'Playfair Display', serif;
-  font-size:36px;
+.cta h2{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
   margin-bottom:15px;
 }
-.cta p {
-  max-width:600px;
-  margin:0 auto 30px;
+.cta p{
+  max-width:620px;
+  margin:0 auto 35px;
   color:#ccc;
 }
-.cta a {
+.cta a{
   background:#22c55e;
   color:#000;
-  padding:14px 36px;
+  padding:14px 38px;
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
 }
 
 /* CONTACT */
-.contact {
+.contact{
   background:#fff;
-  padding:80px 20px;
+  padding:90px 20px;
 }
-.contact-box {
-  max-width:700px;
+.contact-box{
+  max-width:720px;
   margin:auto;
   text-align:center;
 }
-.contact-box p {
-  margin:10px 0;
+.contact-box p{
+  margin:12px 0;
   font-size:15px;
 }
 
 /* FOOTER */
-footer {
+footer{
   background:#000;
   color:#777;
   text-align:center;
-  padding:20px;
+  padding:22px;
   font-size:13px;
 }
 </style>
@@ -164,33 +175,45 @@ footer {
 <section class="section">
   <h2>About Me</h2>
   <div class="about">
-    <p>
-      I’m a graphic designer with 15+ years of experience specializing in logo design,
-      brand identity, print marketing, and digital creatives.  
-      My focus is on clean visuals, clear messaging, and designs that help businesses grow.
-    </p>
+    I’m a graphic designer with 15+ years of experience specializing in logo design,
+    brand identity, print marketing, packaging, and digital creatives.
+    I focus on clean visuals, strong concepts, and designs that help brands stand out.
   </div>
 </section>
 
 <!-- LOGO DESIGN -->
 <section class="section">
   <h2>Logo Design</h2>
-  <p class="subtitle">Brand identities crafted with strategy, clarity, and creativity.</p>
+  <p class="subtitle">
+    Carefully crafted brand identities designed to communicate clarity, trust, and purpose.
+  </p>
+
   <div class="grid">
-    <div class="card">
+    <div class="logo-card">
       <img src="begin.jpg">
       <h3>Begin Ideas</h3>
-      <p>Startup-focused logo designed around creativity and idea generation.</p>
+      <p>
+        Startup-focused logo designed around creativity, innovation,
+        and idea generation using a lightbulb concept.
+      </p>
     </div>
-    <div class="card">
+
+    <div class="logo-card">
       <img src="SMARTCLICK.jpg">
       <h3>Smart Click</h3>
-      <p>Fintech brand identity expressing growth, trust, and digital efficiency.</p>
+      <p>
+        Fintech brand identity expressing growth, trust,
+        and digital efficiency through modern visual language.
+      </p>
     </div>
-    <div class="card">
+
+    <div class="logo-card">
       <img src="SPEAK.jpg">
       <h3>SPEAK</h3>
-      <p>Podcast & voice branding focused on communication and confidence.</p>
+      <p>
+        Voice-based brand identity designed for podcasts and speakers,
+        combining communication and confidence.
+      </p>
     </div>
   </div>
 </section>
@@ -198,7 +221,7 @@ footer {
 <!-- FLYERS -->
 <section class="section">
   <h2>Flyer Design</h2>
-  <p class="subtitle">High-impact promotional designs for print and events.</p>
+  <p class="subtitle">High-impact promotional designs for print marketing.</p>
   <div class="grid">
     <img src="Flyer1.jpg" class="work-img">
     <img src="Flyer2.jpg" class="work-img">
@@ -209,7 +232,7 @@ footer {
 <!-- BROCHURE -->
 <section class="section">
   <h2>Brochure Design</h2>
-  <p class="subtitle">Clean layouts designed for storytelling and clarity.</p>
+  <p class="subtitle">Structured layouts designed for clarity and storytelling.</p>
   <div class="grid">
     <img src="Brochure1.jpg" class="work-img">
     <img src="Brochure2.jpg" class="work-img">
@@ -219,7 +242,7 @@ footer {
 <!-- POSTERS -->
 <section class="section">
   <h2>Posters & Banners</h2>
-  <p class="subtitle">Large-format designs for marketing and visibility.</p>
+  <p class="subtitle">Large-format designs for strong visual presence.</p>
   <div class="grid">
     <img src="Poster.jpg" class="work-img">
     <img src="Roll-up banner.jpg" class="work-img">
@@ -230,7 +253,7 @@ footer {
 <!-- PACKAGING -->
 <section class="section">
   <h2>Packaging Design</h2>
-  <p class="subtitle">Product packaging that balances branding and usability.</p>
+  <p class="subtitle">Packaging that balances branding and usability.</p>
   <div class="grid">
     <img src="Packaging1.jpg" class="work-img">
     <img src="Packaging2.jpg" class="work-img">
@@ -239,8 +262,8 @@ footer {
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Let’s Work Together</h2>
-  <p>If you’re looking for professional, reliable design support — let’s talk.</p>
+  <h2>Start a Project Like This</h2>
+  <p>If you’re looking for reliable, professional graphic design support — let’s connect.</p>
   <a href="#contact">Contact Me</a>
 </section>
 
