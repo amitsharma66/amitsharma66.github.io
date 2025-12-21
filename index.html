@@ -13,9 +13,6 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Animate.css for animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://api.iconify.design/mdi:palette.svg">
     
@@ -358,6 +355,10 @@
         .card-image {
             height: 250px;
             overflow: hidden;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .card-image img {
@@ -491,6 +492,22 @@
         .animate-on-scroll.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+        
+        /* Image Placeholder Styling */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: linear-gradient(45deg, #f0f0f0 25%, #f8f8f8 25%, #f8f8f8 50%, #f0f0f0 50%, #f0f0f0 75%, #f8f8f8 75%, #f8f8f8);
+            background-size: 20px 20px;
+            text-align: center;
+            padding: 20px;
         }
         
         /* Responsive Design */
@@ -673,7 +690,7 @@
                 <!-- Logo 1 -->
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">BI</div>
+                        <img src="beginIDEAS.jpg" alt="Begin Ideas Logo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Begin Ideas Logo<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Begin Ideas</h3>
@@ -684,7 +701,7 @@
                 <!-- Logo 2 -->
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">SC</div>
+                        <img src="SMARTCLICK.jpg" alt="Smart Click Logo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Smart Click Logo<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Smart Click</h3>
@@ -695,7 +712,7 @@
                 <!-- Logo 3 -->
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">S</div>
+                        <img src="SPEAK.jpg" alt="SPEAK Logo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>SPEAK Logo<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>SPEAK</h3>
@@ -715,7 +732,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Corporate Event Flyer Design</div>
+                        <img src="Flyer1.jpg" alt="Corporate Event Flyer" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Corporate Event Flyer<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Corporate Event</h3>
@@ -725,7 +742,7 @@
                 
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Product Launch Promotion</div>
+                        <img src="Flyer2.jpg" alt="Product Launch Flyer" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Launch Flyer<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Product Launch</h3>
@@ -735,7 +752,7 @@
                 
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #c1dfc4 0%, #deecdd 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Sales Promotion Design</div>
+                        <img src="Flyer3.jpg" alt="Sales Promotion Flyer" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Sales Promotion Flyer<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Sales Promotion</h3>
@@ -755,7 +772,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Corporate Brochure Design</div>
+                        <img src="Brochure1.jpg" alt="Corporate Brochure" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Corporate Brochure<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Corporate Profile</h3>
@@ -765,7 +782,7 @@
                 
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Product Catalog Design</div>
+                        <img src="Brochure2.jpg" alt="Product Catalog" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Catalog<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Product Catalog</h3>
@@ -775,7 +792,7 @@
                 
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Brand Brochure Design</div>
+                        <img src="Packaging1.jpg" alt="Product Packaging" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Packaging<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Brand Story Brochure</h3>
@@ -795,7 +812,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #96fbc4 0%, #f9f586 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Product Packaging Design</div>
+                        <img src="Packaging1.jpg" alt="Product Packaging" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Product Packaging<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Consumer Product</h3>
@@ -805,7 +822,7 @@
                 
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Eco Packaging Design</div>
+                        <img src="Packaging2.jpg" alt="Eco Packaging" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Eco Packaging<br><small>Image not found</small></div>';">
                     </div>
                     <div class="card-content">
                         <h3>Eco-Conscious Design</h3>
@@ -815,7 +832,7 @@
                 
                 <div class="portfolio-card animate-on-scroll">
                     <div class="card-image">
-                        <div style="background: linear-gradient(135deg, #a3bded 0%, #6991c7 100%); height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 2rem; font-weight: bold; padding: 20px; text-align: center;">Premium Packaging</div>
+                        <div class="image-placeholder">Packaging Design Example<br><small>Add your packaging image here</small></div>
                     </div>
                     <div class="card-content">
                         <h3>Luxury Packaging</h3>
@@ -959,6 +976,30 @@
                 this.style.transform = 'translateY(0)';
             });
         });
+        
+        // Preload images for better user experience
+        function preloadImages() {
+            const imageUrls = [
+                'beginIDEAS.jpg',
+                'SMARTCLICK.jpg',
+                'SPEAK.jpg',
+                'Flyer1.jpg',
+                'Flyer2.jpg',
+                'Flyer3.jpg',
+                'Brochure1.jpg',
+                'Brochure2.jpg',
+                'Packaging1.jpg',
+                'Packaging2.jpg'
+            ];
+            
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        }
+        
+        // Start preloading images when page loads
+        window.addEventListener('load', preloadImages);
     </script>
 </body>
 </html>
