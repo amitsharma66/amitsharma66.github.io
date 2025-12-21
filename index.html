@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        /* CSS Variables */
         :root {
             --primary: #2C3E50;
             --secondary: #7B8A8B;
@@ -24,32 +25,61 @@
             --transition: all 0.3s ease;
             --border-radius: 8px;
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: #fafafa;
-            background-image:
-                radial-gradient(circle at 15% 50%, rgba(234,238,242,0.5) 0%, transparent 55%),
-                radial-gradient(circle at 85% 30%, rgba(234,238,242,0.4) 0%, transparent 55%);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(234, 238, 242, 0.5) 0%, transparent 55%),
+                radial-gradient(circle at 85% 30%, rgba(234, 238, 242, 0.4) 0%, transparent 55%);
+            min-height: 100vh;
         }
-
+        
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             line-height: 1.3;
         }
-
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; display: block; }
-
-        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
-        .section { padding: 80px 0; }
-
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
         .btn {
             display: inline-block;
             padding: 12px 28px;
@@ -58,226 +88,902 @@
             font-size: 15px;
             cursor: pointer;
             transition: var(--transition);
-            border: 1px solid var(--primary);
             text-align: center;
+            border: 1px solid var(--primary);
         }
-
-        /* ✅ Button contrast improved */
+        
         .btn-primary {
             background-color: var(--primary);
-            color: #fff;
-            box-shadow: 0 6px 18px rgba(44,62,80,0.25);
+            color: white;
         }
-
+        
         .btn-primary:hover {
             background-color: #1a252f;
             transform: translateY(-2px);
         }
-
+        
         .btn-secondary {
-            background: transparent;
+            background-color: transparent;
             color: var(--primary);
         }
-
+        
         .btn-secondary:hover {
-            background: rgba(44,62,80,0.05);
+            background-color: rgba(44, 62, 80, 0.05);
             transform: translateY(-2px);
         }
-
+        
+        /* Navigation */
         header {
             position: fixed;
-            width: 100%;
             top: 0;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(5px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            left: 0;
+            width: 100%;
             z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
-
+        
         .nav-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
         }
-
+        
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
             font-weight: 700;
             color: var(--primary);
         }
-
-        .nav-menu { display: flex; gap: 30px; }
-        .nav-menu a { font-size: 15px; color: var(--gray); }
-        .nav-menu a:hover { color: var(--primary); }
-
-        .menu-toggle { display: none; background: none; border: none; font-size: 20px; }
-
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-menu li a {
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+        
+        .nav-menu li a:hover {
+            color: var(--primary);
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding-top: 80px;
-            background: linear-gradient(135deg, rgba(248,249,250,.9), rgba(234,238,242,.8));
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.9) 0%, rgba(234, 238, 242, 0.8) 100%);
+            position: relative;
         }
-
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(52, 152, 219, 0.03) 0%, transparent 50%);
+        }
+        
         .hero-content {
+            position: relative;
+            z-index: 2;
             max-width: 800px;
-            margin: auto;
             text-align: center;
+            margin: 0 auto;
             padding: 40px 0;
         }
-
-        .hero h1 { font-size: 3.2rem; margin-bottom: 20px; }
-        .hero-subtitle { font-size: 1.4rem; color: var(--accent); margin-bottom: 25px; }
-        .hero-description { font-size: 1.1rem; color: var(--gray); max-width: 700px; margin: auto; }
-
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+        
         .hero-buttons {
             display: flex;
             gap: 15px;
             justify-content: center;
             margin-top: 30px;
         }
-
-        /* ✅ Large screen hero spacing */
-        @media (min-width: 1400px) {
-            .hero { padding-top: 140px; padding-bottom: 120px; }
-            .hero h1 { font-size: 3.6rem; }
-            .hero-description { font-size: 1.15rem; max-width: 760px; }
+        
+        /* Section Headings */
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            text-align: center;
         }
-
-        .section h2 { font-size: 2.5rem; text-align: center; margin-bottom: 15px; }
-        .section-subtitle { text-align: center; color: var(--gray); margin-bottom: 60px; max-width: 700px; margin-inline: auto; }
-
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+        
+        /* About Section */
+        .about-content {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .about-content p {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 25px 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        /* Portfolio Section */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
-
+        
         .portfolio-card {
-            background: #fff;
+            background: white;
             border-radius: var(--border-radius);
             overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.05);
-            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
             transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            cursor: pointer;
         }
-
+        
         .portfolio-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
-
-        .card-image { height: 240px; background: #f5f5f5; }
-        .card-image img { width: 100%; height: 100%; object-fit: cover; }
-
-        .card-content { padding: 25px; }
-        .card-content h3 { margin-bottom: 10px; }
-
+        
+        .card-image {
+            height: 240px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-card:hover .card-image img {
+            transform: scale(1.03);
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .card-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .card-content p {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .project-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(52, 152, 219, 0.1);
+            color: var(--accent);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* Contact Section */
         .contact-section {
-            background: linear-gradient(135deg, #f8f9fa, #eaeef2);
-            border-top: 1px solid rgba(0,0,0,.05);
+            background: linear-gradient(135deg, #f8f9fa 0%, #eaeef2 100%);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
-
+        
         .contact-card {
-            background: #fff;
-            padding: 60px;
+            background: white;
             border-radius: var(--border-radius);
+            padding: 60px;
             max-width: 800px;
-            margin: auto;
-            border: 1px solid rgba(0,0,0,.05);
+            margin: 0 auto;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
-
-        footer {
-            background: var(--primary);
-            color: #fff;
+        
+        .contact-info {
             text-align: center;
-            padding: 50px 0 30px;
+            margin-bottom: 40px;
         }
-
+        
+        .contact-email {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .contact-note {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+        
+        .cta-box {
+            text-align: center;
+            padding: 30px;
+            background: rgba(52, 152, 219, 0.05);
+            border-radius: var(--border-radius);
+        }
+        
+        .cta-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .cta-box p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .footer-tagline {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Simple Modal */
         .modal {
             display: none;
             position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,.7);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
             z-index: 2000;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
-
+        
         .modal-content {
-            background: #fff;
+            background: white;
             border-radius: var(--border-radius);
             max-width: 500px;
             width: 100%;
             position: relative;
         }
-
+        
         .modal-close {
             position: absolute;
             top: 15px;
             right: 15px;
             background: var(--primary);
-            color: #fff;
-            border-radius: 50%;
+            color: white;
             width: 30px;
             height: 30px;
-            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
+            font-size: 16px;
+            border: none;
         }
-
-        .modal-body { padding: 40px; text-align: center; }
+        
+        .modal-body {
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .modal-body h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .modal-body p {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-card {
+                padding: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+                gap: 20px;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-menu li {
+                margin: 10px 0;
+            }
+            
+            .section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .about-content {
+                padding: 40px 25px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-card {
+                padding: 30px 20px;
+            }
+            
+            .modal-body {
+                padding: 30px 20px;
+            }
+        }
     </style>
 </head>
-
 <body>
+    <!-- Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">Amit Sharma</a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#work">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<header>
-    <div class="container nav-wrapper">
-        <a class="logo">Amit Sharma</a>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-        </nav>
-    </div>
-</header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Crafting Iconic Brands Since 1998</h1>
+                <p class="hero-subtitle">25+ Years of Visual Design Excellence</p>
+                <p class="hero-description">I transform business visions into compelling visual identities that resonate, engage, and drive results. With expertise spanning brand identity, print design, and packaging, I help established businesses and ambitious startups stand out in crowded markets.</p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Start Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="home" class="hero">
-    <div class="container hero-content">
-        <h1>Crafting Iconic Brands Since 1998</h1>
-        <p class="hero-subtitle">25+ Years of Visual Design Excellence</p>
-        <p class="hero-description">
-            I transform business visions into compelling visual identities that resonate, engage, and drive results.
-        </p>
-        <div class="hero-buttons">
-            <a href="#work" class="btn btn-primary">View Portfolio</a>
-            <a href="#contact" class="btn btn-secondary">Start Your Project</a>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>The Designer Behind the Designs</h2>
+            <p class="section-subtitle">Two and a half decades of solving complex brand challenges with simple, powerful design solutions</p>
+            
+            <div class="about-content">
+                <p>For over 25 years, I've partnered with businesses across industries to create visual identities that don't just look good—they work hard. My approach combines strategic thinking with artistic execution, ensuring every design element serves a purpose and advances your business objectives.</p>
+                <p>What sets my work apart is the depth of experience I bring to each project. Having witnessed design trends come and go since the 90s, I focus on creating timeless solutions that remain effective for years, not just seasons. I specialize in comprehensive brand systems, from initial logo concepts to complete brand guidelines that ensure consistency across all touchpoints.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Years Design Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Successful Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="section" style="background: white;">
+        <div class="container">
+            <h2>Logo & Brand Identity Systems</h2>
+            <p class="section-subtitle">Comprehensive visual identities that establish market leadership and customer trust</p>
+            
+            <div class="portfolio-grid">
+                <!-- Logo 1 -->
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="beginIDEAS.jpg" alt="Begin Ideas - Tech Startup Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Begin Ideas Brand Identity</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Begin Ideas</h3>
+                        <p>A complete brand identity for an innovative tech startup. The logo symbolizes creativity meeting technology, while the extended visual system provides flexibility across digital and print applications.</p>
+                        <div class="project-tag">Technology Startup</div>
+                    </div>
+                </div>
+                
+                <!-- Logo 2 -->
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="SMARTCLICK.jpg" alt="Smart Click - Fintech Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Smart Click Brand Identity</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Smart Click</h3>
+                        <p>Financial technology branding that balances innovation with trust. The geometric logo suggests precision and digital efficiency, while the color palette communicates stability and forward momentum.</p>
+                        <div class="project-tag">Fintech Branding</div>
+                    </div>
+                </div>
+                
+                <!-- Logo 3 -->
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="SPEAK.jpg" alt="SPEAK - Media Platform Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>SPEAK Media Branding</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>SPEAK Media</h3>
+                        <p>Bold identity for a digital media platform focused on authentic voices. The typography-driven logo communicates clarity and impact, supported by a dynamic visual language for various content formats.</p>
+                        <div class="project-tag">Media & Publishing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Print Design Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Print & Marketing Collateral</h2>
+            <p class="section-subtitle">Tangible designs that create meaningful connections and drive measurable action</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="Flyer1.jpg" alt="Corporate Conference Marketing Suite" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Corporate Event Series</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Global Tech Summit</h3>
+                        <p>Complete print suite for a major industry conference. Clean information hierarchy guides attendees while sophisticated design reinforces the event's premium positioning.</p>
+                        <div class="project-tag">Event Marketing</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="Flyer2.jpg" alt="Product Launch Campaign Materials" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Product Launch Campaign</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Innovation Launch Series</h3>
+                        <p>High-impact launch campaign generating excitement for a new product line. Vibrant visuals and strategic messaging created urgency while clearly communicating benefits.</p>
+                        <div class="project-tag">Product Launch</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="Flyer3.jpg" alt="Sales Promotion & Direct Response Campaign" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Sales Promotion Campaign</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Seasonal Sales Drive</h3>
+                        <p>Results-focused direct marketing campaign with clear calls-to-action. Strategic design elements guide customer journey from attention to conversion with measurable ROI.</p>
+                        <div class="project-tag">Direct Marketing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Design -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <h2>Brochure & Corporate Literature</h2>
+            <p class="section-subtitle">Information architecture that transforms complex messages into compelling narratives</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="Brochure1.jpg" alt="Corporate Capabilities Brochure" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Corporate Profile Brochure</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Enterprise Solutions Guide</h3>
+                        <p>Sophisticated corporate brochure establishing market authority. Clean layout and strategic content organization present complex service offerings with clarity and impact.</p>
+                        <div class="project-tag">Corporate Communications</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="Brochure2.jpg" alt="Product Catalog & Technical Specifications" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Product Catalog System</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Product Catalog System</h3>
+                        <p>Comprehensive catalog balancing aesthetic appeal with functional information design. Intuitive navigation and clear product comparison facilitate purchasing decisions.</p>
+                        <div class="project-tag">Sales Enablement</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="Packaging1.jpg" alt="Packaging Design - Retail Products" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Retail Packaging Design</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Premium Retail Packaging</h3>
+                        <p>Shelf-stopping packaging that communicates quality at first glance. Strategic use of materials, finishes, and structural design creates memorable unboxing experiences.</p>
+                        <div class="project-tag">Retail Packaging</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packaging Design -->
+    <section class="section">
+        <div class="container">
+            <h2>Packaging & Product Experience</h2>
+            <p class="section-subtitle">Three-dimensional design that builds brand loyalty through exceptional customer experiences</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="Packaging2.jpg" alt="Sustainable Packaging Solutions" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Eco-Friendly Packaging</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Eco-Conscious Packaging</h3>
+                        <p>Sustainable packaging solutions that align with brand values while maintaining shelf appeal. Innovative material use and minimalist design reduce environmental impact.</p>
+                        <div class="project-tag">Sustainable Design</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <img src="Packaging3.jpg" alt="Luxury Product Packaging" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Luxury Packaging Design</div>';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Luxury Fragrance Collection</h3>
+                        <p>High-end packaging that justifies premium positioning through meticulous attention to detail. Tactile materials, foiling, and structural innovation create collectible quality.</p>
+                        <div class="project-tag">Luxury Branding</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card" onclick="openContactModal()">
+                    <div class="card-image">
+                        <div style="height:100%; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg, #2C3E50, #3498DB); color:white; padding:20px; text-align:center;">
+                            <div>
+                                <h3 style="color:white; margin-bottom:10px;">Your Project Here</h3>
+                                <p>Let's create something exceptional together</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Your Brand's Next Chapter</h3>
+                        <p>Ready to transform your visual identity? From initial concept to final execution, I provide complete design solutions tailored to your specific business needs.</p>
+                        <div class="project-tag">Next Project</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Let's Create Something Exceptional</h2>
+            <p class="section-subtitle">Your vision + my 25 years of expertise = Results that exceed expectations</p>
+            
+            <div class="contact-card">
+                <div class="contact-info">
+                    <div class="contact-email">amitsharma.graphics@gmail.com</div>
+                    <p class="contact-note">Primary contact for all project discussions</p>
+                </div>
+                
+                <div class="cta-box">
+                    <h3>Start With a Conversation</h3>
+                    <p>The best projects begin with understanding your goals, audience, and market position. Include details about your timeline, budget, and vision when you reach out. I'll provide a comprehensive proposal outlining how we can achieve your objectives through strategic design.</p>
+                    <a href="mailto:amitsharma.graphics@gmail.com" class="btn btn-primary">Email Your Project Brief</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Amit Sharma</div>
+                <p class="footer-tagline">Transforming business visions into timeless visual identities since 1998</p>
+                <p class="copyright">© 1998-2025 Amit Sharma | Professional Graphic Design Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <h3>Start Your Design Project</h3>
+                <p>Let's discuss how we can bring your vision to life with professional design solutions.</p>
+                <p>Email me at:</p>
+                <div style="font-size: 1.3rem; color: #2C3E50; font-weight: 500; margin: 20px 0;">amitsharma.graphics@gmail.com</div>
+                <p>Include details about your project, timeline, and budget for a prompt response.</p>
+                <a href="mailto:amitsharma.graphics@gmail.com" class="btn btn-primary" style="margin-top: 20px;">Send Email Now</a>
+            </div>
         </div>
     </div>
-</section>
 
-<!-- ALL YOUR SECTIONS REMAIN UNCHANGED BELOW -->
-<!-- Portfolio, Print, Brochure, Packaging, Contact, Footer, Modal, JS -->
-<!-- (intentionally preserved exactly as provided) -->
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
 
-<script>
-function openContactModal() {
-    document.getElementById('contactModal').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-    document.getElementById('contactModal').style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-</script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-menu').classList.remove('active');
+                }
+            });
+        });
 
+        // Modal functionality
+        function openContactModal() {
+            document.getElementById('contactModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if(e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape') {
+                closeModal();
+            }
+        });
+        
+        // Preload images
+        function preloadImages() {
+            const imageUrls = [
+                'beginIDEAS.jpg',
+                'SMARTCLICK.jpg',
+                'SPEAK.jpg',
+                'Flyer1.jpg',
+                'Flyer2.jpg',
+                'Flyer3.jpg',
+                'Brochure1.jpg',
+                'Brochure2.jpg',
+                'Packaging1.jpg',
+                'Packaging2.jpg',
+                'Packaging3.jpg'
+            ];
+            
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        }
+        
+        // Start preloading images
+        window.addEventListener('load', preloadImages);
+    </script>
 </body>
 </html>
