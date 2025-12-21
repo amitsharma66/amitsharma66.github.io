@@ -612,3 +612,11 @@ p {
     height: 200px;
   }
 }
+/* ===== CRITICAL IMAGE FALLBACK ===== */
+/* Added to ensure portfolio images always display cleanly */
+.work-img {
+    background-color: transparent; /* Removes any default/gradient background */
+}
+.work-img-container:has(img[src=""]) {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
