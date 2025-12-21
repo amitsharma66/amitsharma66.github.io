@@ -4,58 +4,116 @@
   <meta charset="UTF-8">
   <title>Amit Sharma | Graphic Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background-color: #111827;
       color: #ffffff;
-      text-align: center;
     }
+
+    /* HERO */
     .hero {
       padding: 120px 20px;
+      text-align: center;
     }
-    h1 {
+
+    .hero h1 {
       font-size: 48px;
       margin-bottom: 10px;
     }
-    h2 {
+
+    .hero h2 {
       font-size: 22px;
       font-weight: normal;
       color: #d1d5db;
       margin-bottom: 20px;
     }
-    p {
+
+    .hero p {
       font-size: 18px;
       color: #9ca3af;
       margin-bottom: 40px;
     }
+
     .btn {
       display: inline-block;
-      padding: 14px 28px;
+      padding: 14px 30px;
       background-color: #22c55e;
       color: #ffffff;
       text-decoration: none;
       border-radius: 6px;
       font-size: 16px;
     }
+
+    /* PORTFOLIO */
+    #portfolio {
+      background-color: #ffffff;
+      color: #111111;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #portfolio h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    #portfolio p {
+      color: #555555;
+      margin-bottom: 50px;
+      font-size: 16px;
+    }
+
+    .portfolio-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .portfolio-wrapper img {
+      width: 100%;
+      margin-bottom: 40px;
+      border-radius: 6px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <h1>Amit Sharma</h1>
     <h2>Graphic Designer — Branding & Marketing Design</h2>
     <p>Helping small businesses look professional and attract customers</p>
     <a href="#portfolio" class="btn">View Portfolio</a>
-<section id="portfolio" style="background:#ffffff;color:#111;padding:80px 20px;">
-  <h2 style="font-size:36px;margin-bottom:10px;">Portfolio</h2>
-  <p style="color:#555;margin-bottom:40px;">
-    Selected branding and design work.
-  </p>
-</section>
-
   </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio">
+    <h2>Logo Design Projects</h2>
+    <p>A selection of logo designs created for different brands.</p>
+
+    <div class="portfolio-wrapper">
+      <img src="logo1.jpg" alt="SPEAK Logo Design">
+      <img src="logo2.jpg" alt="Begin Ideas Logo Design">
+      <img src="logo3.jpg" alt="SmartClick Logo Design">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Amit Sharma — Graphic Designer
+  </footer>
 
 </body>
 </html>
