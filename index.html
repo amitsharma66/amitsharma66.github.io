@@ -1,550 +1,519 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Sharma | Professional Graphic Designer</title>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Additional inline styles for this specific page */
-        :root {
-            --primary-color: #1a1a1a;
-            --secondary-color: #333333;
-            --accent-color: #4f46e5;
-            --light-color: #f8fafc;
-            --text-color: #333333;
-            --text-light: #666666;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
-            --border-radius: 16px;
-        }
-        
-        /* Hero Section Background */
-        .hero {
-            background: linear-gradient(135deg, #000, #1a1a1a), 
-                        url('Banner.jpg') no-repeat center center/cover;
-        }
-        
-        .hero::before {
-            background: none; /* Remove the previous background */
-        }
-    </style>
-</head>
+/* ===== CSS RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
 
-<body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo">Amit<span>Sharma</span></a>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <nav>
-                <ul id="navMenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+:root {
+  /* Color Variables */
+  --primary-color: #111827;
+  --secondary-color: #1f2937;
+  --accent-color: #4f46e5;
+  --accent-light: #6366f1;
+  --light-color: #f9fafb;
+  --text-color: #111827;
+  --text-light: #6b7280;
+  --text-white: #ffffff;
+  --card-bg: #ffffff;
+  --muted-bg: #f3f4f6;
+  --dark-bg: #000000;
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+}
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Amit Sharma</h1>
-            <p>Graphic Designer · Brand Identity · Print & Digital</p>
-            <p class="hero-tagline">Creating compelling visual identities that communicate brand values and connect with audiences across all media.</p>
-            <div class="hero-cta">
-                <a href="#portfolio" class="btn">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Hire Me</a>
-            </div>
-        </div>
-    </section>
+/* ===== BODY & TYPOGRAPHY ===== */
+body {
+  background-color: var(--light-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p class="section-subtitle">Passionate about creating visual solutions that make an impact</p>
-            </div>
-            
-            <div class="about">
-                <div class="about-content">
-                    <p>I'm a graphic designer with 15+ years of experience specializing in logo design, brand identity, print marketing, packaging, and digital creatives. I focus on clean visuals, strong concepts, and designs that help brands stand out in today's competitive marketplace.</p>
-                    <p>My approach combines strategic thinking with creative execution to deliver designs that are not only visually appealing but also effectively communicate your brand's message and values.</p>
-                </div>
-                
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <div class="number">15+</div>
-                        <div class="label">Years Experience</div>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="number">500+</div>
-                        <div class="label">Projects Completed</div>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="number">100%</div>
-                        <div class="label">Client Satisfaction</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
 
-    <!-- Logo Design -->
-    <section id="portfolio" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Logo Design</h2>
-                <p class="section-subtitle">Carefully crafted brand identities designed to communicate clarity, trust, and purpose.</p>
-            </div>
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
 
-            <div class="grid">
-                <div class="work">
-                    <img src="beginIDEAS.jpg" alt="Begin Ideas Logo" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Logo Design</span>
-                        <h3>Begin Ideas</h3>
-                        <p>Startup-focused logo designed around creativity, innovation, and idea generation using a lightbulb concept. Modern and memorable brand identity.</p>
-                        <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: var(--space-lg);
+}
 
-                <div class="work">
-                    <img src="SMARTCLICK.jpg" alt="Smart Click Logo" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Logo Design</span>
-                        <h3>Smart Click</h3>
-                        <p>Fintech brand identity expressing growth, trust, and digital efficiency through modern visual language. Clean and professional design.</p>
-                        <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
 
-                <div class="work">
-                    <img src="SPEAK.jpg" alt="SPEAK Logo" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Logo Design</span>
-                        <h3>SPEAK</h3>
-                        <p>Voice-based brand identity designed for podcasts and speakers, combining communication and confidence. Bold and impactful design.</p>
-                        <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+p {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+  color: var(--text-light);
+}
 
-    <!-- Flyers -->
-    <section class="section muted">
-        <div class="container">
-            <div class="section-header">
-                <h2>Flyer Design</h2>
-                <p class="section-subtitle">High-impact promotional designs for print marketing.</p>
-            </div>
-            <div class="grid">
-                <div class="work">
-                    <img src="Flyer1.jpg" alt="Flyer Design 1" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Flyer</span>
-                        <h3>Event Promotion</h3>
-                        <p>Modern flyer design for corporate events with clean typography and visual hierarchy.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="work">
-                    <img src="Flyer2.jpg" alt="Flyer Design 2" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Flyer</span>
-                        <h3>Product Launch</h3>
-                        <p>Vibrant promotional flyer for new product launch with eye-catching colors.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="work">
-                    <img src="Flyer3.jpg" alt="Flyer Design 3" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Flyer</span>
-                        <h3>Special Offer</h3>
-                        <p>Sales promotion flyer with clear call-to-action and compelling visuals.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
 
-    <!-- Brochure -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Brochure Design</h2>
-                <p class="section-subtitle">Structured layouts designed for clarity and storytelling.</p>
-            </div>
-            <div class="grid">
-                <div class="work">
-                    <img src="Brochure1.jpg" alt="Brochure Design 1" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Brochure</span>
-                        <h3>Corporate Brochure</h3>
-                        <p>Professional trifold brochure design for corporate presentation and marketing.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="work">
-                    <img src="Brochure2.jpg" alt="Brochure Design 2" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Brochure</span>
-                        <h3>Product Catalog</h3>
-                        <p>Comprehensive product catalog with organized layout and professional photography.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ===== HEADER & NAVIGATION ===== */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: var(--space-md) 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all var(--transition-base);
+}
 
-    <!-- Posters -->
-    <section class="section muted">
-        <div class="container">
-            <div class="section-header">
-                <h2>Posters & Banners</h2>
-                <p class="section-subtitle">Large-format designs for strong visual presence.</p>
-            </div>
-            <div class="grid">
-                <div class="work">
-                    <img src="Poster.jpg" alt="Poster Design" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Poster</span>
-                        <h3>Event Poster</h3>
-                        <p>Large format event poster with bold typography and striking visual elements.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="work">
-                    <img src="Roll-up banner.jpg" alt="Roll-up Banner" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Banner</span>
-                        <h3>Roll-up Banner</h3>
-                        <p>Portable exhibition banner design for trade shows and corporate events.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="work">
-                    <img src="Social media.jpg" alt="Social Media Banner" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Digital</span>
-                        <h3>Social Media Banner</h3>
-                        <p>Custom social media banner designs optimized for various platforms.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    <!-- Packaging -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Packaging Design</h2>
-                <p class="section-subtitle">Packaging that balances branding and usability.</p>
-            </div>
-            <div class="grid">
-                <div class="work">
-                    <img src="Packaging1.jpg" alt="Packaging Design 1" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Packaging</span>
-                        <h3>Product Packaging</h3>
-                        <p>Creative packaging design that enhances product appeal and brand recognition.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="work">
-                    <img src="Packaging2.jpg" alt="Packaging Design 2" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Packaging</span>
-                        <h3>Box Design</h3>
-                        <p>Eco-friendly and visually appealing box packaging for retail products.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  text-decoration: none;
+}
 
-    <!-- Photoshop Work -->
-    <section class="section muted">
-        <div class="container">
-            <div class="section-header">
-                <h2>Photoshop Artwork</h2>
-                <p class="section-subtitle">Creative digital artwork and photo manipulations.</p>
-            </div>
-            <div class="grid">
-                <div class="work">
-                    <img src="Photoshop1.jpg" alt="Photoshop Artwork 1" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Digital Art</span>
-                        <h3>Creative Composition</h3>
-                        <p>Advanced Photoshop composition showcasing creative photo manipulation skills.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <div class="work">
-                    <img src="Photoshop2.jpg" alt="Photoshop Artwork 2" class="work-img">
-                    <div class="work-content">
-                        <span class="work-category">Digital Art</span>
-                        <h3>Photo Retouching</h3>
-                        <p>Professional photo retouching and enhancement for commercial use.</p>
-                        <a href="#" class="work-link">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.logo span {
+  color: var(--primary-color);
+}
 
-    <!-- Skills Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Skills & Expertise</h2>
-                <p class="section-subtitle">Professional skills developed over 15+ years in graphic design</p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-pen-nib"></i>
-                    </div>
-                    <h4>Logo Design</h4>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h4>Brand Identity</h4>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-print"></i>
-                    </div>
-                    <h4>Print Design</h4>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 92%"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-icon">
-                        <i class="fas fa-box"></i>
-                    </div>
-                    <h4>Packaging</h4>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 88%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--space-lg);
+}
 
-    <!-- Testimonial -->
-    <section class="section muted">
-        <div class="container">
-            <div class="testimonial">
-                <div class="testimonial-content">
-                    "Amit's designs transformed our brand identity. His attention to detail and creative approach resulted in a logo and branding package that perfectly represents our company values. Professional, timely, and exceeded expectations!"
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">SC</div>
-                    <div class="author-info">
-                        <h4>Sarah Chen</h4>
-                        <p>Marketing Director, TechVision Inc.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color var(--transition-base);
+  position: relative;
+}
 
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container cta-content">
-            <h2>Start a Project Like This</h2>
-            <p>If you're looking for reliable, professional graphic design support that combines creative excellence with strategic thinking — let's connect.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn">Contact Me</a>
-                <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
-            </div>
-        </div>
-    </section>
+nav ul li a:hover {
+  color: var(--accent-color);
+}
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container contact-container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p class="section-subtitle">Ready to bring your vision to life? Let's discuss your next project.</p>
-            </div>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h4>Email</h4>
-                    <p>amit@designstudio.com</p>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h4>WhatsApp</h4>
-                    <p>+91-9876543210</p>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-upwork"></i>
-                    </div>
-                    <h4>Upwork</h4>
-                    <p>upwork.com/fl/amitsharma</p>
-                </div>
-            </div>
-        </div>
-    </section>
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: -5px;
+  transition: width var(--transition-base);
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <a href="#" class="footer-logo">Amit<span>Sharma</span></a>
-                
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-                
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-behance"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                
-                <div class="footer-copyright">
-                    © 2025 Amit Sharma · Professional Graphic Designer. All rights reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
+nav ul li a:hover::after {
+  width: 100%;
+}
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            
-            // Change icon based on menu state
-            const icon = mobileMenuBtn.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-        
-        // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.05)';
-            }
-        });
-        
-        // Add fade-in animation to elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all work items
-        document.querySelectorAll('.work').forEach(item => {
-            observer.observe(item);
-        });
-    </script>
-</body>
-</html>
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, var(--dark-bg), var(--secondary-color)), 
+              url('Banner.jpg') no-repeat center center/cover;
+  background-blend-mode: overlay;
+  color: var(--text-white);
+  padding: calc(var(--space-xxl) + 80px) 0 var(--space-xxl);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: var(--text-white);
+  margin-bottom: var(--space-sm);
+  font-weight: 800;
+}
+
+.hero .subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-lg);
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-light);
+}
+
+.btn-outline, .btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-outline:hover, .btn-secondary:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: var(--space-xxl) 0;
+}
+
+.section.muted {
+  background-color: var(--muted-bg);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  color: var(--text-light);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+}
+
+.about-highlights {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.highlight-item {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.highlight-item .number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: var(--space-xs);
+}
+
+.highlight-item .label {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* ===== GRID LAYOUT ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+/* ===== WORK CARDS ===== */
+.work-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.work-img-container {
+  width: 100%;
+  height: 240px;
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--muted-bg);
+}
+
+.work-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-base);
+}
+
+.work-card:hover .work-img {
+  transform: scale(1.05);
+}
+
+.work-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-content h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--space-sm);
+}
+
+.work-content p {
+  flex: 1;
+  margin-bottom: var(--space-md);
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  background: linear-gradient(135deg, var(--dark-bg), var(--secondary-color));
+  color: var(--text-white);
+  padding: var(--space-xxl) 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  color: var(--text-white);
+  margin-bottom: var(--space-md);
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-xl);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background-color: var(--card-bg);
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--muted-bg);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base);
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: var(--space-md);
+}
+
+.contact-item h4 {
+  margin-bottom: var(--space-sm);
+  color: var(--primary-color);
+}
+
+.contact-item p {
+  margin-bottom: 0;
+  word-break: break-all;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--dark-bg);
+  color: rgba(255, 255, 255, 0.7);
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
+
+.footer .copyright {
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: var(--space-md);
+    box-shadow: var(--shadow-xl);
+    z-index: 1000;
+  }
+  
+  nav ul.active {
+    display: flex;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .hero {
+    padding: calc(var(--space-xxl) + 60px) 0 var(--space-xl);
+    min-height: auto;
+  }
+  
+  .hero-cta, .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-highlights {
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .section {
+    padding: var(--space-xl) 0;
+  }
+  
+  .about-card, .work-card {
+    padding: var(--space-md);
+  }
+}
