@@ -3,318 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Sharma | Professional Graphic Designer Portfolio</title>
-    
+    <title>Amit Sharma | Professional Graphic Designer</title>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Your CSS -->
+    <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://api.iconify.design/mdi:palette.svg">
-    
-    <style>
-        /* Temporary inline CSS to ensure basic styling loads immediately */
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background: #f9fafb;
-            color: #111827;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicons/favicon.png">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Header & Navigation -->
     <header>
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#" class="logo">Amit<span>Sharma</span></a>
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <button class="menu-toggle" aria-label="Toggle menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </nav>
-            </div>
+        <div class="container header-container">
+            <a href="#home" class="logo" aria-label="Amit Sharma - Home">Amit<span>Sharma</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav aria-label="Main Navigation">
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Amit Sharma</h1>
-                <p class="hero-subtitle">Graphic Designer · Brand Identity · Print & Digital</p>
-                <p class="hero-description">Creating compelling visual identities that communicate brand values and connect with audiences across all media.</p>
-                <div class="hero-buttons">
-                    <a href="#work" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Start a Project</a>
-                </div>
+    <!-- Hero / Home Section -->
+    <section id="home" class="hero" aria-label="Introduction">
+        <div class="container hero-content">
+            <h1>Amit Sharma</h1>
+            <p class="subtitle">Graphic Designer · Brand Identity · Print & Digital</p>
+            <p class="hero-tagline">Creating compelling visual identities that communicate brand values and connect with audiences across all media.</p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Start a Project</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section" aria-labelledby="about-heading">
         <div class="container">
-            <h2>About Me</h2>
-            <p class="section-subtitle">25+ years of professional design experience</p>
-            
+            <div class="section-header">
+                <h2 id="about-heading">About Me</h2>
+                <p class="section-subtitle">A dedicated visual storyteller with decades of design expertise</p>
+            </div>
             <div class="about-card">
                 <div class="about-content">
-                    <p>With <strong>25+ years of experience</strong>, I specialize in creating visual identities that stand the test of time. My expertise spans logo design, brand systems, print marketing, packaging, and digital design.</p>
-                    <p>I believe in strategic design that not only looks beautiful but also achieves business objectives and resonates with target audiences.</p>
+                    <!-- UPDATED: Experience corrected to 25+ years -->
+                    <p>I'm a graphic designer with <strong>25+ years</strong> of experience specializing in logo design, brand identity, print marketing, packaging, and digital creatives. I focus on clean visuals, strong concepts, and timeless designs that help brands stand out and communicate effectively.</p>
+                    <p>My approach blends strategic insight with creative execution to deliver work that is not only visually striking but also serves your business goals and resonates with your target audience.</p>
                 </div>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Years Experience</div>
+                <div class="about-highlights" aria-label="Key Statistics">
+                    <div class="highlight-item">
+                        <div class="number" aria-label="25 plus years">25+</div>
+                        <div class="label">Years Experience</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Projects Delivered</div>
+                    <div class="highlight-item">
+                        <div class="number">500+</div>
+                        <div class="label">Projects Delivered</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
+                    <div class="highlight-item">
+                        <div class="number">100%</div>
+                        <div class="label">Client Focus</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="work" class="section section-alt">
+    <!-- Portfolio: Logo & Brand Identity -->
+    <section id="portfolio" class="section" aria-labelledby="logo-heading">
         <div class="container">
-            <h2>Logo & Brand Identity</h2>
-            <p class="section-subtitle">Distilled brand essences designed for clarity and impact</p>
-            
-            <div class="portfolio-grid">
-                <!-- Logo 1 -->
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="beginIDEAS.jpg" alt="Begin Ideas Logo" loading="lazy">
+            <div class="section-header">
+                <h2 id="logo-heading">Logo & Brand Identity</h2>
+                <p class="section-subtitle">Distilled brand essences designed for clarity, memorability, and impact.</p>
+            </div>
+            <div class="grid">
+                <!-- FIXED: All placeholders replaced with correct <img> tags -->
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="beginIDEAS.jpg" alt="Begin Ideas Logo - A modern startup logo symbolizing innovation" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>Begin Ideas</h3>
-                        <p>Startup identity built around innovation and creativity with a modern lightbulb concept.</p>
+                        <p>A startup identity built around the lightbulb moment—clean, modern, and symbolizing creativity and new beginnings.</p>
                     </div>
-                </div>
-                
-                <!-- Logo 2 -->
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="SMARTCLICK.jpg" alt="Smart Click Logo" loading="lazy">
+                </article>
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="SMARTCLICK.jpg" alt="Smart Click Logo - A fintech brand mark conveying trust and digital speed" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>Smart Click</h3>
-                        <p>Fintech visual identity expressing digital efficiency, growth, and trust through sleek geometry.</p>
+                        <p>Fintech visual identity project expressing digital efficiency, growth, and user-friendly trust through sleek geometry.</p>
                     </div>
-                </div>
-                
-                <!-- Logo 3 -->
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="SPEAK.jpg" alt="SPEAK Logo" loading="lazy">
+                </article>
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="SPEAK.jpg" alt="SPEAK Logo - A bold wordmark for a podcast or speaking brand" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>SPEAK</h3>
-                        <p>Voice-centric branding for media with bold typography and communication cues.</p>
+                        <p>Voice-centric branding for media and speakers. The design combines bold typography with cues for communication and authority.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Print Design Section -->
-    <section class="section">
+    <!-- Portfolio: Print & Promotional Design -->
+    <section class="section muted" aria-labelledby="print-heading">
         <div class="container">
-            <h2>Print & Promotional Design</h2>
-            <p class="section-subtitle">High-impact collateral designed to capture attention</p>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="Flyer1.jpg" alt="Corporate Event Flyer" loading="lazy">
+            <div class="section-header">
+                <h2 id="print-heading">Print & Promotional Design</h2>
+                <p class="section-subtitle">High-impact print collateral designed to capture attention and drive action.</p>
+            </div>
+            <div class="grid">
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="Flyer1.jpg" alt="Corporate Event Flyer Design" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>Corporate Event</h3>
-                        <p>Clean, information-first flyer for professional conferences.</p>
+                        <p>Clean, information-first flyer for a professional conference, balancing hierarchy with visual appeal.</p>
                     </div>
-                </div>
-                
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="Flyer2.jpg" alt="Product Launch Flyer" loading="lazy">
+                </article>
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="Flyer2.jpg" alt="Product Launch Flyer Design" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>Product Launch</h3>
-                        <p>Vibrant flyer designed to generate buzz for new products.</p>
+                        <p>Vibrant and energetic flyer designed to generate buzz and announce a new product to the market.</p>
                     </div>
-                </div>
-                
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="Flyer3.jpg" alt="Sales Promotion Flyer" loading="lazy">
+                </article>
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="Flyer3.jpg" alt="Sales Promotion Flyer Design" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>Sales Promotion</h3>
-                        <p>Direct promotional piece with strong call-to-action.</p>
+                        <p>Direct promotional piece with a strong offer and clear call-to-action, designed for high conversion.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Brochure Design -->
-    <section class="section section-alt">
+    <!-- Portfolio: Brochure & Catalog Design -->
+    <section class="section" aria-labelledby="brochure-heading">
         <div class="container">
-            <h2>Brochure & Catalog Design</h2>
-            <p class="section-subtitle">Structured layouts that tell compelling brand stories</p>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="Brochure1.jpg" alt="Corporate Brochure" loading="lazy">
+            <div class="section-header">
+                <h2 id="brochure-heading">Brochure & Catalog Design</h2>
+                <p class="section-subtitle">Structured layouts that guide the reader and tell a compelling brand story.</p>
+            </div>
+            <div class="grid">
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="Brochure1.jpg" alt="Corporate Tri-fold Brochure Layout" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>Corporate Profile</h3>
-                        <p>Tri-fold brochure presenting services with credibility.</p>
+                        <p>A classic tri-fold brochure layout for a B2B company, presenting services and credibility in a digestible format.</p>
                     </div>
-                </div>
-                
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="Brochure2.jpg" alt="Product Catalog" loading="lazy">
+                </article>
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="Brochure2.jpg" alt="Product Catalog Design Spread" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>Product Catalog</h3>
-                        <p>Multi-page catalog showcasing product range clearly.</p>
+                        <p>Multi-page catalog with a systematic layout, designed to showcase a product range clearly and attractively.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Packaging Design -->
-    <section class="section">
+    <!-- Portfolio: Packaging Design -->
+    <section class="section muted" aria-labelledby="packaging-heading">
         <div class="container">
-            <h2>Packaging Design</h2>
-            <p class="section-subtitle">Functional and aesthetic packaging that elevates brands</p>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="Packaging1.jpg" alt="Product Packaging" loading="lazy">
+            <div class="section-header">
+                <h2 id="packaging-heading">Packaging Design</h2>
+                <p class="section-subtitle">Functional and aesthetic packaging that protects the product and elevates the brand on the shelf.</p>
+            </div>
+            <div class="grid">
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="Packaging1.jpg" alt="Consumer Product Packaging Design" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
-                        <h3>Consumer Product</h3>
-                        <p>Retail packaging designed to stand out on shelves.</p>
+                    <div class="work-content">
+                        <h3>Consumer Product Box</h3>
+                        <p>Eye-catching retail packaging designed to stand out in a competitive environment and communicate premium quality.</p>
                     </div>
-                </div>
-                
-                <div class="portfolio-card">
-                    <div class="card-image">
-                        <img src="Packaging2.jpg" alt="Eco Packaging" loading="lazy">
+                </article>
+                <article class="work-card">
+                    <div class="work-img-container">
+                        <img src="Packaging2.jpg" alt="Eco-Friendly Packaging Concept" class="work-img" loading="lazy">
                     </div>
-                    <div class="card-content">
+                    <div class="work-content">
                         <h3>Eco-Conscious Design</h3>
-                        <p>Sustainable packaging with clear brand messaging.</p>
+                        <p>Sustainable packaging solution that balances environmental responsibility with strong, clear brand messaging.</p>
                     </div>
-                </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" aria-label="Call to Action">
+        <div class="container cta-content">
+            <h2>Ready to Elevate Your Brand?</h2>
+            <p>If you're looking for experienced, professional design support that combines strategic thinking with creative excellence—let's talk about your next project.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#portfolio" class="btn btn-secondary">See More Work</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="section-subtitle">Ready to discuss your next design project?</p>
-            
-            <div class="contact-card">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>Email</h3>
-                            <p>contact@amitsharma.design</p>
-                            <p class="contact-note">For project inquiries and consultations</p>
-                        </div>
+            <div class="section-header">
+                <h2 id="contact-heading">Get In Touch</h2>
+                <p class="section-subtitle">For project inquiries or to discuss your design needs, please contact me via email.</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                     </div>
-                </div>
-                
-                <div class="cta-box">
-                    <h3>Start Your Project Today</h3>
-                    <p>Send me an email with your project details, timeline, and budget for a prompt response.</p>
+                    <h4>Email</h4>
+                    <!-- UPDATED: Contact section shows email only -->
+                    <p>contact@amitsharma.design</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Amit Sharma</div>
-                <p class="footer-tagline">Professional Graphic Designer</p>
-                <p class="copyright">© 2025 Amit Sharma. All rights reserved.</p>
+                <div class="copyright">
+                    © 2025 Amit Sharma · Professional Graphic Designer
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript for interactivity -->
     <script>
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-            this.setAttribute('aria-expanded', 
-                this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-            );
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                navMenu.classList.toggle('active');
+                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+        
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
         });
-
-        // Smooth scrolling
+        
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
-                    // Close mobile menu if open
-                    document.querySelector('.nav-menu').classList.remove('active');
-                    document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
                 }
             });
         });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
+        
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if(window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+            if (header) {
+                header.style.backgroundColor = window.scrollY > 100 
+                    ? 'rgba(255, 255, 255, 0.98)' 
+                    : 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = window.scrollY > 100 
+                    ? '0 5px 20px rgba(0, 0, 0, 0.1)' 
+                    : '0 5px 20px rgba(0, 0, 0, 0.05)';
             }
         });
     </script>
