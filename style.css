@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET */ 
 * {
   margin: 0;
   padding: 0;
@@ -45,10 +45,11 @@ body {
   font-weight: 800;
 }
 
+/* 🔹 improved contrast */
 .hero-subtitle {
-  font-size: 0.85em;
+  font-size: 0.9em; /* was 0.85em */
   font-weight: 600;
-  color: var(--text-light);
+  color: #d1d5db; /* clearer than var(--text-light) */
 }
 
 .hero p {
@@ -80,9 +81,10 @@ body {
   transform: translateY(-2px);
 }
 
+/* 🔹 improved outline visibility */
 .btn-outline {
   background: transparent;
-  border: 2px solid rgba(255,255,255,0.4);
+  border: 2px solid rgba(255,255,255,0.6); /* was 0.4 */
 }
 
 .btn-outline:hover {
@@ -136,8 +138,10 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+/* 🔹 richer hover depth */
 .work:hover {
   transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
 .work-img {
