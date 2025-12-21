@@ -2,146 +2,95 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Amit Sharma | Graphic Designer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amit Sharma | Graphic Designer</title>
 
 <style>
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#0f172a;
-  color:#ffffff;
-  line-height:1.6;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#222;
 }
+section{
+    padding:80px 10%;
+}
+h1,h2,h3{
+    margin-bottom:20px;
+}
+p{
+    line-height:1.6;
+    color:#555;
+}
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#22c55e;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+.btn:hover{ background:#16a34a; }
 
 /* HERO */
 .hero{
-  padding:140px 20px;
-  text-align:center;
-  background:linear-gradient(180deg,#0f172a,#020617);
+    height:100vh;
+    background:linear-gradient(135deg,#0f172a,#020617);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
-.hero h1{
-  font-size:52px;
-  margin-bottom:12px;
+.hero h1{ font-size:48px; }
+.hero p{ color:#cbd5f5; font-size:18px; }
+
+/* GRID */
+.grid{
+    display:grid;
+    gap:30px;
 }
-.hero h2{
-  font-size:22px;
-  color:#cbd5f5;
-  font-weight:normal;
-  margin-bottom:20px;
+.grid-3{ grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.grid-2{ grid-template-columns:repeat(auto-fit,minmax(400px,1fr)); }
+
+.card{
+    background:#fff;
+    border-radius:14px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
-.hero p{
-  font-size:18px;
-  color:#94a3b8;
-  max-width:720px;
-  margin:0 auto 40px;
+.image-card img{
+    width:100%;
+    border-radius:12px;
 }
-.btn{
-  display:inline-block;
-  padding:15px 36px;
-  background:#22c55e;
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  font-size:16px;
+
+/* SERVICES */
+.services .card{
+    text-align:center;
 }
 
 /* PORTFOLIO */
-#portfolio{
-  background:#f8fafc;
-  color:#0f172a;
-  padding:110px 20px;
-  text-align:center;
-}
-#portfolio h2{
-  font-size:40px;
-  margin-bottom:12px;
-}
-#portfolio p{
-  font-size:17px;
-  color:#475569;
-  margin-bottom:70px;
-}
-
-.portfolio-wrapper{
-  max-width:1200px;
-  margin:0 auto;
-}
-
-.portfolio-item{
-  background:#ffffff;
-  padding:60px;
-  border-radius:18px;
-  box-shadow:0 20px 45px rgba(0,0,0,0.08);
-  margin-bottom:90px;
-}
-
-.portfolio-item img{
-  width:100%;
-  max-width:900px;
-  margin-bottom:30px;
-}
-
-.portfolio-title{
-  font-size:22px;
-  font-weight:bold;
-  margin-bottom:12px;
-}
-
-.case-text{
-  max-width:760px;
-  margin:0 auto;
-  text-align:left;
-  font-size:16px;
-  color:#334155;
-}
-.case-text p{
-  margin-bottom:18px;
-}
-
-.case-meta{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  margin-top:30px;
-  font-size:14px;
-  color:#475569;
-  flex-wrap:wrap;
+.portfolio img{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
 /* CTA */
-.case-cta{
-  margin-top:45px;
-  text-align:center;
+.cta{
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
 }
-
-/* CONTACT */
-#contact{
-  background:#020617;
-  padding:110px 20px;
-  text-align:center;
-}
-#contact h2{
-  font-size:38px;
-  margin-bottom:20px;
-}
-#contact p{
-  font-size:18px;
-  color:#cbd5f5;
-  margin-bottom:30px;
-}
-#contact strong{
-  color:#22c55e;
-}
+.cta p{ color:#cbd5f5; }
 
 /* FOOTER */
 footer{
-  background:#020617;
-  color:#64748b;
-  text-align:center;
-  padding:30px 20px;
-  font-size:14px;
+    padding:30px;
+    text-align:center;
+    background:#020617;
+    color:#94a3b8;
 }
 </style>
 </head>
@@ -150,71 +99,74 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Amit Sharma</h1>
-  <h2>Graphic Designer — Branding & Marketing Design</h2>
-  <p>
-    I help small businesses and startups build clear, professional brand identities
-    through thoughtful logo and visual design.
-  </p>
-  <a href="#portfolio" class="btn">View Portfolio</a>
+    <div>
+        <h1>Amit Sharma</h1>
+        <p>Graphic Designer — Branding, Flyers, Brochures & Marketing Design</p>
+        <br>
+        <a href="#portfolio" class="btn">View Portfolio</a>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <h2>Services</h2>
+    <div class="grid grid-3">
+        <div class="card">Logo & Brand Identity</div>
+        <div class="card">Flyer & Brochure Design</div>
+        <div class="card">Packaging & Print Design</div>
+        <div class="card">Social Media Creatives</div>
+    </div>
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio">
-  <h2>Featured Work</h2>
-  <p>Selected logo design projects with a focus on clarity and brand impact.</p>
-
-  <div class="portfolio-wrapper">
-
-    <!-- SPEAK CASE STUDY -->
-    <div class="portfolio-item">
-      <img src="SPEAK.jpg" alt="SPEAK Logo Design">
-
-      <div class="portfolio-title">SPEAK — Logo Design Case Study</div>
-
-      <div class="case-text">
-        <p><strong>Project brief:</strong><br>
-        SPEAK is a voice-based platform focused on communication, podcasts, and public expression.
-        The goal was to create a logo that feels confident, modern, and easy to recognize.</p>
-
-        <p><strong>Design approach:</strong><br>
-        I combined a microphone symbol with speech bubbles to visually represent voice and conversation.
-        The typography was kept bold and clean to ensure clarity across digital platforms.</p>
-
-        <p><strong>Final result:</strong><br>
-        A simple, memorable logo that communicates “Speak up, stand out” and works well across
-        websites, social media, and branding materials.</p>
-      </div>
-
-      <div class="case-meta">
-        <div><strong>Role:</strong><br>Logo Designer</div>
-        <div><strong>Tools:</strong><br>Adobe Illustrator</div>
-        <div><strong>Category:</strong><br>Brand Identity</div>
-      </div>
-
-      <div class="case-cta">
-        <a href="#contact" class="btn">Start a Project Like This</a>
-      </div>
+<section id="portfolio" class="portfolio">
+    <h2>Logo Design</h2>
+    <div class="grid grid-3">
+        <img src="images/SPEAK.jpg">
+        <img src="images/SMARTCLICK.jpg">
+        <img src="images/beginIDEAS.jpg">
     </div>
 
-  </div>
+    <h2 style="margin-top:80px;">Flyers & Brochures</h2>
+    <div class="grid grid-3">
+        <img src="images/Flyer1.jpg">
+        <img src="images/Flyer2.jpg">
+        <img src="images/Flyer3.jpg">
+        <img src="images/Brochure1.jpg">
+        <img src="images/Brochure2.jpg">
+    </div>
+
+    <h2 style="margin-top:80px;">Posters & Banners</h2>
+    <div class="grid grid-2">
+        <img src="images/Poster.jpg">
+        <img src="images/Banner.jpg">
+        <img src="images/Roll-up banner.jpg">
+    </div>
+
+    <h2 style="margin-top:80px;">Packaging Design</h2>
+    <div class="grid grid-2">
+        <img src="images/Packaging1.jpg">
+        <img src="images/Packaging2.jpg">
+    </div>
+
+    <h2 style="margin-top:80px;">Photo Editing & Social Media</h2>
+    <div class="grid grid-3">
+        <img src="images/Photoshop1.jpg">
+        <img src="images/Photoshop2.jpg">
+        <img src="images/Social media.jpg">
+    </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Let’s Work Together</h2>
-  <p>
-    Need a professional logo or brand identity?<br>
-    Send me a message and I’ll respond within 24 hours.
-  </p>
-  <p>
-    📧 <strong>amitsharma.graphics@gmail.com</strong>
-  </p>
+<!-- CTA -->
+<section class="cta">
+    <h2>Have a project in mind?</h2>
+    <p>Let’s create professional designs that attract customers.</p>
+    <br>
+    <a href="mailto:amitsharma.graphics@gmail.com" class="btn">Start a Project</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © 2025 Amit Sharma — Graphic Designer
+© 2025 Amit Sharma — Graphic Designer
 </footer>
 
 </body>
