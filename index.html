@@ -3,139 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Amit Sharma | Graphic Designer</title>
 
-<!-- GOOGLE FONTS -->
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #f4f5f7;
-  color: #111;
+  background:#f4f5f7;
+  color:#111;
+  line-height:1.6;
 }
 
-/* ================= HEADER ================= */
+/* HERO */
 .hero {
-  background: linear-gradient(135deg, #000, #1a1a1a);
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
+  background: linear-gradient(135deg,#000,#1a1a1a);
+  color:#fff;
+  padding:90px 20px;
+  text-align:center;
 }
-
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 44px;
-  margin-bottom: 12px;
+  font-family:'Playfair Display', serif;
+  font-size:46px;
 }
-
 .hero p {
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  opacity: 0.8;
+  margin-top:10px;
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  opacity:.8;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 .section {
-  max-width: 1200px;
-  margin: auto;
-  padding: 70px 20px;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
 }
-
 .section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 50px;
+  font-family:'Playfair Display', serif;
+  font-size:34px;
+  text-align:center;
+  margin-bottom:20px;
+}
+.section .subtitle {
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 60px;
+  color:#555;
 }
 
-/* ================= GRID ================= */
+/* GRID */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 
-/* ================= CARD ================= */
+/* CARD */
 .card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform 0.3s ease;
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  text-align:center;
 }
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
 .card img {
-  width: 100%;
-  max-height: 140px;
-  object-fit: contain;
-  margin-bottom: 20px;
+  width:100%;
+  max-height:140px;
+  object-fit:contain;
+  margin-bottom:20px;
 }
+.card h3 { font-size:18px; margin-bottom:10px; }
+.card p { font-size:14px; color:#555; }
 
-.card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* ================= IMAGE WORK ================= */
+/* IMAGE WORK */
 .work-img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
-/* ================= CTA ================= */
+/* ABOUT */
+.about {
+  background:#fff;
+  border-radius:20px;
+  padding:50px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+
+/* CTA */
 .cta {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
+  background:#000;
+  color:#fff;
+  padding:90px 20px;
+  text-align:center;
 }
-
 .cta h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  margin-bottom: 20px;
+  font-family:'Playfair Display', serif;
+  font-size:36px;
+  margin-bottom:15px;
 }
-
+.cta p {
+  max-width:600px;
+  margin:0 auto 30px;
+  color:#ccc;
+}
 .cta a {
-  display: inline-block;
-  padding: 14px 34px;
-  background: #22c55e;
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 30px;
+  background:#22c55e;
+  color:#000;
+  padding:14px 36px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
 }
 
-/* ================= FOOTER ================= */
+/* CONTACT */
+.contact {
+  background:#fff;
+  padding:80px 20px;
+}
+.contact-box {
+  max-width:700px;
+  margin:auto;
+  text-align:center;
+}
+.contact-box p {
+  margin:10px 0;
+  font-size:15px;
+}
+
+/* FOOTER */
 footer {
-  background: #000;
-  color: #777;
-  text-align: center;
-  padding: 20px;
-  font-size: 13px;
+  background:#000;
+  color:#777;
+  text-align:center;
+  padding:20px;
+  font-size:13px;
 }
 </style>
 </head>
@@ -143,38 +155,50 @@ footer {
 <body>
 
 <!-- HERO -->
-<header class="hero">
+<section class="hero">
   <h1>Amit Sharma</h1>
   <p>Graphic Designer · Brand Identity · Print & Digital</p>
-</header>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Me</h2>
+  <div class="about">
+    <p>
+      I’m a graphic designer with 15+ years of experience specializing in logo design,
+      brand identity, print marketing, and digital creatives.  
+      My focus is on clean visuals, clear messaging, and designs that help businesses grow.
+    </p>
+  </div>
+</section>
 
 <!-- LOGO DESIGN -->
 <section class="section">
   <h2>Logo Design</h2>
+  <p class="subtitle">Brand identities crafted with strategy, clarity, and creativity.</p>
   <div class="grid">
     <div class="card">
-      <img src="begin.jpg" alt="Begin Ideas">
+      <img src="begin.jpg">
       <h3>Begin Ideas</h3>
-      <p>Startup-focused logo designed around creativity and innovation using a lightbulb concept.</p>
+      <p>Startup-focused logo designed around creativity and idea generation.</p>
     </div>
-
     <div class="card">
-      <img src="SMARTCLICK.jpg" alt="Smart Click">
+      <img src="SMARTCLICK.jpg">
       <h3>Smart Click</h3>
       <p>Fintech brand identity expressing growth, trust, and digital efficiency.</p>
     </div>
-
     <div class="card">
-      <img src="SPEAK.jpg" alt="Speak">
+      <img src="SPEAK.jpg">
       <h3>SPEAK</h3>
-      <p>Voice-based brand identity designed for podcasts and speakers.</p>
+      <p>Podcast & voice branding focused on communication and confidence.</p>
     </div>
   </div>
 </section>
 
-<!-- FLYER DESIGN -->
+<!-- FLYERS -->
 <section class="section">
   <h2>Flyer Design</h2>
+  <p class="subtitle">High-impact promotional designs for print and events.</p>
   <div class="grid">
     <img src="Flyer1.jpg" class="work-img">
     <img src="Flyer2.jpg" class="work-img">
@@ -185,6 +209,7 @@ footer {
 <!-- BROCHURE -->
 <section class="section">
   <h2>Brochure Design</h2>
+  <p class="subtitle">Clean layouts designed for storytelling and clarity.</p>
   <div class="grid">
     <img src="Brochure1.jpg" class="work-img">
     <img src="Brochure2.jpg" class="work-img">
@@ -194,6 +219,7 @@ footer {
 <!-- POSTERS -->
 <section class="section">
   <h2>Posters & Banners</h2>
+  <p class="subtitle">Large-format designs for marketing and visibility.</p>
   <div class="grid">
     <img src="Poster.jpg" class="work-img">
     <img src="Roll-up banner.jpg" class="work-img">
@@ -204,6 +230,7 @@ footer {
 <!-- PACKAGING -->
 <section class="section">
   <h2>Packaging Design</h2>
+  <p class="subtitle">Product packaging that balances branding and usability.</p>
   <div class="grid">
     <img src="Packaging1.jpg" class="work-img">
     <img src="Packaging2.jpg" class="work-img">
@@ -212,8 +239,19 @@ footer {
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Start a Project Like This</h2>
+  <h2>Let’s Work Together</h2>
+  <p>If you’re looking for professional, reliable design support — let’s talk.</p>
   <a href="#contact">Contact Me</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-box">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> yourname@email.com</p>
+    <p><strong>WhatsApp:</strong> +91-XXXXXXXXXX</p>
+    <p><strong>Upwork:</strong> https://www.upwork.com/fl/anjusharma70</p>
+  </div>
 </section>
 
 <footer>
