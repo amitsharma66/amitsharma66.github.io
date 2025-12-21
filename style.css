@@ -400,3 +400,12 @@ footer {
         flex-direction: column;
     }
 }
+/* Fix anchor spacing for fixed header */
+section {
+  scroll-margin-top: 120px;
+}
+
+/* Packaging heading spacing safety */
+#packaging h2 {
+  margin-top: 20px;
+}
