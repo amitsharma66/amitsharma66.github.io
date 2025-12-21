@@ -162,9 +162,9 @@ nav ul li a:hover::after {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(135deg, var(--dark-bg), var(--secondary-color));
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, var(--dark-bg), var(--secondary-color)), 
+              url('Banner.jpg') no-repeat center center/cover;
+  background-blend-mode: overlay;
   color: var(--text-white);
   padding: calc(var(--space-xxl) + 80px) 0 var(--space-xxl);
   text-align: center;
@@ -339,10 +339,6 @@ nav ul li a:hover::after {
   border-radius: var(--radius-md);
   overflow: hidden;
   background-color: var(--muted-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .work-img {
@@ -350,8 +346,6 @@ nav ul li a:hover::after {
   height: 100%;
   object-fit: contain;
   transition: transform var(--transition-base);
-  max-width: 85%;
-  max-height: 85%;
 }
 
 .work-card:hover .work-img {
@@ -458,57 +452,6 @@ nav ul li a:hover::after {
   font-size: 0.95rem;
 }
 
-/* ===== PREMIUM ENHANCEMENTS ===== */
-.section-header h2 {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 15px;
-}
-
-.section-header h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-  border-radius: 2px;
-}
-
-.work-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.work-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
-  opacity: 0;
-  transition: opacity var(--transition-base);
-  z-index: 2;
-}
-
-.work-card:hover::before {
-  opacity: 1;
-}
-
-.work-img {
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   nav ul {
@@ -553,14 +496,6 @@ nav ul li a:hover::after {
   
   .contact-info {
     grid-template-columns: 1fr;
-  }
-  
-  .work-img-container {
-    height: 200px;
-  }
-  
-  .section-header h2::after {
-    width: 60px;
   }
 }
 
