@@ -9,89 +9,127 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #111827;
+      background-color: #0f172a;
       color: #ffffff;
+      line-height: 1.6;
     }
 
     /* HERO */
     .hero {
-      padding: 120px 20px;
+      padding: 140px 20px;
       text-align: center;
+      background: linear-gradient(180deg, #0f172a, #020617);
     }
 
     .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 52px;
+      margin-bottom: 12px;
     }
 
     .hero h2 {
       font-size: 22px;
       font-weight: normal;
-      color: #d1d5db;
+      color: #cbd5f5;
       margin-bottom: 20px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #9ca3af;
+      color: #94a3b8;
       margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 30px;
+      padding: 15px 34px;
       background-color: #22c55e;
       color: #ffffff;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 16px;
+      font-weight: bold;
     }
 
     /* PORTFOLIO */
     #portfolio {
-      background-color: #ffffff;
-      color: #111111;
-      padding: 80px 20px;
+      background-color: #f8fafc;
+      color: #0f172a;
+      padding: 100px 20px;
       text-align: center;
     }
 
     #portfolio h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
+      font-size: 40px;
+      margin-bottom: 12px;
     }
 
     #portfolio p {
-      color: #555555;
-      margin-bottom: 50px;
-      font-size: 16px;
+      color: #475569;
+      margin-bottom: 70px;
+      font-size: 17px;
     }
 
     .portfolio-wrapper {
-      max-width: 900px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .portfolio-item {
-      margin-bottom: 60px;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 16px;
+      margin-bottom: 70px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
     }
 
     .portfolio-item img {
       width: 100%;
-      border-radius: 6px;
+      max-width: 900px;
+      margin-bottom: 20px;
     }
 
     .portfolio-title {
-      margin-top: 15px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-desc {
+      font-size: 15px;
+      color: #475569;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #020617;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      font-size: 18px;
+      color: #cbd5f5;
+      margin-bottom: 30px;
+    }
+
+    .contact strong {
+      color: #22c55e;
     }
 
     /* FOOTER */
     footer {
-      background-color: #111827;
-      color: #9ca3af;
+      background-color: #020617;
+      color: #64748b;
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px 20px;
       font-size: 14px;
     }
   </style>
@@ -99,37 +137,61 @@
 
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
     <h1>Amit Sharma</h1>
     <h2>Graphic Designer — Branding & Marketing Design</h2>
-    <p>Helping small businesses look professional and attract customers</p>
+    <p>
+      I help small businesses build strong brand identities through
+      clean, professional, and meaningful design.
+    </p>
     <a href="#portfolio" class="btn">View Portfolio</a>
   </section>
 
-  <!-- PORTFOLIO SECTION -->
+  <!-- PORTFOLIO -->
   <section id="portfolio">
     <h2>Logo Design Projects</h2>
-    <p>A selection of logo designs created for different brands.</p>
+    <p>Selected logo work created for startups and growing brands.</p>
 
     <div class="portfolio-wrapper">
 
       <div class="portfolio-item">
         <img src="SPEAK.jpg" alt="SPEAK Logo Design">
-        <div class="portfolio-title">SPEAK — Logo Design</div>
+        <div class="portfolio-title">SPEAK</div>
+        <div class="portfolio-desc">
+          Logo design for a voice-focused platform promoting communication and expression.
+        </div>
       </div>
 
       <div class="portfolio-item">
         <img src="beginIDEAS.jpg" alt="Begin Ideas Logo Design">
-        <div class="portfolio-title">Begin Ideas — Logo Design</div>
+        <div class="portfolio-title">Begin Ideas</div>
+        <div class="portfolio-desc">
+          Creative logo concept designed for an idea-driven startup and innovation brand.
+        </div>
       </div>
 
       <div class="portfolio-item">
         <img src="SMARTCLICK.jpg" alt="SmartClick Logo Design">
-        <div class="portfolio-title">SmartClick — Logo Design</div>
+        <div class="portfolio-title">SmartClick</div>
+        <div class="portfolio-desc">
+          Modern logo designed for a digital and performance-focused business.
+        </div>
       </div>
 
     </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Let’s Work Together</h2>
+    <p>
+      Looking for a professional logo or brand identity?<br>
+      Get in touch and I’ll respond within 24 hours.
+    </p>
+    <p>
+      📧 <strong>amitsharma.graphics@gmail.com</strong>
+    </p>
   </section>
 
   <!-- FOOTER -->
