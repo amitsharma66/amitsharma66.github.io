@@ -1,1030 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Sharma | 25+ Years of Strategic Graphic Design Excellence</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* CSS Variables */
-        :root {
-            --primary: #2C3E50;
-            --secondary: #7B8A8B;
-            --accent: #3498DB;
-            --light: #F8F9FA;
-            --dark: #2C3E50;
-            --gray: #7F8C8D;
-            --transition: all 0.3s ease;
-            --border-radius: 8px;
-        }
-        
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: #fafafa;
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(234, 238, 242, 0.5) 0%, transparent 55%),
-                radial-gradient(circle at 85% 30%, rgba(234, 238, 242, 0.4) 0%, transparent 55%);
-            min-height: 100vh;
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        ul {
-            list-style: none;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .section {
-            padding: 80px 0;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: var(--border-radius);
-            font-weight: 500;
-            font-size: 15px;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-            border: 1px solid var(--primary);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background-color: #1a252f;
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary);
-        }
-        
-        .btn-secondary:hover {
-            background-color: rgba(44, 62, 80, 0.05);
-            transform: translateY(-2px);
-        }
-        
-        /* Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .logo span {
-            color: var(--accent);
-        }
-        
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav-menu li a {
-            font-weight: 500;
-            font-size: 15px;
-            color: var(--gray);
-            transition: var(--transition);
-        }
-        
-        .nav-menu li a:hover {
-            color: var(--primary);
-        }
-        
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 20px;
-            color: var(--primary);
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-            background: linear-gradient(135deg, rgba(248, 249, 250, 0.9) 0%, rgba(234, 238, 242, 0.8) 100%);
-            position: relative;
-        }
-        
-        .hero:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(52, 152, 219, 0.03) 0%, transparent 50%);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            text-align: center;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-        
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .hero-subtitle {
-            font-size: 1.4rem;
-            color: var(--accent);
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--gray);
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        /* Section Headings */
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--primary);
-            text-align: center;
-        }
-        
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--gray);
-            text-align: center;
-            margin-bottom: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-        
-        /* About Section */
-        .about-content {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 60px;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .about-content p {
-            font-size: 1.05rem;
-            margin-bottom: 25px;
-            color: var(--dark);
-            line-height: 1.8;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 25px 20px;
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            font-size: 0.95rem;
-            color: var(--gray);
-            font-weight: 500;
-        }
-        
-        /* Portfolio Section */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .portfolio-card {
-            background: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            cursor: pointer;
-        }
-        
-        .portfolio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        .card-image {
-            height: 240px;
-            overflow: hidden;
-            background-color: #f5f5f5;
-        }
-        
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .portfolio-card:hover .card-image img {
-            transform: scale(1.03);
-        }
-        
-        .card-content {
-            padding: 25px;
-        }
-        
-        .card-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-        
-        .card-content p {
-            color: var(--gray);
-            line-height: 1.7;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-        
-        .project-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(52, 152, 219, 0.1);
-            color: var(--accent);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #eaeef2 100%);
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .contact-card {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 60px;
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .contact-info {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .contact-email {
-            font-size: 1.3rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        
-        .contact-note {
-            font-size: 0.95rem;
-            color: var(--gray);
-            margin-bottom: 30px;
-        }
-        
-        .cta-box {
-            text-align: center;
-            padding: 30px;
-            background: rgba(52, 152, 219, 0.05);
-            border-radius: var(--border-radius);
-        }
-        
-        .cta-box h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        
-        .cta-box p {
-            color: var(--gray);
-            margin-bottom: 25px;
-            line-height: 1.7;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 50px 0 30px;
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .footer-tagline {
-            font-size: 1.1rem;
-            opacity: 0.8;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .copyright {
-            opacity: 0.6;
-            font-size: 0.9rem;
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Simple Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .modal-content {
-            background: white;
-            border-radius: var(--border-radius);
-            max-width: 500px;
-            width: 100%;
-            position: relative;
-        }
-        
-        .modal-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--primary);
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 16px;
-            border: none;
-        }
-        
-        .modal-body {
-            padding: 40px;
-            text-align: center;
-        }
-        
-        .modal-body h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .modal-body p {
-            color: var(--gray);
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .contact-card {
-                padding: 40px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero {
-                text-align: center;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 280px;
-            }
-            
-            .menu-toggle {
-                display: block;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 30px 0;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-                z-index: 999;
-                gap: 20px;
-            }
-            
-            .nav-menu.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            .nav-menu li {
-                margin: 10px 0;
-            }
-            
-            .section h2 {
-                font-size: 2.2rem;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .about-content {
-                padding: 40px 25px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .section {
-                padding: 60px 0;
-            }
-            
-            .section h2 {
-                font-size: 2rem;
-            }
-            
-            .contact-card {
-                padding: 30px 20px;
-            }
-            
-            .modal-body {
-                padding: 30px 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Amit Sharma · Design & Automation Solutions</title>
+  <meta name="description" content="28+ years of design combined with modern automation. Helping businesses save time, improve workflows, and build stronger brands.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: #fcfcfd;
+      color: #0f172a;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width:100%; display:block; }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; }
+    button { font-family:inherit; cursor:pointer; border:none; background:none; }
+
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .section { padding:80px 0; }
+    .bg-white { background:#ffffff; }
+    .bg-mist { background:#fafbfc; }
+    .bg-soft-dark { background:#0f172a; color:#fff; }
+
+    h1,h2,h3,h4 { font-family:'Space Grotesk', sans-serif; font-weight:700; letter-spacing:-0.02em; }
+    h1 { font-size:clamp(2.8rem, 5.5vw, 4rem); line-height:1.08; }
+    h2 { font-size:clamp(2rem, 3.2vw, 2.8rem); line-height:1.15; }
+    h3 { font-size:1.35rem; }
+
+    .btn {
+      display:inline-flex; align-items:center; gap:8px; padding:13px 30px;
+      border-radius:10px; font-weight:600; font-size:0.95rem;
+      transition: all 0.2s ease; border:none;
+    }
+    .btn-primary { background:#0f172a; color:#fff; }
+    .btn-primary:hover { background:#1e293b; transform:translateY(-2px); box-shadow:0 8px 20px rgba(15,23,42,0.12); }
+    .btn-outline { background:transparent; border:1px solid rgba(15,23,42,0.1); color:#0f172a; }
+    .btn-outline:hover { border-color:#6366f1; transform:translateY(-2px); }
+    .btn-block { width:100%; justify-content:center; }
+
+    .badge {
+      display:inline-flex; align-items:center; gap:6px; padding:5px 14px; border-radius:100px;
+      font-size:0.7rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;
+    }
+    .badge-blue { background:rgba(99,102,241,0.08); color:#6366f1; }
+    .badge-amber { background:rgba(249,115,22,0.08); color:#f97316; }
+    .badge-green { background:rgba(16,185,129,0.08); color:#10b981; }
+    .badge-white { background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.7); }
+
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:0.7rem;
+      letter-spacing:0.08em; text-transform:uppercase; color:#6366f1; margin-bottom:16px;
+    }
+    .eyebrow::before { content:''; width:6px; height:6px; border-radius:50%; background:#6366f1; display:inline-block; }
+
+    header {
+      position:fixed; top:0; left:0; width:100%; z-index:1000;
+      background:rgba(255,255,255,0.9); backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(15,23,42,.05);
+    }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; height:70px; }
+    .logo { display:flex; align-items:center; gap:10px; font-weight:700; font-size:1.1rem; color:#0f172a; }
+    .logo-mark {
+      width:32px; height:32px; border-radius:8px;
+      background:#0f172a;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-size:0.75rem; font-weight:700;
+    }
+    .nav-menu { display:flex; align-items:center; gap:28px; }
+    .nav-menu a { font-size:0.85rem; font-weight:500; color:#475569; transition:color 0.15s; }
+    .nav-menu a:hover { color:#0f172a; }
+    .menu-toggle { display:none; }
+
+    .hero { padding:130px 0 72px; background:#fcfcfd; position:relative; overflow:hidden; }
+    .hero-inner { position:relative; z-index:2; max-width:820px; margin:0 auto; text-align:center; }
+    .hero h1 { margin-bottom:20px; }
+    .hero h1 .accent {
+      background:linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    }
+    .hero p { font-size:1.15rem; color:#475569; max-width:620px; margin:0 auto 32px; line-height:1.7; }
+
+    /* HERO STATS */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 900px;
+      margin: 48px auto 0;
+    }
+    .stat-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px 16px;
+      box-shadow: 0 10px 40px rgba(15,23,42,0.04);
+      text-align: center;
+      border: 1px solid rgba(15,23,42,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+    }
+    .stat-number { font-family:'Space Grotesk', sans-serif; font-size:1.6rem; font-weight:700; color:#0f172a; }
+    .stat-number span { color:#6366f1; }
+    .stat-label { font-size:0.78rem; color:#64748b; font-weight:500; }
+    .stat-icon svg { width:26px; height:26px; stroke:#6366f1; stroke-width:1.75; }
+
+    /* Responsive hero stats */
+    @media (max-width: 768px) {
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start; }
+    .about-text p { font-size:1rem; color:#334155; line-height:1.8; margin-bottom:14px; }
+    .about-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .pill { padding:5px 14px; background:#f1f5f9; border-radius:100px; font-size:0.78rem; font-weight:500; color:#334155; }
+    .about-timeline { display:flex; flex-direction:column; gap:12px; }
+    .timeline-item {
+      display:flex; gap:16px; padding:14px 18px; background:#fff; border-radius:12px;
+      box-shadow:0 8px 30px rgba(15,23,42,0.03); border-left:3px solid transparent;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .timeline-item:hover { border-left-color:#6366f1; transform:translateY(-4px); }
+    .timeline-year { font-weight:700; color:#6366f1; font-size:0.85rem; min-width:65px; }
+
+    .service-groups { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+    .service-group {
+      background:#fff; border-radius:20px; padding:32px;
+      box-shadow:0 10px 40px rgba(15,23,42,0.05); transition:0.2s ease;
+    }
+    .service-group:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(15,23,42,0.08); }
+    .service-item { display:flex; align-items:center; gap:10px; padding:10px 0; font-size:0.92rem; color:#334155; }
+
+    .project-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+    .project-card {
+      background:#fff; border-radius:20px; padding:28px;
+      box-shadow:0 10px 40px rgba(15,23,42,0.05); transition:0.2s ease;
+    }
+    .project-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(15,23,42,0.08); }
+    .project-block { padding:12px 16px; margin-top:8px; border-radius:12px; }
+    .project-block.problem { background:#f8fafc; }
+    .project-block.solution { background:#fff7ed; }
+    .project-block.result { background:#ecfdf5; }
+    .project-block-label { font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#64748b; }
+    .project-block p { font-size:0.85rem; color:#334155; margin-top:2px; }
+
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .portfolio-card {
+      background:#fff; border-radius:18px; overflow:hidden;
+      box-shadow:0 10px 40px rgba(15,23,42,0.05); transition:0.2s ease;
+    }
+    .portfolio-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(15,23,42,0.08); }
+    .portfolio-card .img { height:200px; background:#f1f5f9; overflow:hidden; }
+    .portfolio-card .img img { width:100%; height:100%; object-fit:cover; transition:0.4s; }
+    .portfolio-card:hover .img img { transform:scale(1.03); }
+    .portfolio-card .body { padding:18px 20px 20px; }
+    .portfolio-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:32px; justify-content:center; }
+    .tab-btn { padding:8px 20px; border-radius:100px; font-weight:600; font-size:0.78rem;
+      border:1px solid rgba(15,23,42,0.08); color:#475569; transition:0.15s; }
+    .tab-btn.active, .tab-btn:hover { background:#0f172a; color:#fff; border-color:#0f172a; }
+
+    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .why-card {
+      background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+      border-radius:16px; padding:24px; box-shadow:none; transition:0.2s ease;
+    }
+    .why-card:hover { transform:translateY(-6px); border-color:rgba(99,102,241,0.3); }
+    .why-card .icon { width:24px; height:24px; color:#6366f1; margin-bottom:14px; }
+
+    .testimonial-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .testimonial-card {
+      background:#fff; border-radius:20px; padding:28px;
+      box-shadow:0 10px 40px rgba(15,23,42,0.05); transition:0.2s ease;
+    }
+    .testimonial-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(15,23,42,0.08); }
+    .testimonial-card blockquote { font-size:0.9rem; color:#334155; line-height:1.7; margin-bottom:20px; }
+    .testimonial-card .attribution { padding-top:20px; }
+
+    .faq-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+    .faq-card {
+      background:#fff; border-radius:16px; padding:24px;
+      box-shadow:0 10px 40px rgba(15,23,42,0.04); border:1px solid rgba(15,23,42,0.04);
+    }
+    .faq-card h4 { font-size:0.95rem; margin-bottom:6px; color:#0f172a; }
+    .faq-card p { font-size:0.88rem; color:#475569; line-height:1.6; }
+
+    .contact-grid { display:grid; grid-template-columns:0.85fr 1.15fr; gap:48px; align-items:start; }
+    .contact-form {
+      background:#fff; border-radius:20px; padding:36px;
+      box-shadow:0 10px 40px rgba(15,23,42,0.05);
+    }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width:100%; padding:12px 16px; border:1px solid rgba(15,23,42,0.08); border-radius:12px;
+      font-family:inherit; font-size:0.9rem; transition:0.15s; background:#fafbfc;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color:#6366f1; outline:none; box-shadow:0 0 0 3px rgba(99,102,241,0.06); background:#fff; }
+
+    footer { background:#0f172a; color:#fff; padding:48px 0 28px; }
+    .footer-grid { display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; margin-bottom:32px; }
+    .footer-col a { display:block; font-size:0.85rem; color:rgba(255,255,255,0.6); margin-bottom:8px; transition:0.15s; }
+    .footer-col a:hover { color:#fff; }
+
+    .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.is-visible { opacity:1; transform:translateY(0); }
+
+    @media (max-width:1024px) {
+      .about-grid, .service-groups, .project-grid, .faq-grid { grid-template-columns:1fr; }
+      .portfolio-grid { grid-template-columns:repeat(2,1fr); }
+      .why-grid, .testimonial-grid { grid-template-columns:1fr 1fr; }
+      .contact-grid { grid-template-columns:1fr; }
+    }
+    @media (max-width:768px) {
+      .nav-menu { display:none; position:fixed; top:70px; left:0; width:100%; background:#fff;
+        flex-direction:column; padding:28px; gap:20px; box-shadow:0 20px 40px rgba(0,0,0,0.08); }
+      .nav-menu.open { display:flex; }
+      .menu-toggle { display:flex; align-items:center; justify-content:center; width:40px; height:40px; font-size:1.4rem; }
+      .portfolio-grid, .why-grid, .testimonial-grid { grid-template-columns:1fr; }
+      .form-row { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#" class="logo">Amit Sharma</a>
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#work">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <button class="menu-toggle" aria-label="Toggle menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Crafting Iconic Brands Since 1998</h1>
-                <p class="hero-subtitle">25+ Years of Visual Design Excellence</p>
-                <p class="hero-description">I help businesses transform ideas into clear, timeless visual identities that build trust, recognition, and long-term brand value. With 25+ years of experience across brand identity, print, and packaging design, I work with established companies and growing brands to stand out with confidence.</p>
-                <div class="hero-buttons">
-                    <a href="#work" class="btn btn-primary">View Portfolio</a>
-                    <a href="#contact" class="btn btn-secondary">Start Your Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>The Designer Behind the Designs</h2>
-            <p class="section-subtitle">Two and a half decades of solving complex brand challenges with simple, powerful design solutions</p>
-            
-            <div class="about-content">
-                <p>For over 25 years, I’ve partnered with businesses across industries to create visual identities that don’t just look good — they deliver results. My approach blends strategic thinking with refined design execution, ensuring every element supports your brand goals and strengthens market positioning.</p>
-                <p>Having seen design trends evolve since the 1990s, I focus on timeless solutions that remain effective for years, not seasons. I specialize in complete brand systems — from logo creation to full brand guidelines — ensuring clarity, consistency, and long-term value across all touchpoints.</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Years Design Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Successful Projects</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="work" class="section" style="background: white;">
-        <div class="container">
-            <h2>Logo & Brand Identity Systems</h2>
-            <p class="section-subtitle">Comprehensive visual identities that establish market leadership and customer trust</p>
-            
-            <div class="portfolio-grid">
-                <!-- Logo 1 -->
-                <div class="portfolio-card" onclick="openContactModal()">
-                    <div class="card-image">
-                        <img src="beginIDEAS.jpg" alt="Begin Ideas - Tech Startup Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Begin Ideas Brand Identity</div>';">
-                    </div>
-                    <div class="card-content">
-                        <h3>Begin Ideas</h3>
-                        <p>A complete brand identity for an innovative tech startup, blending creativity with technology through a flexible visual system designed for digital and print growth.</p>
-                        <div class="project-tag">Technology Startup</div>
-                    </div>
-                </div>
-                
-                <!-- Logo 2 -->
-                <div class="portfolio-card" onclick="openContactModal()">
-                    <div class="card-image">
-                        <img src="SMARTCLICK.jpg" alt="Smart Click - Fintech Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Smart Click Brand Identity</div>';">
-                    </div>
-                    <div class="card-content">
-                        <h3>Smart Click</h3>
-                        <p>Fintech branding that balances innovation with trust. A precise geometric logo and stable color palette communicate efficiency, security, and forward momentum.</p>
-                        <div class="project-tag">Fintech Branding</div>
-                    </div>
-                </div>
-                
-                <!-- Logo 3 -->
-                <div class="portfolio-card" onclick="openContactModal()">
-                    <div class="card-image">
-                        <img src="SPEAK.jpg" alt="SPEAK - Media Platform Brand Identity" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>SPEAK Media Branding</div>';">
-                    </div>
-                    <div class="card-content">
-                        <h3>SPEAK Media</h3>
-                        <p>A bold identity for a digital media platform. Typography-driven branding designed to amplify authentic voices with clarity, impact, and adaptability.</p>
-                        <div class="project-tag">Media & Publishing</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Print Design Section -->
-    <section class="section">
-        <div class="container">
-            <h2>Print & Marketing Collateral</h2>
-            <p class="section-subtitle">Tangible designs that create meaningful connections and drive measurable action</p>
-            
-            <div class="portfolio-grid">
-                <div class="portfolio-card" onclick="openContactModal()">
-                    <div class="card-image">
-                        <img src="Flyer1.jpg" alt="Corporate Conference Marketing Suite" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Corporate Event Series</div>';">
-                    </div>
-                    <div class="card-content">
-                        <h3>Global Tech Summit</h3>
-                        <p>Complete print suite for a major industry conference. Clear information hierarchy combined with premium design to guide attendees and elevate event positioning.</p>
-                        <div class="project-tag">Event Marketing</div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-card" onclick="openContactModal()">
-                    <div class="card-image">
-                        <img src="Flyer2.jpg" alt="Product Launch Campaign Materials" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Product Launch Campaign</div>';">
-                    </div>
-                    <div class="card-content">
-                        <h3>Innovation Launch Series</h3>
-                        <p>High-impact launch campaign designed to generate excitement and urgency, while clearly communicating product benefits through bold visuals and strategic messaging.</p>
-                        <div class="project-tag">Product Launch</div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-card" onclick="openContactModal()">
-                    <div class="card-image">
-                        <img src="Flyer3.jpg" alt="Sales Promotion & Direct Response Campaign" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666; padding:20px; text-align:center;\'>Sales Promotion Campaign</div>';">
-                    </div>
-                    <div class="card-content">
-                        <h3>Seasonal Sales Drive</h3>
-                        <p>Results-focused direct marketing campaign with strong calls-to-action, guiding customers from attention to conversion with measurable ROI.</p>
-                        <div class="project-tag">Direct Marketing</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Brochure Design -->
-    <section class="section" style="background: white;">
-        <div class="container">
-            <h2>Brochure & Corporate Literature</h2>
-            <p class="section-subtitle">Information architecture that transforms complex messages into compelling narratives</p>
-            
-            <div class="portfolio-grid">
-                <!-- Brochure 1 -->
-<div class="portfolio-card" onclick="openContactModal()">
-    <div class="card-image">
-        <img src="Brochure1.jpg" alt="Enterprise Solutions Guide"
-             loading="lazy"
-             onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;background:#f5f5f5;color:#666;padding:20px;text-align:center;\'>Enterprise Solutions Guide</div>';">
+<header>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="logo"><span class="logo-mark">AS</span> Amit Sharma</a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Case Studies</a>
+        <a href="#why">Why Work With Me</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary" style="padding:9px 20px;font-size:0.85rem;">Let's Talk</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      </div>
     </div>
-    <div class="card-content">
-        <h3>Enterprise Solutions Guide</h3>
-        <p>
-            Sophisticated corporate brochure designed to establish market authority.
-            Clean layouts and structured content present complex service offerings
-            with clarity, professionalism, and impact.
-        </p>
-        <div class="project-tag">Corporate Communications</div>
-    </div>
-</div>
+  </div>
+</header>
 
-<!-- Brochure 2 -->
-<div class="portfolio-card" onclick="openContactModal()">
-    <div class="card-image">
-        <img src="Brochure2.jpg" alt="Product Catalog System"
-             loading="lazy"
-             onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;background:#f5f5f5;color:#666;padding:20px;text-align:center;\'>Product Catalog System</div>';">
-    </div>
-    <div class="card-content">
-        <h3>Product Catalog System</h3>
-        <p>
-            Comprehensive multi-page catalog balancing visual appeal with functional
-            information design. Clear navigation and product comparison support
-            confident purchasing decisions.
-        </p>
-        <div class="project-tag">Sales Enablement</div>
-    </div>
-</div>
-
-<!-- Brochure 3 (NEW – your uploaded image) -->
-<div class="portfolio-card" onclick="openContactModal()">
-    <div class="card-image">
-        <img src="Brochure3.jpg" alt="Editorial & Magazine Brochure Design"
-             loading="lazy"
-             onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;background:#f5f5f5;color:#666;padding:20px;text-align:center;\'>Editorial Brochure Design</div>';">
-    </div>
-    <div class="card-content">
-        <h3>Editorial & Magazine Brochure Design</h3>
-        <p>
-            Multi-page editorial brochure designed for a lifestyle and fashion publication.
-            Strong visual hierarchy, bold typography, and controlled color usage guide
-            readers through dense content with a premium feel.
-        </p>
-        <div class="project-tag">Editorial Design</div>
-    </div>
-</div>
-
-    </section>
-
-<!-- Packaging & Product Experience -->
-<!-- Packaging & Product Experience -->
-<section class="section" id="packaging">
+<main>
+  <section class="hero" id="home">
     <div class="container">
-        <h2>Packaging & Product Experience</h2>
-        <p class="section-subtitle">
-            Three-dimensional design that strengthens brand presence and creates memorable customer experiences
-        </p>
-
-        <div class="portfolio-grid">
-            <!-- Card 1: Eco-Conscious Packaging -->
-            <div class="portfolio-card" onclick="openContactModal()">
-                <div class="card-image">
-                    <img src="Packaging1.jpg" alt="Eco-Conscious Packaging - Sustainable Design Solutions" loading="lazy" 
-                         onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;background:#f5f5f5;color:#666;padding:20px;text-align:center;\'>Eco-Conscious Packaging Design</div>';">
-                </div>
-                <div class="card-content">
-                    <h3>Eco-Conscious Packaging</h3>
-                    <p>
-                        Sustainable packaging solutions designed to align with brand values while maintaining strong shelf presence.
-                        Thoughtful material selection and minimal design reduce environmental impact.
-                    </p>
-                    <div class="project-tag">Sustainable Design</div>
-                </div>
-            </div>
-
-            <!-- Card 2: Luxury Fragrance Collection -->
-            <div class="portfolio-card" onclick="openContactModal()">
-                <div class="card-image">
-                    <img src="Packaging2.jpg" alt="Luxury Fragrance Collection - Premium Packaging Design" loading="lazy"
-                         onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;background:#f5f5f5;color:#666;padding:20px;text-align:center;\'>Luxury Fragrance Packaging</div>';">
-                </div>
-                <div class="card-content">
-                    <h3>Luxury Fragrance Collection</h3>
-                    <p>
-                        Premium packaging crafted to support high-end positioning. Attention to structure, finishes, and tactile
-                        elements creates a refined unboxing experience and reinforces brand value.
-                    </p>
-                    <div class="project-tag">Luxury Branding</div>
-                </div>
-            </div>
-
-            <!-- Card 3: Your Project Here -->
-            <div class="portfolio-card" onclick="openContactModal()">
-                <div class="card-image">
-                    <img src="Packaging3.jpg" alt="Packaging Design Project - Custom Solutions for Your Brand" loading="lazy"
-                         onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'height:100%;display:flex;align-items:center;justify-content:center;background:#2c3e50;color:white;padding:20px;text-align:center;\'><h3>Your Project Here</h3></div>';">
-                </div>
-                <div class="card-content">
-                    <h3>Your Brand's Next Chapter</h3>
-                    <p>
-                        Looking to elevate your product presentation? From concept to production-ready designs,
-                        I deliver packaging solutions tailored to your brand and market.
-                    </p>
-                    <div class="project-tag">Next Project</div>
-                </div>
-            </div>
+      <div class="hero-inner">
+        <span class="eyebrow reveal">Creative Design + Smart Automation</span>
+        <h1 class="reveal">Design. Automation. <span class="accent">Business Solutions.</span></h1>
+        <p class="reveal">Helping businesses save time, improve workflows, and build stronger brands through creative design and practical automation solutions.</p>
+        <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
+          <a href="#projects" class="btn btn-outline">View Case Studies</a>
         </div>
+        <div class="hero-stats reveal">
+          <div class="stat-card">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
+            <div class="stat-number">28<span>+</span></div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.75"/><path d="M2 12H22M12 2C9.5 4 8 8 8 12C8 16 9.5 20 12 22C14.5 20 16 16 16 12C16 8 14.5 4 12 2Z" stroke="currentColor" stroke-width="1.75"/></svg></span>
+            <div class="stat-number">Global</div>
+            <div class="stat-label">International Clients</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H9L10 22L20 10H14L13 2Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
+            <div class="stat-number">500<span>+</span></div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.75"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
+            <div class="stat-number">Custom</div>
+            <div class="stat-label">Solutions</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+            <div class="stat-number">2-in-1</div>
+            <div class="stat-label">Design + Automation</div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Contact CTA Section -->
-<section id="contact" class="section contact-section">
+  <section id="about" class="section bg-white">
     <div class="container">
-        <h2>Let’s Create Something Exceptional</h2>
-        <p class="section-subtitle">
-            Your vision combined with 25 years of design expertise — delivering results that exceed expectations
-        </p>
-
-        <div class="contact-card">
-            <div class="contact-info">
-                <div class="contact-email">amitsharma.graphics@gmail.com</div>
-                <p class="contact-note">Primary contact for all project discussions</p>
-            </div>
-
-            <div class="cta-box">
-                <h3>Start With a Conversation</h3>
-                <p>
-                    The best projects begin with clarity. Share your goals, audience, timeline, and budget, and I’ll
-                    provide a clear proposal outlining how we can achieve your objectives through strategic design.
-                </p>
-                <a href="mailto:amitsharma.graphics@gmail.com" class="btn btn-primary">
-                    Email Your Project Brief
-                </a>
-            </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="eyebrow">About</span>
+          <h2>28 years of creative experience meet practical automation thinking.</h2>
+          <p>With 28+ years of visual identity work for international clients, I saw the same challenge repeat: businesses get slowed down by repetitive, manual tasks. So I built automation systems to solve it.</p>
+          <p>Today, I combine deep design intuition with practical automation thinking — helping businesses look sharp and run smart.</p>
+          <div class="about-pills">
+            <span class="pill">Brand Identity</span>
+            <span class="pill">Automation Solutions</span>
+            <span class="pill">Workflow Design</span>
+            <span class="pill">International Clients</span>
+          </div>
         </div>
+        <div class="about-timeline reveal">
+          <div class="timeline-item"><span class="timeline-year">1997</span><span>Brand Identity</span></div>
+          <div class="timeline-item"><span class="timeline-year">2008</span><span>International Clients</span></div>
+          <div class="timeline-item"><span class="timeline-year">2018</span><span>Workflow Thinking</span></div>
+          <div class="timeline-item"><span class="timeline-year">2022</span><span>Automation Solutions</span></div>
+          <div class="timeline-item"><span class="timeline-year">Today</span><span><strong>Design + Automation</strong></span></div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Amit Sharma</div>
-                <p class="footer-tagline">Transforming business visions into timeless visual identities since 1998</p>
-                <p class="copyright">© 1998-2025 Amit Sharma | Professional Graphic Design Services</p>
-            </div>
+  <section id="services" class="section bg-soft-dark">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:44px;" class="reveal">
+        <span class="badge badge-white" style="margin-bottom:12px;">Services</span>
+        <h2 style="color:#fff;">Design and automation that work together.</h2>
+        <p style="max-width:540px;margin:8px auto 0;color:rgba(255,255,255,.6);">Whether you need your brand to stand out or your workflow to run itself — I can help.</p>
+      </div>
+      <div class="service-groups reveal">
+        <div class="service-group">
+          <h3 style="display:flex;align-items:center;gap:10px;">
+            <i data-lucide="palette" style="width:24px;height:24px;color:#6366f1;stroke-width:1.75;"></i>
+            Creative Services
+          </h3>
+          <span style="color:#64748b;font-size:0.85rem;display:block;margin-bottom:18px;">Design that builds trust and recognition</span>
+          <div class="service-item"><i data-lucide="sparkles" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Logo &amp; Brand Identity</div>
+          <div class="service-item"><i data-lucide="package" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Packaging Design</div>
+          <div class="service-item"><i data-lucide="printer" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Print Design</div>
+          <div class="service-item"><i data-lucide="presentation" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Marketing Materials</div>
         </div>
-    </footer>
-
-    <!-- Simple Contact Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-body">
-                <h3>Start Your Design Project</h3>
-                <p>Let's discuss how we can bring your vision to life with professional design solutions.</p>
-                <p>Email me at:</p>
-                <div style="font-size: 1.3rem; color: #2C3E50; font-weight: 500; margin: 20px 0;">amitsharma.graphics@gmail.com</div>
-                <p>Include details about your project, timeline, and budget for a prompt response.</p>
-                <a href="mailto:amitsharma.graphics@gmail.com" class="btn btn-primary" style="margin-top: 20px;">Send Email Now</a>
-            </div>
+        <div class="service-group">
+          <h3 style="display:flex;align-items:center;gap:10px;">
+            <i data-lucide="cpu" style="width:24px;height:24px;color:#6366f1;stroke-width:1.75;"></i>
+            Automation Services
+          </h3>
+          <span style="color:#64748b;font-size:0.85rem;display:block;margin-bottom:18px;">Systems that save time and reduce errors</span>
+          <div class="service-item"><i data-lucide="bar-chart-3" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> TradingView Automation</div>
+          <div class="service-item"><i data-lucide="user-search" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Lead Research Systems</div>
+          <div class="service-item"><i data-lucide="file-spreadsheet" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Data Processing Tools</div>
+          <div class="service-item"><i data-lucide="workflow" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Workflow Automation</div>
         </div>
+      </div>
     </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
+  <section id="projects" class="section bg-white">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:44px;" class="reveal">
+        <span class="eyebrow">Case Studies</span>
+        <h2>Automation Case Studies</h2>
+        <p style="max-width:520px;margin:8px auto 0;color:#475569;">Examples of practical systems built to save time, improve workflows, and eliminate repetitive tasks.</p>
+      </div>
+      <div class="project-grid reveal">
+        <div class="project-card">
+          <span class="badge badge-blue">Trading</span>
+          <h4 style="margin:8px 0 4px;">TradingView Alert Automation</h4>
+          <div style="color:#64748b;font-size:0.85rem;margin-bottom:16px;">Signal to execution in under 2 seconds</div>
+          <div class="project-block problem"><div class="project-block-label">Problem</div><p>Manual monitoring caused missed entries and inconsistent execution.</p></div>
+          <div class="project-block solution"><div class="project-block-label">Solution</div><p>Custom system receives webhooks, parses alerts, applies risk filters, and routes orders automatically.</p></div>
+          <div class="project-block result"><div class="project-block-label">Result</div><p>Signal-to-execution time dropped from minutes to under 2 seconds. Zero missed alerts.</p></div>
+        </div>
+        <div class="project-card">
+          <span class="badge badge-amber">Lead Research</span>
+          <h4 style="margin:8px 0 4px;">Automated Lead Research Workflow</h4>
+          <div style="color:#64748b;font-size:0.85rem;margin-bottom:16px;">85% time reduction</div>
+          <div class="project-block problem"><div class="project-block-label">Problem</div><p>15+ hours per week manually researching prospects across directories and social platforms.</p></div>
+          <div class="project-block solution"><div class="project-block-label">Solution</div><p>Automated pipeline that crawls target sources, extracts contacts, and qualifies leads.</p></div>
+          <div class="project-block result"><div class="project-block-label">Result</div><p>Research time reduced by 85%. Team focused entirely on outreach.</p></div>
+        </div>
+        <div class="project-card">
+          <span class="badge badge-green">Data Processing</span>
+          <h4 style="margin:8px 0 4px;">Custom Data Processing Tool</h4>
+          <div style="color:#64748b;font-size:0.85rem;margin-bottom:16px;">3 hours → 8 minutes</div>
+          <div class="project-block problem"><div class="project-block-label">Problem</div><p>Daily inventory and sales exports from multiple suppliers in inconsistent formats.</p></div>
+          <div class="project-block solution"><div class="project-block-label">Solution</div><p>Automated tool ingests files, normalizes data, flags discrepancies, and generates unified reports.</p></div>
+          <div class="project-block result"><div class="project-block-label">Result</div><p>Reconciliation time dropped from 3 hours to 8 minutes. Errors caught automatically.</p></div>
+        </div>
+        <div class="project-card">
+          <span class="badge badge-blue">Trading Bot</span>
+          <h4 style="margin:8px 0 4px;">Trading Bot System</h4>
+          <div style="color:#64748b;font-size:0.85rem;margin-bottom:16px;">Consistent execution, reduced manual intervention</div>
+          <div class="project-block problem"><div class="project-block-label">Problem</div><p>Manual trade execution led to inconsistent timing and missed opportunities.</p></div>
+          <div class="project-block solution"><div class="project-block-label">Solution</div><p>Python system connected to alerts and risk management for automated trade execution.</p></div>
+          <div class="project-block result"><div class="project-block-label">Result</div><p>Consistent execution and significantly reduced manual intervention.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if(this.getAttribute('href') === '#') return;
-                
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    document.querySelector('.nav-menu').classList.remove('active');
-                }
-            });
-        });
+  <section id="portfolio" class="section bg-soft-dark">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:32px;" class="reveal">
+        <span class="badge badge-white" style="margin-bottom:12px;">Portfolio</span>
+        <h2 style="color:#fff;">Design Portfolio Highlights</h2>
+        <p style="max-width:460px;margin:8px auto 0;color:rgba(255,255,255,0.5);">Brand identity, packaging, and print projects built across nearly three decades.</p>
+      </div>
+      <div class="portfolio-tabs reveal">
+        <button class="tab-btn active" data-filter="all" style="border-color:rgba(255,255,255,0.15);color:#0f172a;background:#fff;">All</button>
+        <button class="tab-btn" data-filter="brand" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);">Brand Identity</button>
+        <button class="tab-btn" data-filter="packaging" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);">Packaging</button>
+        <button class="tab-btn" data-filter="print" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);">Print Design</button>
+        <button class="tab-btn" data-filter="marketing" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);">Marketing Design</button>
+      </div>
+      <div class="portfolio-grid reveal" id="portfolioGrid">
+        <div class="portfolio-card" data-category="brand"><div class="img"><img src="beginIDEAS.jpg" alt="Begin Ideas" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Begin Ideas</h4><p style="color:#64748b;font-size:0.85rem;">Tech startup brand identity</p><span class="badge badge-blue">Brand Identity</span></div></div>
+        <div class="portfolio-card" data-category="brand"><div class="img"><img src="SMARTCLICK.jpg" alt="Smart Click" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Smart Click</h4><p style="color:#64748b;font-size:0.85rem;">Fintech branding</p><span class="badge badge-blue">Brand Identity</span></div></div>
+        <div class="portfolio-card" data-category="brand"><div class="img"><img src="SPEAK.jpg" alt="SPEAK Media" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>SPEAK Media</h4><p style="color:#64748b;font-size:0.85rem;">Digital media platform</p><span class="badge badge-blue">Brand Identity</span></div></div>
+        <div class="portfolio-card" data-category="marketing"><div class="img"><img src="Flyer1.jpg" alt="Global Tech Summit" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Global Tech Summit</h4><p style="color:#64748b;font-size:0.85rem;">Event marketing suite</p><span class="badge badge-amber">Marketing Design</span></div></div>
+        <div class="portfolio-card" data-category="marketing"><div class="img"><img src="Flyer2.jpg" alt="Innovation Launch" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Innovation Launch</h4><p style="color:#64748b;font-size:0.85rem;">Product campaign</p><span class="badge badge-amber">Marketing Design</span></div></div>
+        <div class="portfolio-card" data-category="print"><div class="img"><img src="Brochure1.jpg" alt="Enterprise Guide" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Enterprise Solutions Guide</h4><p style="color:#64748b;font-size:0.85rem;">Corporate brochure</p><span class="badge badge-green">Print Design</span></div></div>
+      </div>
+      <div style="text-align:center;margin-top:32px;" class="reveal"><a href="https://www.behance.net/" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(255,255,255,0.15);color:#fff;">View Full Portfolio →</a></div>
+    </div>
+  </section>
 
-        // Modal functionality
-        function openContactModal() {
-            document.getElementById('contactModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeModal() {
-            document.getElementById('contactModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        
-        // Close modal when clicking outside
-        document.getElementById('contactModal').addEventListener('click', function(e) {
-            if(e.target === this) {
-                closeModal();
-            }
-        });
-        
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if(e.key === 'Escape') {
-                closeModal();
-            }
-        });
-        
-        // Preload images
-        function preloadImages() {
-            const imageUrls = [
-                'beginIDEAS.jpg',
-                'SMARTCLICK.jpg',
-                'SPEAK.jpg',
-                'Flyer1.jpg',
-                'Flyer2.jpg',
-                'Flyer3.jpg',
-                'Brochure1.jpg',
-                'Brochure2.jpg',
-                'Packaging1.jpg',
-                'Packaging2.jpg',
-                'Packaging3.jpg'
-            ];
-            
-            imageUrls.forEach(url => {
-                const img = new Image();
-                img.src = url;
-            });
-        }
-        
-        // Start preloading images
-        window.addEventListener('load', preloadImages);
-    </script>
+  <section id="why" class="section bg-white">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:40px;" class="reveal">
+        <span class="eyebrow">Why Work With Me</span>
+        <h2>Why clients choose to work with me</h2>
+        <p style="max-width:520px;margin:8px auto 0;color:#475569;">Creative expertise combined with practical automation thinking — helping businesses look better and work smarter.</p>
+      </div>
+      <div class="why-grid reveal">
+        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="clock" class="icon"></i><h4>28+ Years Experience</h4><p style="color:#64748b;">Deep domain knowledge — no learning curve on your time.</p></div>
+        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="layers" class="icon"></i><h4>Design + Automation</h4><p style="color:#64748b;">Both disciplines in one professional, so your brand and workflows grow together.</p></div>
+        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="briefcase" class="icon"></i><h4>Business Understanding</h4><p style="color:#64748b;">Worked with small businesses, agencies, and operators — I know what matters.</p></div>
+        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="message-circle" class="icon"></i><h4>Direct Communication</h4><p style="color:#64748b;">You work with me, not an account manager. Clear, fast responses.</p></div>
+        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="sliders" class="icon"></i><h4>Tailored Solutions</h4><p style="color:#64748b;">No templates. Every design and automation is built for your specific situation.</p></div>
+        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="globe" class="icon"></i><h4>International Track Record</h4><p style="color:#64748b;">Trusted by clients across Guru and Upwork. Proven across time zones.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section bg-soft-dark">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:44px;" class="reveal">
+        <span class="badge badge-white" style="margin-bottom:12px;">Testimonials</span>
+        <h2 style="color:#fff;">Trusted by clients around the world</h2>
+        <p style="max-width:420px;margin:8px auto 0;color:rgba(255,255,255,0.5);">A track record built on communication, reliability, and results.</p>
+      </div>
+      <div class="testimonial-grid reveal">
+        <div class="testimonial-card">
+          <blockquote>Communication was clear from day one. It felt like working with an in-house designer who actually understood the brief.</blockquote>
+          <div class="attribution"><div><strong>J. Martinez</strong><br><small style="color:#64748b;">Founder • Retail Startup • Spain</small></div></div>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>We came in needing an automation fix and left with a system that's been completely reliable since launch. Professional from proposal to delivery.</blockquote>
+          <div class="attribution"><div><strong>R. Kapoor</strong><br><small style="color:#64748b;">Operations Lead • India</small></div></div>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>The packaging redesign exceeded what we asked for, and the quality held up across every print run. This is the kind of partner you keep coming back to.</blockquote>
+          <div class="attribution"><div><strong>S. Lindqvist</strong><br><small style="color:#64748b;">Brand Manager • Sweden</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section bg-white">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:40px;" class="reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid reveal">
+        <div class="faq-card">
+          <h4>Do you provide both design and automation services?</h4>
+          <p>Yes. Depending on your needs, projects may involve branding, automation, or a combination of both.</p>
+        </div>
+        <div class="faq-card">
+          <h4>Can you build custom Python tools?</h4>
+          <p>Yes. I create practical automation solutions tailored to specific workflows and business processes.</p>
+        </div>
+        <div class="faq-card">
+          <h4>Do you work with international clients?</h4>
+          <p>Yes. I have worked with clients worldwide through freelance platforms and direct collaborations.</p>
+        </div>
+        <div class="faq-card">
+          <h4>What types of businesses do you work with?</h4>
+          <p>Small businesses, startups, agencies, e-commerce brands, trading communities, and entrepreneurs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section bg-soft-dark">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <span class="badge badge-white" style="margin-bottom:12px;">Contact</span>
+          <h2 style="color:#fff;">Let's discuss your project</h2>
+          <p style="color:rgba(255,255,255,0.6);font-size:1.05rem;line-height:1.7;margin:16px 0 24px;">Whether you need a brand identity, an automation tool, or both — share what you're working on and I'll come back with a clear proposal.</p>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.8);"><i data-lucide="mail" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> amitsharma.graphics@gmail.com</div>
+            <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.8);"><i data-lucide="map-pin" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Available for remote projects worldwide</div>
+          </div>
+        </div>
+        <div class="contact-form reveal">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group"><label style="font-weight:600;font-size:0.85rem;">Name</label><input type="text" id="name" placeholder="Your name" required></div>
+              <div class="form-group"><label style="font-weight:600;font-size:0.85rem;">Email</label><input type="email" id="email" placeholder="you@company.com" required></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label style="font-weight:600;font-size:0.85rem;">Project Type</label><select id="projectType"><option>Brand Identity</option><option>Packaging Design</option><option>Print Design</option><option>Marketing Materials</option><option>Automation Tool</option><option>Workflow Automation</option><option>Both Design &amp; Automation</option></select></div>
+              <div class="form-group"><label style="font-weight:600;font-size:0.85rem;">Budget Range</label><select id="budget"><option>$1k – $3k</option><option>$3k – $6k</option><option>$6k – $10k</option><option>$10k+</option></select></div>
+            </div>
+            <div class="form-group" style="margin-bottom:16px;"><label style="font-weight:600;font-size:0.85rem;">Timeline</label><input type="text" id="timeline" placeholder="When do you need this completed?"></div>
+            <div class="form-group" style="margin-bottom:20px;"><label style="font-weight:600;font-size:0.85rem;">Project Details</label><textarea id="message" placeholder="Describe your goals, challenges, and what you need…" required style="min-height:110px;"></textarea></div>
+            <button type="submit" class="btn btn-primary btn-block">Let's Talk →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="color:#fff;"><span class="logo-mark">AS</span> Amit Sharma</div>
+        <p style="color:rgba(255,255,255,0.5);max-width:300px;font-size:0.9rem;line-height:1.6;margin-top:8px;">28+ years of design experience combined with modern automation solutions.</p>
+      </div>
+      <div style="display:flex;gap:48px;flex-wrap:wrap;">
+        <div class="footer-col">
+          <h5 style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);margin-bottom:14px;">Navigation</h5>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Case Studies</a>
+          <a href="#why">Why Work With Me</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5 style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);margin-bottom:14px;">Platforms</h5>
+          <a href="https://www.upwork.com" target="_blank" rel="noopener">Upwork</a>
+          <a href="https://www.guru.com" target="_blank" rel="noopener">Guru</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div style="padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.8rem;color:rgba(255,255,255,0.3);">
+      <span>© 1997–2026 Amit Sharma. All rights reserved.</span>
+      <span style="display:flex;gap:16px;"><span>Design</span><span>Automation</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    lucide.createIcons();
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
+    navMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navMenu.classList.remove('open')));
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth' }); }
+      });
+    });
+
+    const tabs = document.querySelectorAll('.tab-btn');
+    const cards = document.querySelectorAll('#portfolioGrid .portfolio-card');
+    tabs.forEach(b => b.addEventListener('click', function() {
+      tabs.forEach(bt => bt.classList.remove('active'));
+      this.classList.add('active');
+      const f = this.dataset.filter;
+      cards.forEach(c => c.style.display = (f==='all' || c.dataset.category===f) ? '' : 'none');
+    }));
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const n = document.getElementById('name').value.trim();
+      const em = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if(!n||!em||!msg) { alert('Please fill in all required fields.'); return; }
+      const subject = `Project inquiry from ${n}`;
+      const body = `Name: ${n}\nEmail: ${em}\nProject: ${document.getElementById('projectType').value}\nBudget: ${document.getElementById('budget').value}\nTimeline: ${document.getElementById('timeline').value}\n\nMessage:\n${msg}`;
+      window.location.href = `mailto:amitsharma.graphics@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  })();
+</script>
 </body>
 </html>
