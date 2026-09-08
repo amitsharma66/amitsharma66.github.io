@@ -1,611 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Amit Sharma · Design & Automation Solutions</title>
-  <meta name="description" content="28+ years of design combined with modern automation. Helping businesses save time, improve workflows, and build stronger brands.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      font-family: 'Inter', -apple-system, system-ui, sans-serif;
-      background: #fcfcfd;
-      color: #0f172a;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      overflow-x: hidden;
-    }
-    img { max-width:100%; display:block; }
-    a { text-decoration:none; color:inherit; }
-    ul { list-style:none; }
-    button { font-family:inherit; cursor:pointer; border:none; background:none; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amit Sharma · Design & Automation Solutions</title>
+<meta name="description" content="Graphic design, automation, AI conversions and custom workflow solutions by Amit Sharma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#f45b16;--orange2:#ff6b22;--navy:#0b1728;--cream:#fbf8f3;--teal:#087f89;--text:#142238;--muted:#5c6878;--line:#e1e5e9;--white:#fff;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--shadow:0 18px 45px rgba(11,23,40,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:var(--sans),Arial,sans-serif;background:#fff;line-height:1.55}img{max-width:100%;display:block}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}button{cursor:pointer}.container{width:min(1420px,calc(100% - 64px));margin:auto}.serif{font-family:var(--serif)}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;border-radius:8px;padding:13px 20px;font-weight:700;transition:.2s}.btn-primary{background:var(--orange2);color:#fff}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 25px #f45b1630}.btn-outline{border-color:#b9c0c8;background:#fff}.btn-outline:hover{border-color:var(--orange);color:var(--orange)}.tiny{font-size:11px;color:var(--muted)}.hide{display:none!important}
 
-    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-    .section { padding:80px 0; }
-    .bg-white { background:#ffffff; }
-    .bg-mist { background:#fafbfc; }
-    .bg-soft-dark { background:#0f172a; color:#fff; }
+/* header */
+header{height:72px;background:#fff;border-bottom:1px solid #eceff1;position:sticky;top:0;z-index:100}.nav{height:100%;display:flex;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:0;min-width:340px}.logo{font-family:Georgia,serif;font-size:46px;letter-spacing:-.12em;color:var(--orange);line-height:1}.brand-name{font-family:var(--serif);font-size:25px;font-weight:700}.brand-sub{font-size:8px;letter-spacing:.17em}.navlinks{display:flex;align-items:center;gap:28px;margin-left:auto;font-size:13px}.navlinks a{padding:26px 0;position:relative}.navlinks a:hover,.navlinks a.active{color:var(--orange)}.navlinks a.active:after{content:"";position:absolute;height:2px;background:var(--orange);bottom:12px;left:0;right:0}.menu{display:none;border:0;background:none;font-size:25px;margin-left:auto}
 
-    h1,h2,h3,h4 { font-family:'Space Grotesk', sans-serif; font-weight:700; letter-spacing:-0.02em; }
-    h1 { font-size:clamp(2.8rem, 5.5vw, 4rem); line-height:1.08; }
-    h2 { font-size:clamp(2rem, 3.2vw, 2.8rem); line-height:1.15; }
-    h3 { font-size:1.35rem; }
+/* hero */
+.hero{min-height:485px;position:relative;overflow:hidden;background:var(--cream)}.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fbf8f3 0%,rgba(251,248,243,.97) 27%,rgba(251,248,243,.76) 44%,rgba(251,248,243,.18) 64%,rgba(251,248,243,0) 76%)}.hero-inner{min-height:485px;display:flex;align-items:center;position:relative;z-index:2}.hero-copy{width:53%;padding:42px 0}.hero h1{font-family:var(--serif);font-size:clamp(46px,4.6vw,66px);line-height:.97;letter-spacing:-.045em;margin:15px 0 20px}.hero h1 span{color:var(--orange)}.hero-copy p{font-size:16px;max-width:620px;margin:0 0 25px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.proof{display:flex;margin-top:30px}.proof>div{padding:0 20px;border-right:1px solid #cbd1d7}.proof>div:first-child{padding-left:0}.proof>div:last-child{border:0}.proof b{font-size:18px;display:block}.proof small{font-size:11px;color:#536071}
 
-    .btn {
-      display:inline-flex; align-items:center; gap:8px; padding:13px 30px;
-      border-radius:10px; font-weight:600; font-size:0.95rem;
-      transition: all 0.2s ease; border:none;
-    }
-    .btn-primary { background:#0f172a; color:#fff; }
-    .btn-primary:hover { background:#1e293b; transform:translateY(-2px); box-shadow:0 8px 20px rgba(15,23,42,0.12); }
-    .btn-outline { background:transparent; border:1px solid rgba(15,23,42,0.1); color:#0f172a; }
-    .btn-outline:hover { border-color:#6366f1; transform:translateY(-2px); }
-    .btn-block { width:100%; justify-content:center; }
+/* strip */
+.service-strip{border-bottom:1px solid var(--line)}.service-row{display:grid;grid-template-columns:repeat(6,1fr);padding:21px 0}.service{display:flex;gap:11px;align-items:center;padding:0 15px;border-right:1px solid var(--line)}.service:first-child{padding-left:0}.service:last-child{border:0}.service .icon{font-size:26px}.service b{font-size:13px}.service small{display:block;color:var(--muted);font-size:10px}
 
-    .badge {
-      display:inline-flex; align-items:center; gap:6px; padding:5px 14px; border-radius:100px;
-      font-size:0.7rem; font-weight:600; letter-spacing:0.04em; text-transform:uppercase;
-    }
-    .badge-blue { background:rgba(99,102,241,0.08); color:#6366f1; }
-    .badge-amber { background:rgba(249,115,22,0.08); color:#f97316; }
-    .badge-green { background:rgba(16,185,129,0.08); color:#10b981; }
-    .badge-white { background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.7); }
+/* feature */
+.feature-wrap{padding:26px 0}.features{display:grid;grid-template-columns:1fr 1fr;gap:18px}.feature{min-height:300px;border-radius:12px;overflow:hidden;position:relative}.feature.design{background:#f6eee5}.feature.auto{background:#eef7f7}.feature-copy{position:relative;z-index:4;width:57%;padding:32px}.feature h2{font-family:var(--serif);font-size:38px;line-height:1.05;margin:8px 0 12px}.feature p{font-size:13px;max-width:410px}.feature-img{position:absolute;right:0;top:0;width:60%;height:100%;object-fit:cover;object-position:center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 10%,rgba(0,0,0,.68) 23%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.18) 10%,rgba(0,0,0,.68) 23%,#000 38%);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%}.feature.design:after,.feature.auto:after{content:"";position:absolute;inset:0;z-index:2}.feature.design:after{background:linear-gradient(90deg,#f6eee5 15%,rgba(246,238,229,.8) 43%,rgba(246,238,229,0) 75%)}.feature.auto:after{background:linear-gradient(90deg,#eef7f7 14%,rgba(238,247,247,.86) 46%,rgba(238,247,247,0) 79%)}.flow{position:absolute;z-index:5;right:24px;top:64px;width:45%;display:flex;align-items:center;justify-content:center;gap:7px}.flow .box{background:#ffffffd9;border:1px solid #b7dcdf;border-radius:9px;padding:12px 8px;text-align:center;font-size:10px;min-width:82px}.flow .box strong{font-size:21px;display:block;color:var(--teal)}.flow .arrow{font-size:22px;color:var(--teal)}
 
-    .eyebrow {
-      display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:0.7rem;
-      letter-spacing:0.08em; text-transform:uppercase; color:#6366f1; margin-bottom:16px;
-    }
-    .eyebrow::before { content:''; width:6px; height:6px; border-radius:50%; background:#6366f1; display:inline-block; }
+/* trust */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.trust-row{display:grid;grid-template-columns:1.25fr repeat(4,1fr) 1.35fr;padding:18px 0;align-items:center}.trust-item{font-size:11px;padding:0 17px;border-right:1px solid var(--line)}.trust-item:first-child{padding-left:0;text-transform:uppercase;letter-spacing:.18em;font-size:9px}.trust-item:last-child{border:0;font-family:cursive;font-style:italic;font-size:19px}
 
-    header {
-      position:fixed; top:0; left:0; width:100%; z-index:1000;
-      background:rgba(255,255,255,0.9); backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(15,23,42,.05);
-    }
-    .nav-inner { display:flex; align-items:center; justify-content:space-between; height:70px; }
-    .logo { display:flex; align-items:center; gap:10px; font-weight:700; font-size:1.1rem; color:#0f172a; }
-    .logo-mark {
-      width:32px; height:32px; border-radius:8px;
-      background:#0f172a;
-      display:flex; align-items:center; justify-content:center;
-      color:#fff; font-size:0.75rem; font-weight:700;
-    }
-    .nav-menu { display:flex; align-items:center; gap:28px; }
-    .nav-menu a { font-size:0.85rem; font-weight:500; color:#475569; transition:color 0.15s; }
-    .nav-menu a:hover { color:#0f172a; }
-    .menu-toggle { display:none; }
+/* sections */
+.section{padding:88px 0;scroll-margin-top:88px}.section-head{text-align:center;max-width:770px;margin:0 auto 45px}.section-head .eyebrow{color:var(--orange)}.section-head h2{font-family:var(--serif);font-size:49px;line-height:1.04;margin:10px 0 14px}.section-head p{color:var(--muted);font-size:16px}
 
-    .hero { padding:130px 0 72px; background:#fcfcfd; position:relative; overflow:hidden; }
-    .hero-inner { position:relative; z-index:2; max-width:820px; margin:0 auto; text-align:center; }
-    .hero h1 { margin-bottom:20px; }
-    .hero h1 .accent {
-      background:linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-    }
-    .hero p { font-size:1.15rem; color:#475569; max-width:620px; margin:0 auto 32px; line-height:1.7; }
+/* automation */
+.auto-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.auto-card,.automation-builder{border:1px solid var(--line);border-radius:14px;padding:30px;box-shadow:0 10px 30px #0b17280b}.auto-card h3,.automation-builder h3{font-family:var(--serif);font-size:29px;margin:0 0 8px}.auto-list{display:grid;gap:12px;margin-top:22px}.auto-list div{display:flex;gap:10px;font-size:13px}.check{color:var(--teal);font-weight:800}.automation-builder{background:var(--navy);color:#fff}.automation-builder .eyebrow{color:#67dce0}.builder-step{margin-top:20px}.builder-step label{display:block;font-size:11px;font-weight:700;margin-bottom:7px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid #ffffff30;color:#fff;background:#ffffff0b;border-radius:99px;padding:8px 11px;font-size:11px}.chip.active,.chip:hover{border-color:#67dce0;background:#67dce018}.builder-result{margin-top:22px;padding:15px;border:1px solid #ffffff1e;border-radius:9px;background:#ffffff09}.builder-result b{font-size:18px}.builder-result span{color:#aebdcc;font-size:11px}
 
-    /* HERO STATS */
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      max-width: 900px;
-      margin: 48px auto 0;
-    }
-    .stat-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 18px 16px;
-      box-shadow: 0 10px 40px rgba(15,23,42,0.04);
-      text-align: center;
-      border: 1px solid rgba(15,23,42,0.04);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
-    }
-    .stat-number { font-family:'Space Grotesk', sans-serif; font-size:1.6rem; font-weight:700; color:#0f172a; }
-    .stat-number span { color:#6366f1; }
-    .stat-label { font-size:0.78rem; color:#64748b; font-weight:500; }
-    .stat-icon svg { width:26px; height:26px; stroke:#6366f1; stroke-width:1.75; }
+/* design */
+.design-section{background:#fafafa}.design-intro{display:grid;grid-template-columns:.9fr 1.4fr;gap:50px;align-items:center;margin-bottom:40px}.design-intro h2{font-family:var(--serif);font-size:50px;line-height:1.03;margin:10px 0 14px}.design-intro p{color:var(--muted)}.story{border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}.story img{width:100%;height:300px;object-fit:cover}.filters{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:23px}.filter{border:1px solid #d8dde1;background:#fff;border-radius:99px;padding:8px 13px;font-size:11px}.filter.active,.filter:hover{border-color:var(--orange);color:var(--orange)}.portfolio{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.work{position:relative;min-height:220px;border-radius:10px;overflow:hidden;background:#eee}.work img{width:100%;height:100%;object-fit:cover;transition:.3s}.work:hover img{transform:scale(1.04)}.work .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 13px 12px;color:#fff;background:linear-gradient(transparent,#000b);font-size:12px}.work .cap small{display:block;opacity:.75;font-size:9px}
 
-    /* Responsive hero stats */
-    @media (max-width: 768px) {
-      .hero-stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 480px) {
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-    }
+/* conversion */
+.conversion{background:var(--cream)}.conversion-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.conversion h2{font-family:var(--serif);font-size:48px;line-height:1.04;margin:10px 0 14px}.order-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:var(--shadow)}.order-card h3{font-family:var(--serif);font-size:28px;margin:0}.price{font-weight:800;color:var(--orange);margin:3px 0 17px}.quick-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}.quick{border:1px solid var(--line);border-radius:9px;padding:13px;text-align:left;background:#fff}.quick b{font-size:12px}.quick small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
 
-    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start; }
-    .about-text p { font-size:1rem; color:#334155; line-height:1.8; margin-bottom:14px; }
-    .about-pills { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
-    .pill { padding:5px 14px; background:#f1f5f9; border-radius:100px; font-size:0.78rem; font-weight:500; color:#334155; }
-    .about-timeline { display:flex; flex-direction:column; gap:12px; }
-    .timeline-item {
-      display:flex; gap:16px; padding:14px 18px; background:#fff; border-radius:12px;
-      box-shadow:0 8px 30px rgba(15,23,42,0.03); border-left:3px solid transparent;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .timeline-item:hover { border-left-color:#6366f1; transform:translateY(-4px); }
-    .timeline-year { font-weight:700; color:#6366f1; font-size:0.85rem; min-width:65px; }
+/* quote */
+.quote-section{background:#fff}.quote-layout{display:grid;grid-template-columns:1fr 1fr;gap:25px}.quote-card{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff}.quote-card h3{font-family:var(--serif);font-size:28px;margin:0 0 5px}.service-menu{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}.service-btn{text-align:left;padding:13px;border:1px solid var(--line);border-radius:8px;background:#fff}.service-btn:hover,.service-btn.selected{border-color:var(--orange);background:#fff8f4}.service-btn b{display:block;font-size:12px}.service-btn small{font-size:10px;color:var(--muted)}.quote-summary{background:var(--navy);color:#fff}.quote-summary .eyebrow{color:#68dce0}.quote-summary .summary-line{display:flex;justify-content:space-between;border-bottom:1px solid #ffffff1a;padding:12px 0;font-size:12px}.quote-summary .total{font-size:23px;font-weight:800;border:0}.quote-summary .note{color:#b8c5d4;font-size:10px;margin-top:15px}
 
-    .service-groups { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
-    .service-group {
-      background:#fff; border-radius:20px; padding:32px;
-      box-shadow:0 10px 40px rgba(15,23,42,0.05); transition:0.2s ease;
-    }
-    .service-group:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(15,23,42,0.08); }
-    .service-item { display:flex; align-items:center; gap:10px; padding:10px 0; font-size:0.92rem; color:#334155; }
+/* contact */
+.contact{background:var(--navy);color:#fff}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px}.contact h2{font-family:var(--serif);font-size:50px;line-height:1.04;margin:10px 0 17px}.contact p{color:#b8c5d4}.contact-form{background:#fff;color:var(--text);padding:26px;border-radius:14px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field label{display:block;font-size:10px;font-weight:700;margin-bottom:5px}.field input,.field textarea,.field select{width:100%;padding:11px;border:1px solid #d9dfe3;border-radius:7px;outline:none}.field textarea{min-height:110px;resize:vertical}.full{grid-column:1/-1}.file-box{border:1px dashed #bfc7ce;padding:13px;border-radius:8px;font-size:11px;color:var(--muted)}
 
-    .project-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
-    .project-card {
-      background:#fff; border-radius:20px; padding:28px;
-      box-shadow:0 10px 40px rgba(15,23,42,0.05); transition:0.2s ease;
-    }
-    .project-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(15,23,42,0.08); }
-    .project-block { padding:12px 16px; margin-top:8px; border-radius:12px; }
-    .project-block.problem { background:#f8fafc; }
-    .project-block.solution { background:#fff7ed; }
-    .project-block.result { background:#ecfdf5; }
-    .project-block-label { font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#64748b; }
-    .project-block p { font-size:0.85rem; color:#334155; margin-top:2px; }
+/* modal */
+.modal{position:fixed;inset:0;background:#07111eaa;backdrop-filter:blur(6px);z-index:300;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.modal-panel{width:min(760px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:16px;box-shadow:0 25px 80px #0005}.modal-head{padding:20px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.modal-head h3{font-family:var(--serif);font-size:26px;margin:0}.close{border:0;background:#f2f3f4;border-radius:50%;width:34px;height:34px;font-size:20px}.modal-body{padding:24px}.steps{display:flex;gap:6px;margin-bottom:20px}.step{flex:1;height:5px;background:#e6e8eb;border-radius:99px}.step.active{background:var(--orange)}.modal-step{display:none}.modal-step.active{display:block}.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.choice{border:1px solid var(--line);border-radius:9px;padding:13px;text-align:left;background:#fff}.choice:hover,.choice.selected{border-color:var(--orange);background:#fff8f4}.choice b{font-size:12px}.choice small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.modal-actions{display:flex;justify-content:space-between;margin-top:20px;gap:10px}.modal-actions .btn{min-width:120px}.estimate{background:var(--cream);border-radius:10px;padding:17px;margin-top:15px}.estimate strong{font-size:24px;color:var(--orange)}.success{padding:20px;border:1px solid #cde4df;background:#f1fbf8;border-radius:10px;color:#16584e}
 
-    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-    .portfolio-card {
-      background:#fff; border-radius:18px; overflow:hidden;
-      box-shadow:0 10px 40px rgba(15,23,42,0.05); transition:0.2s ease;
-    }
-    .portfolio-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(15,23,42,0.08); }
-    .portfolio-card .img { height:200px; background:#f1f5f9; overflow:hidden; }
-    .portfolio-card .img img { width:100%; height:100%; object-fit:cover; transition:0.4s; }
-    .portfolio-card:hover .img img { transform:scale(1.03); }
-    .portfolio-card .body { padding:18px 20px 20px; }
-    .portfolio-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:32px; justify-content:center; }
-    .tab-btn { padding:8px 20px; border-radius:100px; font-weight:600; font-size:0.78rem;
-      border:1px solid rgba(15,23,42,0.08); color:#475569; transition:0.15s; }
-    .tab-btn.active, .tab-btn:hover { background:#0f172a; color:#fff; border-color:#0f172a; }
+/* footer */
+footer{background:#07111e;color:#91a0b1;padding:25px 0;font-size:11px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 
-    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .why-card {
-      background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
-      border-radius:16px; padding:24px; box-shadow:none; transition:0.2s ease;
-    }
-    .why-card:hover { transform:translateY(-6px); border-color:rgba(99,102,241,0.3); }
-    .why-card .icon { width:24px; height:24px; color:#6366f1; margin-bottom:14px; }
 
-    .testimonial-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-    .testimonial-card {
-      background:#fff; border-radius:20px; padding:28px;
-      box-shadow:0 10px 40px rgba(15,23,42,0.05); transition:0.2s ease;
-    }
-    .testimonial-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(15,23,42,0.08); }
-    .testimonial-card blockquote { font-size:0.9rem; color:#334155; line-height:1.7; margin-bottom:20px; }
-    .testimonial-card .attribution { padding-top:20px; }
+/* Consistent CSS icons — avoids missing-glyph / wrong-font symbols */
+.css-icon{width:30px;height:30px;display:inline-grid;place-items:center;position:relative;flex:0 0 30px;color:currentColor}
+.i-design:before{content:"";width:20px;height:20px;border:2px solid currentColor;border-radius:50%;box-shadow:7px -3px 0 -5px #fff}
+.i-design:after{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:currentColor;top:7px;left:10px;box-shadow:7px 4px 0 currentColor,-3px 8px 0 currentColor}
+.i-gear:before{content:"⚙";font-size:25px;font-family:Arial,sans-serif}
+.i-vector:before{content:"◇";font-size:28px;font-weight:700}
+.i-data:before{content:"◫";font-size:29px}
+.i-mail:before{content:"";width:23px;height:16px;border:2px solid currentColor;border-radius:3px}
+.i-mail:after{content:"";width:12px;height:12px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);position:absolute;top:2px}
+.i-monitor:before{content:"";width:24px;height:16px;border:2px solid currentColor;border-radius:3px}
+.i-monitor:after{content:"";width:10px;height:2px;background:currentColor;position:absolute;bottom:2px;box-shadow:-4px 3px 0 -0px currentColor}
+.i-flow:before{content:"";width:18px;height:18px;border:2px solid currentColor;border-radius:5px}
+.i-flow:after{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.i-result:before{content:"▥";font-size:28px}
+.service .icon{font-size:0;color:var(--navy)}
 
-    .faq-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
-    .faq-card {
-      background:#fff; border-radius:16px; padding:24px;
-      box-shadow:0 10px 40px rgba(15,23,42,0.04); border:1px solid rgba(15,23,42,0.04);
-    }
-    .faq-card h4 { font-size:0.95rem; margin-bottom:6px; color:#0f172a; }
-    .faq-card p { font-size:0.88rem; color:#475569; line-height:1.6; }
+.hero-slides{position:absolute;inset:0;z-index:0}
+.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity 1.2s ease}
+.hero-slide.active{opacity:1}
+.hero-dots{position:absolute;z-index:6;right:42px;bottom:20px;display:flex;gap:7px}
+.hero-dot{width:8px;height:8px;border-radius:50%;border:1px solid #fff;background:#ffffff66;cursor:pointer;padding:0}
+.hero-dot.active{background:#fff}
+.feature-img{transition:opacity .8s ease,transform .8s ease}
+.feature-img.fade{opacity:.06;transform:scale(1.02)}
+.portfolio-pulse{animation:portfolioPulse 4s ease-in-out infinite}
+@keyframes portfolioPulse{0%,100%{box-shadow:0 0 0 0 rgba(244,91,22,0)}50%{box-shadow:0 0 0 5px rgba(244,91,22,.08)}}
 
-    .contact-grid { display:grid; grid-template-columns:0.85fr 1.15fr; gap:48px; align-items:start; }
-    .contact-form {
-      background:#fff; border-radius:20px; padding:36px;
-      box-shadow:0 10px 40px rgba(15,23,42,0.05);
-    }
-    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
-    .form-group input, .form-group select, .form-group textarea {
-      width:100%; padding:12px 16px; border:1px solid rgba(15,23,42,0.08); border-radius:12px;
-      font-family:inherit; font-size:0.9rem; transition:0.15s; background:#fafbfc;
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color:#6366f1; outline:none; box-shadow:0 0 0 3px rgba(99,102,241,0.06); background:#fff; }
+.discussion-box{margin-top:18px;padding:18px;border:1px solid #ffffff22;border-radius:11px;background:#ffffff08}
+.discussion-box h4{font-family:var(--serif);font-size:21px;margin:0 0 8px}
+.contact-methods{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.contact-method{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid #ffffff2b;border-radius:99px;font-size:11px;color:#fff;background:#ffffff08}
+.contact-method:hover{border-color:#ff7b43;color:#ffb08d}
 
-    footer { background:#0f172a; color:#fff; padding:48px 0 28px; }
-    .footer-grid { display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; margin-bottom:32px; }
-    .footer-col a { display:block; font-size:0.85rem; color:rgba(255,255,255,0.6); margin-bottom:8px; transition:0.15s; }
-    .footer-col a:hover { color:#fff; }
+@media(max-width:780px){.hero-dots{right:20px;bottom:18px}}
 
-    .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.is-visible { opacity:1; transform:translateY(0); }
 
-    @media (max-width:1024px) {
-      .about-grid, .service-groups, .project-grid, .faq-grid { grid-template-columns:1fr; }
-      .portfolio-grid { grid-template-columns:repeat(2,1fr); }
-      .why-grid, .testimonial-grid { grid-template-columns:1fr 1fr; }
-      .contact-grid { grid-template-columns:1fr; }
-    }
-    @media (max-width:768px) {
-      .nav-menu { display:none; position:fixed; top:70px; left:0; width:100%; background:#fff;
-        flex-direction:column; padding:28px; gap:20px; box-shadow:0 20px 40px rgba(0,0,0,0.08); }
-      .nav-menu.open { display:flex; }
-      .menu-toggle { display:flex; align-items:center; justify-content:center; width:40px; height:40px; font-size:1.4rem; }
-      .portfolio-grid, .why-grid, .testimonial-grid { grid-template-columns:1fr; }
-      .form-row { grid-template-columns:1fr; }
-    }
-  </style>
+/* Premium automation visual */
+.automation-visual{position:absolute;right:18px;top:22px;width:48%;height:255px;overflow:hidden}
+.automation-visual:before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;right:35px;top:14px;background:radial-gradient(circle,#fff 0 25%,#e3f7f7 26% 58%,transparent 59%);opacity:.72}
+.orbit{position:absolute;border:1px dashed #0b8a944d;border-radius:50%;right:22px;top:8px}
+.orbit-a{width:245px;height:245px}.orbit-b{width:170px;height:170px;right:60px;top:45px}
+.auto-node{position:absolute;width:108px;height:78px;border:1px solid #9bd6da;background:#ffffffef;border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 24px #087f8918;z-index:3}
+.auto-node .node-icon{font-size:22px;color:var(--teal);line-height:1}
+.auto-node b{font-size:8px;letter-spacing:.12em;margin-top:5px;color:#193047}
+.auto-node small{font-size:9px;color:#6a7786}
+.node-trigger{left:5px;top:84px}.node-work{left:calc(50% - 54px);top:30px}.node-result{right:0;top:118px}
+.auto-path{position:absolute;height:2px;background:linear-gradient(90deg,#0b8a90,#62d4d8);transform-origin:left center;z-index:2;border-radius:9px}
+.p1{width:132px;left:92px;top:120px;transform:rotate(-27deg)}.p2{width:128px;left:calc(50% + 38px);top:93px;transform:rotate(24deg)}
+.auto-label{position:absolute;font-size:7px;letter-spacing:.18em;color:#4c7780;font-weight:700;z-index:4}.label-one{left:13px;top:62px}.label-two{left:calc(50% - 30px);top:10px}.label-three{right:8px;top:99px}
+.auto-tag{position:absolute;right:5px;bottom:3px;font-family:cursive;font-size:17px;line-height:1.05;color:#153046;transform:rotate(-4deg);z-index:5}.auto-tag em{color:var(--teal);font-style:normal}
+.feature.auto{min-height:300px}.feature.auto .feature-copy{width:53%;padding-right:8px;z-index:8}
+.feature.auto .feature-copy p{max-width:380px}
+@keyframes nodeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.auto-node{animation:nodeFloat 4s ease-in-out infinite}.node-work{animation-delay:.6s}.node-result{animation-delay:1.2s}
+
+/* Service pricing package selector */
+.price-packages{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:15px}
+.price-package{border:1px solid var(--line);border-radius:9px;padding:11px;background:#fff;text-align:left;cursor:pointer}
+.price-package:hover,.price-package.active{border-color:var(--orange);background:#fff8f4}
+.price-package b{font-size:10px}.price-package strong{display:block;color:var(--orange);font-size:17px;margin:2px 0}.price-package small{display:block;color:var(--muted);font-size:9px;line-height:1.35}
+@media(max-width:780px){.automation-visual{position:relative;right:auto;top:auto;width:100%;height:240px;margin-top:8px}.feature.auto{min-height:530px}.feature.auto .feature-copy{width:100%}.price-packages{grid-template-columns:1fr 1fr}}
+
+/* responsive */
+
+.fit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.fit-card{background:#fff;border:1px solid #e6e1d9;border-radius:18px;padding:28px;box-shadow:0 12px 30px #17212b0d}.fit-number{font-size:12px;letter-spacing:.16em;color:var(--orange);font-weight:800}.fit-card h3{font-size:22px;margin:12px 0 10px}.fit-card p{color:#536071;font-size:14px;line-height:1.65;margin:0 0 18px}.fit-card a{font-size:13px;font-weight:800;color:#17212b;text-decoration:none}.fit-card a:hover{color:var(--orange)}
+@media(max-width:1100px){.container{width:min(100% - 42px,1420px)}.navlinks{gap:15px}.nav .btn{display:none}.service-row{grid-template-columns:repeat(3,1fr);gap:13px}.service{border:0}.trust-row{grid-template-columns:repeat(3,1fr);gap:10px}.trust-item{border:0}.portfolio{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1050px){.menu{display:block}.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;box-shadow:0 15px 30px #0002;padding:8px 20px;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:12px 0;border-bottom:1px solid #eee}.navlinks a.active:after{display:none}} 
+@media(max-width:780px){header{height:66px}.brand{min-width:0}.logo{font-size:39px}.brand-name{font-size:20px}.brand-sub{font-size:6px}.menu{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;box-shadow:0 15px 30px #0002;padding:8px 20px;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:12px 0;border-bottom:1px solid #eee}.navlinks a.active:after{display:none}.hero{min-height:650px}.hero-inner{min-height:650px;align-items:flex-start}.hero:after{background:linear-gradient(180deg,#fbf8f3 0%,rgba(251,248,243,.96) 40%,rgba(251,248,243,.35) 74%,rgba(251,248,243,.05) 100%)}.hero-copy{width:100%;padding-top:55px}.hero h1{font-size:48px}.features,.auto-grid,.design-intro,.conversion-grid,.quote-layout,.contact-grid{grid-template-columns:1fr}.feature{min-height:430px}.feature-copy{width:72%}.feature h2{font-size:34px}.feature-img{width:80%;height:58%;top:auto;bottom:0}.flow{width:90%;right:5%;top:38px}.trust-row{grid-template-columns:1fr 1fr}.trust-item:first-child,.trust-item:last-child{grid-column:1/-1}.portfolio{grid-template-columns:1fr 1fr}.section{padding:65px 0}.section-head h2,.design-intro h2,.conversion h2,.contact h2{font-size:40px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}}
+@media(max-width:480px){.container{width:calc(100% - 28px)}.service-row{grid-template-columns:1fr 1fr}.portfolio{grid-template-columns:1fr}.proof{flex-wrap:wrap;gap:12px}.proof>div{width:100%;border:0;padding:0}.hero h1{font-size:43px}.quick-options,.service-menu,.choice-grid{grid-template-columns:1fr}.feature-copy{width:100%;padding:24px}.feature h2{font-size:32px}.feature-img{opacity:.78}}
+</style>
 </head>
 <body>
 <header>
-  <div class="container">
-    <div class="nav-inner">
-      <a href="#" class="logo"><span class="logo-mark">AS</span> Amit Sharma</a>
-      <nav class="nav-menu" id="navMenu">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Case Studies</a>
-        <a href="#why">Why Work With Me</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-cta">
-        <a href="#contact" class="btn btn-primary" style="padding:9px 20px;font-size:0.85rem;">Let's Talk</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
-      </div>
-    </div>
-  </div>
+<div class="container nav">
+<a class="brand" href="#home"><div><div class="brand-name">Amit Sharma</div><div class="brand-sub">DESIGN · AUTOMATION · REAL SOLUTIONS</div></div></a>
+<button class="menu" aria-label="Menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+<nav class="navlinks">
+<a class="active" href="#home">Home</a><a href="#automation">Automation</a><a href="#design">Design</a><a href="#conversion">AI &amp; Conversions</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
+</nav>
+<a class="btn btn-primary" href="#contact">Let's Discuss Your Idea →</a>
+</div>
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-inner">
-        <span class="eyebrow reveal">Creative Design + Smart Automation</span>
-        <h1 class="reveal">Design. Automation. <span class="accent">Business Solutions.</span></h1>
-        <p class="reveal">Helping businesses save time, improve workflows, and build stronger brands through creative design and practical automation solutions.</p>
-        <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
-          <a href="#contact" class="btn btn-primary">Let's Talk</a>
-          <a href="#projects" class="btn btn-outline">View Case Studies</a>
-        </div>
-        <div class="hero-stats reveal">
-          <div class="stat-card">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
-            <div class="stat-number">28<span>+</span></div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-          <div class="stat-card">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.75"/><path d="M2 12H22M12 2C9.5 4 8 8 8 12C8 16 9.5 20 12 22C14.5 20 16 16 16 12C16 8 14.5 4 12 2Z" stroke="currentColor" stroke-width="1.75"/></svg></span>
-            <div class="stat-number">Global</div>
-            <div class="stat-label">International Clients</div>
-          </div>
-          <div class="stat-card">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H9L10 22L20 10H14L13 2Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
-            <div class="stat-number">500<span>+</span></div>
-            <div class="stat-label">Projects Delivered</div>
-          </div>
-          <div class="stat-card">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.75"/><polyline points="12 6 12 12 16 14" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
-            <div class="stat-number">Custom</div>
-            <div class="stat-label">Solutions</div>
-          </div>
-          <div class="stat-card">
-            <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
-            <div class="stat-number">2-in-1</div>
-            <div class="stat-label">Design + Automation</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="home" class="hero">
+<div class="hero-slides" aria-label="Creative workspace visuals">
+<img class="hero-slide active" src="hero-workspace.png" alt="Creative studio workspace showing design and automation">
+<img class="hero-slide" src="design-story.png" alt="Design and automation creative workspace">
+</div>
+<div class="hero-dots" aria-label="Hero image selector">
+<button class="hero-dot active" data-slide="0" aria-label="Show image 1"></button>
+<button class="hero-dot" data-slide="1" aria-label="Show image 2"></button>
+</div>
+<div class="container hero-inner">
+<div class="hero-copy">
+<div class="eyebrow">IDEAS · AUTOMATION · REAL IMPACT</div>
+<h1>Design That Inspires.<br><span>Automation That Works.</span></h1>
+<p>I help businesses save time, look better and grow with practical tools, smart automation and creative design — backed by 24+ years of experience.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#contact">Let's Discuss Your Project →</a><a class="btn btn-outline" href="#portfolio">◉ &nbsp; See My Work</a></div>
+<div class="proof"><div><b>500+</b><small>Projects Completed</small></div><div><b>Global</b><small>Clients Worldwide</small></div><div><b>24+ Years</b><small>Design &amp; Automation</small></div></div>
+</div></div>
+</section>
 
-  <section id="about" class="section bg-white">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <span class="eyebrow">About</span>
-          <h2>28 years of creative experience meet practical automation thinking.</h2>
-          <p>With 28+ years of visual identity work for international clients, I saw the same challenge repeat: businesses get slowed down by repetitive, manual tasks. So I built automation systems to solve it.</p>
-          <p>Today, I combine deep design intuition with practical automation thinking — helping businesses look sharp and run smart.</p>
-          <div class="about-pills">
-            <span class="pill">Brand Identity</span>
-            <span class="pill">Automation Solutions</span>
-            <span class="pill">Workflow Design</span>
-            <span class="pill">International Clients</span>
-          </div>
-        </div>
-        <div class="about-timeline reveal">
-          <div class="timeline-item"><span class="timeline-year">1997</span><span>Brand Identity</span></div>
-          <div class="timeline-item"><span class="timeline-year">2008</span><span>International Clients</span></div>
-          <div class="timeline-item"><span class="timeline-year">2018</span><span>Workflow Thinking</span></div>
-          <div class="timeline-item"><span class="timeline-year">2022</span><span>Automation Solutions</span></div>
-          <div class="timeline-item"><span class="timeline-year">Today</span><span><strong>Design + Automation</strong></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="service-strip"><div class="container service-row">
+<div class="service"><span class="css-icon i-design" aria-hidden="true"></span><div><b>Graphic Design</b><small>Logos, Branding, Print</small></div></div>
+<div class="service"><span class="css-icon i-gear" aria-hidden="true"></span><div><b>Automation</b><small>Custom Bots &amp; Tools</small></div></div>
+<div class="service"><span class="css-icon i-vector" aria-hidden="true"></span><div><b>AI to Vector</b><small>Logos &amp; Artwork</small></div></div>
+<div class="service"><span class="css-icon i-data" aria-hidden="true"></span><div><b>Data &amp; Research</b><small>Collect, Process, Organize</small></div></div>
+<div class="service"><span class="css-icon i-mail" aria-hidden="true"></span><div><b>Email &amp; Reports</b><small>Automate Your Workflow</small></div></div>
+<div class="service"><span class="css-icon i-monitor" aria-hidden="true"></span><div><b>Web &amp; Monitoring</b><small>Track, Alerts, Updates</small></div></div>
+</div></section>
 
-  <section id="services" class="section bg-soft-dark">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:44px;" class="reveal">
-        <span class="badge badge-white" style="margin-bottom:12px;">Services</span>
-        <h2 style="color:#fff;">Design and automation that work together.</h2>
-        <p style="max-width:540px;margin:8px auto 0;color:rgba(255,255,255,.6);">Whether you need your brand to stand out or your workflow to run itself — I can help.</p>
-      </div>
-      <div class="service-groups reveal">
-        <div class="service-group">
-          <h3 style="display:flex;align-items:center;gap:10px;">
-            <i data-lucide="palette" style="width:24px;height:24px;color:#6366f1;stroke-width:1.75;"></i>
-            Creative Services
-          </h3>
-          <span style="color:#64748b;font-size:0.85rem;display:block;margin-bottom:18px;">Design that builds trust and recognition</span>
-          <div class="service-item"><i data-lucide="sparkles" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Logo &amp; Brand Identity</div>
-          <div class="service-item"><i data-lucide="package" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Packaging Design</div>
-          <div class="service-item"><i data-lucide="printer" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Print Design</div>
-          <div class="service-item"><i data-lucide="presentation" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Marketing Materials</div>
-        </div>
-        <div class="service-group">
-          <h3 style="display:flex;align-items:center;gap:10px;">
-            <i data-lucide="cpu" style="width:24px;height:24px;color:#6366f1;stroke-width:1.75;"></i>
-            Automation Services
-          </h3>
-          <span style="color:#64748b;font-size:0.85rem;display:block;margin-bottom:18px;">Systems that save time and reduce errors</span>
-          <div class="service-item"><i data-lucide="bar-chart-3" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> TradingView Automation</div>
-          <div class="service-item"><i data-lucide="user-search" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Lead Research Systems</div>
-          <div class="service-item"><i data-lucide="file-spreadsheet" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Data Processing Tools</div>
-          <div class="service-item"><i data-lucide="workflow" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Workflow Automation</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="feature-wrap"><div class="container features">
+<article class="feature design"><img class="feature-img" id="designFeatureImage" src="Packaging3.jpg" alt="Packaging design"><div class="feature-copy"><div class="eyebrow" style="color:var(--orange)">GRAPHIC DESIGN</div><h2>Visuals that<br>Make an Impact.</h2><p>Logos, packaging, branding, marketing material and more — built from years of hands-on design experience.</p><button class="btn btn-outline" onclick="openOrder('Graphic Design')">Start a Design Order →</button></div></article>
+<article class="feature auto">
+<div class="feature-copy"><div class="eyebrow" style="color:var(--teal)">AUTOMATION SOLUTIONS</div>
+<h2>Let Your Computer<br>do the Repetitive Work.</h2>
+<p>Research, data, email, monitoring, trading workflows and custom tools — explained in plain business language.</p>
+<a class="btn btn-outline" href="#automation">Explore Automation →</a></div>
+<div class="automation-visual" aria-label="Automation workflow visual">
+<div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+<div class="auto-node node-trigger"><span class="node-icon">↯</span><b>YOU DECIDE</b><small>Trigger</small></div>
+<div class="auto-node node-work"><span class="node-icon">⚙</span><b>IT WORKS</b><small>Automation</small></div>
+<div class="auto-node node-result"><span class="node-icon">↗</span><b>YOU SAVE</b><small>Time &amp; effort</small></div>
+<div class="auto-path p1"></div><div class="auto-path p2"></div>
+<div class="auto-label label-one">01 · INPUT</div><div class="auto-label label-two">02 · PROCESS</div><div class="auto-label label-three">03 · RESULT</div>
+<div class="auto-tag">Same work.<br><em>Smarter way.</em></div>
+</div></article>
+</div></section>
 
-  <section id="projects" class="section bg-white">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:44px;" class="reveal">
-        <span class="eyebrow">Case Studies</span>
-        <h2>Automation Case Studies</h2>
-        <p style="max-width:520px;margin:8px auto 0;color:#475569;">Examples of practical systems built to save time, improve workflows, and eliminate repetitive tasks.</p>
-      </div>
-      <div class="project-grid reveal">
-        <div class="project-card">
-          <span class="badge badge-blue">Trading</span>
-          <h4 style="margin:8px 0 4px;">TradingView Alert Automation</h4>
-          <div style="color:#64748b;font-size:0.85rem;margin-bottom:16px;">Signal to execution in under 2 seconds</div>
-          <div class="project-block problem"><div class="project-block-label">Problem</div><p>Manual monitoring caused missed entries and inconsistent execution.</p></div>
-          <div class="project-block solution"><div class="project-block-label">Solution</div><p>Custom system receives webhooks, parses alerts, applies risk filters, and routes orders automatically.</p></div>
-          <div class="project-block result"><div class="project-block-label">Result</div><p>Signal-to-execution time dropped from minutes to under 2 seconds. Zero missed alerts.</p></div>
-        </div>
-        <div class="project-card">
-          <span class="badge badge-amber">Lead Research</span>
-          <h4 style="margin:8px 0 4px;">Automated Lead Research Workflow</h4>
-          <div style="color:#64748b;font-size:0.85rem;margin-bottom:16px;">85% time reduction</div>
-          <div class="project-block problem"><div class="project-block-label">Problem</div><p>15+ hours per week manually researching prospects across directories and social platforms.</p></div>
-          <div class="project-block solution"><div class="project-block-label">Solution</div><p>Automated pipeline that crawls target sources, extracts contacts, and qualifies leads.</p></div>
-          <div class="project-block result"><div class="project-block-label">Result</div><p>Research time reduced by 85%. Team focused entirely on outreach.</p></div>
-        </div>
-        <div class="project-card">
-          <span class="badge badge-green">Data Processing</span>
-          <h4 style="margin:8px 0 4px;">Custom Data Processing Tool</h4>
-          <div style="color:#64748b;font-size:0.85rem;margin-bottom:16px;">3 hours → 8 minutes</div>
-          <div class="project-block problem"><div class="project-block-label">Problem</div><p>Daily inventory and sales exports from multiple suppliers in inconsistent formats.</p></div>
-          <div class="project-block solution"><div class="project-block-label">Solution</div><p>Automated tool ingests files, normalizes data, flags discrepancies, and generates unified reports.</p></div>
-          <div class="project-block result"><div class="project-block-label">Result</div><p>Reconciliation time dropped from 3 hours to 8 minutes. Errors caught automatically.</p></div>
-        </div>
-        <div class="project-card">
-          <span class="badge badge-blue">Trading Bot</span>
-          <h4 style="margin:8px 0 4px;">Trading Bot System</h4>
-          <div style="color:#64748b;font-size:0.85rem;margin-bottom:16px;">Consistent execution, reduced manual intervention</div>
-          <div class="project-block problem"><div class="project-block-label">Problem</div><p>Manual trade execution led to inconsistent timing and missed opportunities.</p></div>
-          <div class="project-block solution"><div class="project-block-label">Solution</div><p>Python system connected to alerts and risk management for automated trade execution.</p></div>
-          <div class="project-block result"><div class="project-block-label">Result</div><p>Consistent execution and significantly reduced manual intervention.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="trust"><div class="container trust-row"><div class="trust-item">Trusted by clients worldwide</div><div class="trust-item">◎ 500+ Projects</div><div class="trust-item">♙ 24+ Years</div><div class="trust-item">☆ High-Quality Results</div><div class="trust-item">♡ Long-Term Relationships</div><div class="trust-item">Let's build something useful together.</div></div></section>
 
-  <section id="portfolio" class="section bg-soft-dark">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:32px;" class="reveal">
-        <span class="badge badge-white" style="margin-bottom:12px;">Portfolio</span>
-        <h2 style="color:#fff;">Design Portfolio Highlights</h2>
-        <p style="max-width:460px;margin:8px auto 0;color:rgba(255,255,255,0.5);">Brand identity, packaging, and print projects built across nearly three decades.</p>
-      </div>
-      <div class="portfolio-tabs reveal">
-        <button class="tab-btn active" data-filter="all" style="border-color:rgba(255,255,255,0.15);color:#0f172a;background:#fff;">All</button>
-        <button class="tab-btn" data-filter="brand" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);">Brand Identity</button>
-        <button class="tab-btn" data-filter="packaging" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);">Packaging</button>
-        <button class="tab-btn" data-filter="print" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);">Print Design</button>
-        <button class="tab-btn" data-filter="marketing" style="border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);">Marketing Design</button>
-      </div>
-      <div class="portfolio-grid reveal" id="portfolioGrid">
-        <div class="portfolio-card" data-category="brand"><div class="img"><img src="beginIDEAS.jpg" alt="Begin Ideas" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Begin Ideas</h4><p style="color:#64748b;font-size:0.85rem;">Tech startup brand identity</p><span class="badge badge-blue">Brand Identity</span></div></div>
-        <div class="portfolio-card" data-category="brand"><div class="img"><img src="SMARTCLICK.jpg" alt="Smart Click" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Smart Click</h4><p style="color:#64748b;font-size:0.85rem;">Fintech branding</p><span class="badge badge-blue">Brand Identity</span></div></div>
-        <div class="portfolio-card" data-category="brand"><div class="img"><img src="SPEAK.jpg" alt="SPEAK Media" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>SPEAK Media</h4><p style="color:#64748b;font-size:0.85rem;">Digital media platform</p><span class="badge badge-blue">Brand Identity</span></div></div>
-        <div class="portfolio-card" data-category="marketing"><div class="img"><img src="Flyer1.jpg" alt="Global Tech Summit" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Global Tech Summit</h4><p style="color:#64748b;font-size:0.85rem;">Event marketing suite</p><span class="badge badge-amber">Marketing Design</span></div></div>
-        <div class="portfolio-card" data-category="marketing"><div class="img"><img src="Flyer2.jpg" alt="Innovation Launch" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Innovation Launch</h4><p style="color:#64748b;font-size:0.85rem;">Product campaign</p><span class="badge badge-amber">Marketing Design</span></div></div>
-        <div class="portfolio-card" data-category="print"><div class="img"><img src="Brochure1.jpg" alt="Enterprise Guide" loading="lazy" onerror="this.parentElement.style.background='#e2e8f0'"></div><div class="body"><h4>Enterprise Solutions Guide</h4><p style="color:#64748b;font-size:0.85rem;">Corporate brochure</p><span class="badge badge-green">Print Design</span></div></div>
-      </div>
-      <div style="text-align:center;margin-top:32px;" class="reveal"><a href="https://www.behance.net/" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(255,255,255,0.15);color:#fff;">View Full Portfolio →</a></div>
-    </div>
-  </section>
+<section class="section fit-section"><div class="container"><div class="section-head"><div class="eyebrow">BUILT FOR BUSINESS</div><h2>Design, automation and practical help — in one place.</h2><p>You don't need to know the technology. Just tell me what you need done, and I can help with the creative work or the repetitive computer work behind it.</p></div><div class="fit-grid"><div class="fit-card"><span class="fit-number">01</span><h3>Need something designed?</h3><p>Logos, branding, brochures, flyers, packaging, banners, social media and image editing.</p><a href="#design">Explore Design →</a></div><div class="fit-card"><span class="fit-number">02</span><h3>Doing the same task repeatedly?</h3><p>Research, data processing, email reports, monitoring, alerts and custom business tools can often be automated.</p><a href="#automation">Explore Automation →</a></div><div class="fit-card"><span class="fit-number">03</span><h3>Have a specific problem?</h3><p>Send the details first. I'll review the scope, confirm the final price and tell you the simplest way forward.</p><a href="#contact">Start a Conversation →</a></div></div></div></section>
 
-  <section id="why" class="section bg-white">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:40px;" class="reveal">
-        <span class="eyebrow">Why Work With Me</span>
-        <h2>Why clients choose to work with me</h2>
-        <p style="max-width:520px;margin:8px auto 0;color:#475569;">Creative expertise combined with practical automation thinking — helping businesses look better and work smarter.</p>
-      </div>
-      <div class="why-grid reveal">
-        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="clock" class="icon"></i><h4>28+ Years Experience</h4><p style="color:#64748b;">Deep domain knowledge — no learning curve on your time.</p></div>
-        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="layers" class="icon"></i><h4>Design + Automation</h4><p style="color:#64748b;">Both disciplines in one professional, so your brand and workflows grow together.</p></div>
-        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="briefcase" class="icon"></i><h4>Business Understanding</h4><p style="color:#64748b;">Worked with small businesses, agencies, and operators — I know what matters.</p></div>
-        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="message-circle" class="icon"></i><h4>Direct Communication</h4><p style="color:#64748b;">You work with me, not an account manager. Clear, fast responses.</p></div>
-        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="sliders" class="icon"></i><h4>Tailored Solutions</h4><p style="color:#64748b;">No templates. Every design and automation is built for your specific situation.</p></div>
-        <div class="why-card" style="background:#fff;border:1px solid rgba(15,23,42,0.06);box-shadow:0 10px 40px rgba(15,23,42,0.05);"><i data-lucide="globe" class="icon"></i><h4>International Track Record</h4><p style="color:#64748b;">Trusted by clients across Guru and Upwork. Proven across time zones.</p></div>
-      </div>
-    </div>
-  </section>
+<section id="automation" class="section"><div class="container">
+<div class="section-head"><div class="eyebrow">AUTOMATION · WITHOUT THE JARGON</div><h2>Same work. Smarter way.</h2><p>If you do the same computer work again and again, there is a good chance it can be made faster, more consistent and easier.</p></div>
+<div class="auto-grid">
+<div class="auto-card"><h3>What can I automate?</h3><p class="tiny">Practical business tasks — not complicated technology for the sake of it.</p>
+<div class="auto-list"><div><span class="check">✓</span><span><b>Research bots</b> — collect information, leads, prices or websites.</span></div><div><span class="check">✓</span><span><b>Data bots</b> — clean, convert, merge and organise files.</span></div><div><span class="check">✓</span><span><b>Email &amp; reports</b> — prepare recurring updates.</span></div><div><span class="check">✓</span><span><b>Monitoring</b> — watch websites, data or events and alert you.</span></div><div><span class="check">✓</span><span><b>Trading workflows</b> — connect alerts and execution where appropriate.</span></div><div><span class="check">✓</span><span><b>Custom tools</b> — utilities built around your exact process.</span></div></div></div>
+<div class="automation-builder"><div class="eyebrow">BUILD MY AUTOMATION</div><h3>Tell me what you want the computer to do.</h3>
+<div class="builder-step"><label>What type of automation?</label><div class="chips" id="autoType"><button class="chip active" data-value="Research / Lead Bot">Research / Lead Bot</button><button class="chip" data-value="Data Processing">Data Processing</button><button class="chip" data-value="Email / Reports">Email / Reports</button><button class="chip" data-value="Monitoring / Alerts">Monitoring / Alerts</button><button class="chip" data-value="Custom Bot / Tool">Custom Bot / Tool</button></div></div>
+<div class="builder-step"><label>How much do you want built?</label><div class="chips" id="autoScope"><button class="chip active" data-value="Small task">Small task</button><button class="chip" data-value="Complete workflow">Complete workflow</button><button class="chip" data-value="Full custom system">Full custom system</button></div></div>
+<div class="builder-result"><b>Starting point: Custom Quote</b><br><span>Your requirements will determine the final scope and price. Click below to send the brief.</span></div>
+<button class="btn btn-primary" style="margin-top:15px" onclick="openOrder('Automation / Bot')">Build My Automation →</button>
+</div>
+</div></div></section>
 
-  <section id="testimonials" class="section bg-soft-dark">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:44px;" class="reveal">
-        <span class="badge badge-white" style="margin-bottom:12px;">Testimonials</span>
-        <h2 style="color:#fff;">Trusted by clients around the world</h2>
-        <p style="max-width:420px;margin:8px auto 0;color:rgba(255,255,255,0.5);">A track record built on communication, reliability, and results.</p>
-      </div>
-      <div class="testimonial-grid reveal">
-        <div class="testimonial-card">
-          <blockquote>Communication was clear from day one. It felt like working with an in-house designer who actually understood the brief.</blockquote>
-          <div class="attribution"><div><strong>J. Martinez</strong><br><small style="color:#64748b;">Founder • Retail Startup • Spain</small></div></div>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>We came in needing an automation fix and left with a system that's been completely reliable since launch. Professional from proposal to delivery.</blockquote>
-          <div class="attribution"><div><strong>R. Kapoor</strong><br><small style="color:#64748b;">Operations Lead • India</small></div></div>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>The packaging redesign exceeded what we asked for, and the quality held up across every print run. This is the kind of partner you keep coming back to.</blockquote>
-          <div class="attribution"><div><strong>S. Lindqvist</strong><br><small style="color:#64748b;">Brand Manager • Sweden</small></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="design" class="section design-section"><div class="container">
+<div class="design-intro"><div><div class="eyebrow" style="color:var(--orange)">GRAPHIC DESIGN</div><h2>Design that looks good — and works hard.</h2><p>Brand identity, brochures, flyers, packaging, posters, social media and image editing. Your original portfolio artwork is kept as the visual proof.</p><button class="btn btn-primary" onclick="openOrder('Graphic Design')">Start a Design Project →</button></div><div class="story"><img src="design-story.png" alt="Copyright-safe design and automation workspace"></div></div>
+</div></section>
 
-  <section id="faq" class="section bg-white">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:40px;" class="reveal">
-        <span class="eyebrow">FAQ</span>
-        <h2>Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-grid reveal">
-        <div class="faq-card">
-          <h4>Do you provide both design and automation services?</h4>
-          <p>Yes. Depending on your needs, projects may involve branding, automation, or a combination of both.</p>
-        </div>
-        <div class="faq-card">
-          <h4>Can you build custom Python tools?</h4>
-          <p>Yes. I create practical automation solutions tailored to specific workflows and business processes.</p>
-        </div>
-        <div class="faq-card">
-          <h4>Do you work with international clients?</h4>
-          <p>Yes. I have worked with clients worldwide through freelance platforms and direct collaborations.</p>
-        </div>
-        <div class="faq-card">
-          <h4>What types of businesses do you work with?</h4>
-          <p>Small businesses, startups, agencies, e-commerce brands, trading communities, and entrepreneurs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="portfolio" class="section"><div class="container">
+<div class="section-head"><div class="eyebrow">SELECTED WORK</div><h2>Real work. Real examples.</h2><p>Original portfolio artwork from your existing site, presented in a cleaner premium gallery.</p></div>
+<div class="filters"><button class="filter active" data-filter="all">All Work</button><button class="filter" data-filter="brochure">Brochures</button><button class="filter" data-filter="flyer">Flyers</button><button class="filter" data-filter="packaging">Packaging</button><button class="filter" data-filter="brand">Brand &amp; Logo</button><button class="filter" data-filter="photo">Photoshop</button><button class="filter" data-filter="poster">Posters &amp; Banners</button></div>
+<div class="portfolio">
+<div class="work" data-cat="brochure"><img src="Brochure1.jpg"><div class="cap"><b>Brochure Design</b><small>Print / Marketing</small></div></div>
+<div class="work" data-cat="brochure"><img src="Brochure2.jpg"><div class="cap"><b>Brochure Design</b><small>Editorial / Print</small></div></div>
+<div class="work" data-cat="brochure"><img src="Brochure3.jpg"><div class="cap"><b>Brochure Design</b><small>Brand Communication</small></div></div>
+<div class="work" data-cat="flyer"><img src="Flyer1.jpg"><div class="cap"><b>Flyer Design</b><small>Campaign / Promotion</small></div></div>
+<div class="work" data-cat="flyer"><img src="Flyer2.jpg"><div class="cap"><b>Flyer Design</b><small>Event / Marketing</small></div></div>
+<div class="work" data-cat="flyer"><img src="Flyer3.jpg"><div class="cap"><b>Flyer Design</b><small>Promotional Material</small></div></div>
+<div class="work" data-cat="packaging"><img src="Packaging1.jpg"><div class="cap"><b>Packaging</b><small>Product Identity</small></div></div>
+<div class="work" data-cat="packaging"><img src="Packaging2.jpg"><div class="cap"><b>Packaging</b><small>Food / Retail</small></div></div>
+<div class="work" data-cat="packaging"><img src="Packaging3.jpg"><div class="cap"><b>Packaging</b><small>Product Branding</small></div></div>
+<div class="work" data-cat="photo"><img src="Photoshop1.jpg"><div class="cap"><b>Image Editing</b><small>Photoshop / Retouching</small></div></div>
+<div class="work" data-cat="photo"><img src="Photoshop2.jpg"><div class="cap"><b>Image Editing</b><small>Before / After</small></div></div>
+<div class="work" data-cat="poster"><img src="Poster.jpg"><div class="cap"><b>Poster Design</b><small>Large Format</small></div></div>
+<div class="work" data-cat="poster"><img src="Banner.jpg"><div class="cap"><b>Banner Design</b><small>Advertising</small></div></div>
+<div class="work" data-cat="poster"><img src="Roll-up banner.jpg"><div class="cap"><b>Roll-up Banner</b><small>Event / Display</small></div></div>
+<div class="work" data-cat="brand"><img src="SMARTCLICK.jpg"><div class="cap"><b>Logo / Brand Identity</b><small>SMARTCLICK</small></div></div>
+<div class="work" data-cat="brand"><img src="SPEAK.jpg"><div class="cap"><b>Logo / Brand Identity</b><small>SPEAK</small></div></div>
+<div class="work" data-cat="brand"><img src="beginIDEAS.jpg"><div class="cap"><b>Logo / Brand Identity</b><small>beginIDEAS</small></div></div>
+<div class="work" data-cat="brand"><img src="Social media.jpg"><div class="cap"><b>Social Media</b><small>Campaign Visual</small></div></div>
+</div>
+</div></section>
 
-  <section id="contact" class="section bg-soft-dark">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <span class="badge badge-white" style="margin-bottom:12px;">Contact</span>
-          <h2 style="color:#fff;">Let's discuss your project</h2>
-          <p style="color:rgba(255,255,255,0.6);font-size:1.05rem;line-height:1.7;margin:16px 0 24px;">Whether you need a brand identity, an automation tool, or both — share what you're working on and I'll come back with a clear proposal.</p>
-          <div style="display:flex;flex-direction:column;gap:14px;">
-            <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.8);"><i data-lucide="mail" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> amitsharma.graphics@gmail.com</div>
-            <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.8);"><i data-lucide="map-pin" style="width:18px;height:18px;color:#6366f1;stroke-width:1.75;"></i> Available for remote projects worldwide</div>
-          </div>
-        </div>
-        <div class="contact-form reveal">
-          <form id="contactForm">
-            <div class="form-row">
-              <div class="form-group"><label style="font-weight:600;font-size:0.85rem;">Name</label><input type="text" id="name" placeholder="Your name" required></div>
-              <div class="form-group"><label style="font-weight:600;font-size:0.85rem;">Email</label><input type="email" id="email" placeholder="you@company.com" required></div>
-            </div>
-            <div class="form-row">
-              <div class="form-group"><label style="font-weight:600;font-size:0.85rem;">Project Type</label><select id="projectType"><option>Brand Identity</option><option>Packaging Design</option><option>Print Design</option><option>Marketing Materials</option><option>Automation Tool</option><option>Workflow Automation</option><option>Both Design &amp; Automation</option></select></div>
-              <div class="form-group"><label style="font-weight:600;font-size:0.85rem;">Budget Range</label><select id="budget"><option>$1k – $3k</option><option>$3k – $6k</option><option>$6k – $10k</option><option>$10k+</option></select></div>
-            </div>
-            <div class="form-group" style="margin-bottom:16px;"><label style="font-weight:600;font-size:0.85rem;">Timeline</label><input type="text" id="timeline" placeholder="When do you need this completed?"></div>
-            <div class="form-group" style="margin-bottom:20px;"><label style="font-weight:600;font-size:0.85rem;">Project Details</label><textarea id="message" placeholder="Describe your goals, challenges, and what you need…" required style="min-height:110px;"></textarea></div>
-            <button type="submit" class="btn btn-primary btn-block">Let's Talk →</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="conversion" class="section conversion"><div class="container conversion-grid"><div><div class="eyebrow" style="color:var(--orange)">QUICK SERVICE</div><h2>Need artwork turned into clean, usable files?</h2><p class="muted">AI-generated image, raster logo or hand sketch? Send the artwork, choose what you need and get the process started.</p><button class="btn btn-primary" onclick="openOrder('AI / Vector Conversion')">Start Conversion →</button></div>
+<div class="order-card"><h3>Quick Order Options</h3><div class="price">Starting from $15</div><div class="quick-options"><button class="quick" onclick="openOrder('AI / Vector Conversion')"><b>AI / Image → Vector</b><small>Clean, editable artwork</small></button><button class="quick" onclick="openOrder('AI / Vector Conversion')"><b>Raster → Vector</b><small>JPG / PNG to vector</small></button><button class="quick" onclick="openOrder('Logo Design')"><b>Sketch → Logo</b><small>Turn an idea into artwork</small></button><button class="quick" onclick="openOrder('AI / Vector Conversion')"><b>Artwork Cleanup</b><small>Prepare existing files</small></button></div><p class="tiny" style="margin-top:16px">Final price depends on artwork quality, complexity, deadline and deliverables.</p></div></div></section>
+
+<section id="quote" class="section quote-section"><div class="container"><div class="section-head"><div class="eyebrow">EASY ORDERING</div><h2>Choose a service. Tell me what you need.</h2><p>Choose the service and send your requirements first. <b>No payment is required here.</b> I review the work, confirm the final price, and then send your PayPal payment request/invoice.</p></div>
+<div class="quote-layout"><div class="quote-card"><h3>What are you looking for?</h3><p class="tiny">Choose one to start. You can explain everything in the next step.</p><div class="service-menu"><p class="tiny" style="margin-top:12px">Starting prices are market-reference entry points, not fixed final prices. Exact pricing depends on scope, pages, concepts, revisions, files and deadline.</p>
+<button class="service-btn" onclick="openOrder('Logo Design')"><b>Logo Design</b><small>$15–$100 · depends on logo level &amp; complexity</small></button>
+<button class="service-btn" onclick="openOrder('Business Card')"><b>Business Card</b><small>$10–$60 · front/back &amp; complexity</small></button>
+<button class="service-btn" onclick="openOrder('Flyer')"><b>Flyer</b><small>$15–$75 · design &amp; image complexity</small></button>
+<button class="service-btn" onclick="openOrder('Brochure')"><b>Brochure</b><small>$55–$200 · depends on pages &amp; content</small></button>
+<button class="service-btn" onclick="openOrder('Banner')"><b>Banner</b><small>$20–$100 · size, images &amp; composition</small></button>
+<button class="service-btn" onclick="openOrder('Packaging')"><b>Packaging</b><small>$25–$150 · label/packaging complexity</small></button>
+<button class="service-btn" onclick="openOrder('Complete Branding')"><b>Complete Branding</b><small>$75–$250 · depends on what is included</small></button>
+<button class="service-btn" onclick="openOrder('Automation / Bot')"><b>Automation / Bot</b><small>$10/hour or custom quote · scope based</small></button>
+<button class="service-btn" onclick="openOrder('Other')"><b>Something Else</b><small>Show me what you need</small></button>
+</div></div>
+<div class="quote-card quote-summary"><div class="eyebrow">YOUR PROJECT PATH</div><h3 style="font-family:var(--serif);font-size:31px;margin:8px 0 15px">One place. No confusion.</h3><div class="summary-line"><span>1. Select your service</span><b>✓</b></div><div class="summary-line"><span>2. Upload artwork / references</span><b>✓</b></div><div class="summary-line"><span>3. Explain requirements</span><b>✓</b></div><div class="summary-line"><span>4. I review the work and confirm the final price</span><b>✓</b></div><div class="summary-line"><span>5. I send you a PayPal payment request</span><b>→</b></div><div class="note">No payment is taken when you submit the request. I review your requirements first, set the final amount, and then send the PayPal payment request/invoice to your email. Payment is handled manually through PayPal.</div><button class="btn btn-primary" style="margin-top:18px" onclick="openOrder('General Project Quote')">Start My Project →</button></div></div>
+</div></section>
+
+<section id="about" class="section"><div class="container"><div class="section-head"><div class="eyebrow">ABOUT AMIT</div><h2>Experience that connects creative work with practical solutions.</h2><p>24+ years of hands-on design experience, 500+ projects and an expanding focus on practical automation, data workflows and custom tools.</p></div></div></section>
+
+<section id="contact" class="section contact"><div class="container contact-grid"><div><div class="eyebrow" style="color:#ff7b43">LET'S TALK</div><h2>Tell me what you need. I'll help you find the simplest way forward.</h2><p>Small design job, conversion, automation or larger custom project — start with a brief and we can take it from there.</p>
+<div class="discussion-box">
+<h4>Prefer to discuss first?</h4>
+<div class="tiny" style="color:#b8c5d4">Send the project details first. I will review them, confirm the final amount, and send the PayPal payment request/invoice when it is ready.</div>
+<div class="contact-methods">
+<a class="contact-method" href="mailto:amitsharma.graphics@gmail.com">✉ Email</a>
+<a class="contact-method" href="#contact">💬 Discussion after enquiry</a>
+</div>
+</div><p style="margin-top:24px"><b>Email</b><br><a href="mailto:amitsharma.graphics@gmail.com">amitsharma.graphics@gmail.com</a></p></div>
+<form class="contact-form" id="briefForm" onsubmit="sendBrief(event)"><div class="form-grid">
+<div class="field"><label>Name</label><input id="fName" required></div><div class="field"><label>Email</label><input id="fEmail" type="email" required></div>
+<div class="field"><label>Project Type</label><select id="fType"><option>Graphic Design</option><option>AI / Vector Conversion</option><option>Automation / Bot</option><option>Data / Research</option><option>Web / Monitoring</option><option>Other</option></select></div>
+<div class="field"><label>Budget / Starting Range</label><input id="fBudget" placeholder="e.g. $25 / $250 / Discuss"></div>
+<div class="field"><label>Deadline</label><input id="fDeadline" placeholder="e.g. 3 days / flexible"></div>
+<div class="field"><label>Preferred Format</label><input id="fFormat" placeholder="AI / EPS / SVG / PDF / PNG"></div>
+<div class="field full"><label>Upload Artwork</label><input id="fFile" type="file" multiple></div>
+<div class="field full"><label>Project Details</label><textarea id="fDetails" required placeholder="What do you need done? What files or examples do you have?"></textarea></div>
+<div class="field full"><label><input type="checkbox" required style="width:auto;margin-right:7px"> I understand the scope, deliverables, revisions and final price will be confirmed before payment.</label></div>
+<div class="full"><button class="btn btn-primary" type="submit">Send Project Request →</button></div>
+</div></form></div></section>
 </main>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo" style="color:#fff;"><span class="logo-mark">AS</span> Amit Sharma</div>
-        <p style="color:rgba(255,255,255,0.5);max-width:300px;font-size:0.9rem;line-height:1.6;margin-top:8px;">28+ years of design experience combined with modern automation solutions.</p>
-      </div>
-      <div style="display:flex;gap:48px;flex-wrap:wrap;">
-        <div class="footer-col">
-          <h5 style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);margin-bottom:14px;">Navigation</h5>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#projects">Case Studies</a>
-          <a href="#why">Why Work With Me</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h5 style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.3);margin-bottom:14px;">Platforms</h5>
-          <a href="https://www.upwork.com" target="_blank" rel="noopener">Upwork</a>
-          <a href="https://www.guru.com" target="_blank" rel="noopener">Guru</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-    <div style="padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.8rem;color:rgba(255,255,255,0.3);">
-      <span>© 1997–2026 Amit Sharma. All rights reserved.</span>
-      <span style="display:flex;gap:16px;"><span>Design</span><span>Automation</span></span>
-    </div>
-  </div>
-</footer>
+<footer><div class="container foot"><span>© <span id="year"></span> Amit Sharma · Design &amp; Automation Solutions</span><span>Design · Automation · AI Conversions · Custom Workflows</span></div></footer>
+
+<!-- Order Builder Modal -->
+<div class="modal" id="orderModal" aria-hidden="true"><div class="modal-panel">
+<div class="modal-head"><h3 id="modalTitle">Start Your Project</h3><button class="close" onclick="closeOrder()">×</button></div>
+<div class="modal-body"><div class="steps"><div class="step active" id="st1"></div><div class="step" id="st2"></div><div class="step" id="st3"></div></div>
+<div class="modal-step active" id="ms1"><div class="eyebrow" style="color:var(--orange)">STEP 1</div><h3 class="serif" style="font-size:28px;margin:6px 0">Choose what you need</h3><p class="tiny">First show me what you need. A starting price is only a guide. I review your requirements first and confirm the final price before payment.</p><div class="choice-grid" id="serviceChoices">
+<button class="choice" data-service="Logo Design" data-price="15"><b>Logo Design</b><small>$15–$100 · choose the logo level</small></button><button class="choice" data-service="Business Card" data-price="10"><b>Business Card</b><small>$10–$60 · front/back</small></button><button class="choice" data-service="Flyer" data-price="15"><b>Flyer</b><small>$15–$75 · design complexity</small></button><button class="choice" data-service="Brochure" data-price="55"><b>Brochure</b><small>$55–$200 · page count based</small></button><button class="choice" data-service="Banner" data-price="20"><b>Banner</b><small>$20–$100 · size &amp; imagery</small></button><button class="choice" data-service="Packaging" data-price="25"><b>Packaging</b><small>$25–$150 · complexity based</small></button><button class="choice" data-service="Complete Branding" data-price="75"><b>Complete Branding</b><small>$75–$250 · package based</small></button><button class="choice" data-service="AI / Vector Conversion" data-price="15"><b>AI / Raster → Vector</b><small>$15–$50 · artwork complexity</small></button><button class="choice" data-service="Automation / Bot" data-price="10"><b>Automation / Bot</b><small>$10/hour or custom quote</small></button></div>
+<div id="packageSelector" class="hide">
+<div class="tiny" style="margin-top:15px"><b id="packageHeading">Choose the level that matches the work:</b></div>
+<div class="price-packages">
+<button class="price-package active" data-tier="Basic"><b>Basic</b><strong id="tier1Price">$15</strong><small>Simple, focused job</small></button>
+<button class="price-package" data-tier="Professional"><b>Professional</b><strong id="tier2Price">$35</strong><small>More detail, options or revisions</small></button>
+<button class="price-package" data-tier="Advanced"><b>Advanced</b><strong id="tier3Price">$60</strong><small>Higher complexity or deliverables</small></button>
+<button class="price-package" data-tier="Premium / Custom"><b>Premium / Custom</b><strong id="tier4Price">$100</strong><small>Maximum scope / final quote</small></button>
+</div></div>
+<div class="modal-actions"><span></span><button class="btn btn-primary" onclick="nextStep(2)">Continue →</button></div></div>
+<div class="modal-step" id="ms2"><div class="eyebrow" style="color:var(--orange)">STEP 2</div><h3 class="serif" style="font-size:28px;margin:6px 0">Tell me about it</h3><div class="form-grid"><div class="field"><label>Your name</label><input id="oName"></div><div class="field"><label>Email</label><input id="oEmail" type="email"></div><div class="field"><label>Deadline</label><input id="oDeadline" placeholder="e.g. 3 days"></div><div class="field"><label>Output format</label><input id="oFormat" placeholder="AI / SVG / PDF / PNG"></div><div class="field full"><label>Upload artwork / reference</label><input id="oFile" type="file" multiple></div><div class="field full"><label>Requirements</label><textarea id="oDetails" placeholder="What exactly would you like done?"></textarea></div></div><div class="modal-actions"><button class="btn btn-outline" onclick="nextStep(1)">← Back</button><button class="btn btn-primary" onclick="nextStep(3)">Review →</button></div></div>
+<div class="modal-step" id="ms3"><div class="eyebrow" style="color:var(--orange)">STEP 3</div><h3 class="serif" style="font-size:28px;margin:6px 0">Review your project</h3><div class="estimate"><div class="tiny">Selected service</div><b id="reviewService">—</b><div style="margin-top:11px" class="tiny">Starting price</div><strong id="reviewPrice">Custom quote</strong><div style="margin-top:10px" class="tiny">Final price can change with complexity, quantity, revisions, deadline and deliverables.</div></div><div class="success" style="margin-top:15px"><b>What happens next:</b> You send the project request. I review the scope and set the final amount. Then I create the PayPal payment request/invoice manually and send the secure payment link to your email. <b>No payment is taken at this stage.</b></div><div class="modal-actions"><button class="btn btn-outline" onclick="nextStep(2)">← Back</button><button class="btn btn-primary" onclick="submitOrder()">Send Project Request →</button></div></div>
+<div class="modal-step" id="msDone"><div class="success"><b>Project request ready.</b><br>Your email client will open with the project details. Send it to me, and I will review the work, confirm the final amount, then send your PayPal payment request/invoice separately.</div><div class="modal-actions"><span></span><button class="btn btn-primary" onclick="closeOrder()">Done</button></div></div>
+</div></div></div>
 
 <script>
-  (function() {
-    lucide.createIcons();
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    menuToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
-    navMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navMenu.classList.remove('open')));
+const state={service:"",price:0,step:1,autoType:"Research / Lead Bot",autoScope:"Small task"};
+document.getElementById("year").textContent=new Date().getFullYear();
+// Hero visual carousel: gentle movement without distracting from the headline.
+let heroIndex=0;
+const heroSlides=[...document.querySelectorAll(".hero-slide")];
+const heroDots=[...document.querySelectorAll(".hero-dot")];
+function showHero(i){
+  heroIndex=(i+heroSlides.length)%heroSlides.length;
+  heroSlides.forEach((s,n)=>s.classList.toggle("active",n===heroIndex));
+  heroDots.forEach((d,n)=>d.classList.toggle("active",n===heroIndex));
+}
+heroDots.forEach(d=>d.addEventListener("click",()=>showHero(Number(d.dataset.slide))));
+if(heroSlides.length>1) setInterval(()=>showHero(heroIndex+1),6500);
 
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const t = document.querySelector(a.getAttribute('href'));
-        if(t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth' }); }
-      });
-    });
+// Design feature visual rotates through the original portfolio packaging work.
+const designFeature=document.getElementById("designFeatureImage");
+const designImages=["Packaging3.jpg","Packaging1.jpg","Packaging2.jpg"];
+let designIndex=0;
+if(designFeature) setInterval(()=>{
+  designFeature.classList.add("fade");
+  setTimeout(()=>{
+    designIndex=(designIndex+1)%designImages.length;
+    designFeature.src=designImages[designIndex];
+    designFeature.classList.remove("fade");
+  },450);
+},4800);
 
-    const tabs = document.querySelectorAll('.tab-btn');
-    const cards = document.querySelectorAll('#portfolioGrid .portfolio-card');
-    tabs.forEach(b => b.addEventListener('click', function() {
-      tabs.forEach(bt => bt.classList.remove('active'));
-      this.classList.add('active');
-      const f = this.dataset.filter;
-      cards.forEach(c => c.style.display = (f==='all' || c.dataset.category===f) ? '' : 'none');
-    }));
 
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const n = document.getElementById('name').value.trim();
-      const em = document.getElementById('email').value.trim();
-      const msg = document.getElementById('message').value.trim();
-      if(!n||!em||!msg) { alert('Please fill in all required fields.'); return; }
-      const subject = `Project inquiry from ${n}`;
-      const body = `Name: ${n}\nEmail: ${em}\nProject: ${document.getElementById('projectType').value}\nBudget: ${document.getElementById('budget').value}\nTimeline: ${document.getElementById('timeline').value}\n\nMessage:\n${msg}`;
-      window.location.href = `mailto:amitsharma.graphics@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    });
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");const f=b.dataset.filter;document.querySelectorAll(".work").forEach(x=>x.classList.toggle("hide",f!=="all"&&x.dataset.cat!==f))}));
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  })();
+document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{const group=c.parentElement;c.parentElement.querySelectorAll(".chip").forEach(x=>x.classList.remove("active"));c.classList.add("active");if(group.id==="autoType")state.autoType=c.dataset.value;if(group.id==="autoScope")state.autoScope=c.dataset.value}));
+
+document.querySelectorAll("#serviceChoices .choice").forEach(c=>c.addEventListener("click",()=>{document.querySelectorAll("#serviceChoices .choice").forEach(x=>x.classList.remove("selected"));c.classList.add("selected");state.service=c.dataset.service;state.price=Number(c.dataset.price);updatePackages()}));
+
+
+const packageSelector=document.getElementById("packageSelector");
+let selectedTier="Basic";
+const servicePricing={
+  "Logo Design":{prices:[15,35,60,100],note:"Choose the logo level that matches the work. Final price depends on concepts, complexity, revisions and deliverables."},
+  "Business Card":{prices:[10,25,40,60],note:"Price varies with front/back design, concepts, revisions and print-ready deliverables."},
+  "Flyer":{prices:[15,30,50,75],note:"Price depends on layout complexity, imagery, revisions and final deliverables."},
+  "Brochure":{prices:[55,90,140,200],note:"Brochure pricing depends mainly on page count, content, layout complexity and revisions."},
+  "Banner":{prices:[20,40,70,100],note:"Price depends on banner size, image treatment, composition, variations and final files."},
+  "Packaging":{prices:[25,50,90,150],note:"Packaging work varies widely by label, dieline, product complexity, artwork and deliverables."},
+  "Complete Branding":{prices:[75,125,180,250],note:"Branding scope can include logo, colours, typography, stationery, guidelines and other brand assets."},
+  "AI / Vector Conversion":{prices:[15,25,35,50],note:"Price depends on source artwork quality, number of elements, cleanup and vector detail."},
+  "Automation / Bot":{prices:[10,0,0,0],note:"Automation is $10/hour as a starting hourly rate, or a custom quote for a defined project/system."}
+};
+function updatePackages(){
+  if(!packageSelector) return;
+  const cfg=servicePricing[state.service];
+  packageSelector.classList.toggle("hide", !cfg);
+  if(!cfg) return;
+  const ids=["tier1Price","tier2Price","tier3Price","tier4Price"];
+  const labels=state.service==="Automation / Bot"?["$10/hr","Custom","Custom","Custom"]:cfg.prices.map(x=>"$"+x);
+  ids.forEach((id,i)=>document.getElementById(id).textContent=labels[i]);
+  const smalls=[...document.querySelectorAll(".price-package small")];
+  if(state.service==="Automation / Bot"){
+    document.getElementById("packageHeading").textContent="Choose how you want automation priced:";
+    smalls[0].textContent="Hourly starting rate"; smalls[1].textContent="Defined project quote"; smalls[2].textContent="Larger system quote"; smalls[3].textContent="Custom scope / final quote";
+  } else {
+    document.getElementById("packageHeading").textContent=state.service==="Logo Design"?"Choose the logo level that matches the work:":"Choose the level that matches the work:";
+  }
+  selectedTier="Basic";
+  state.price=cfg.prices[0];
+  document.querySelectorAll(".price-package").forEach(x=>x.classList.toggle("active",x.dataset.tier==="Basic"));
+}
+document.querySelectorAll(".price-package").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".price-package").forEach(x=>x.classList.remove("active"));b.classList.add("active");
+  selectedTier=b.dataset.tier;
+  const cfg=servicePricing[state.service];
+  const idx=[...document.querySelectorAll(".price-package")].indexOf(b);
+  state.price=cfg && cfg.prices[idx] ? cfg.prices[idx] : (state.service==="Automation / Bot" && idx===0 ? 10 : 0);
+}));
+
+function openOrder(service){state.service=service||"";state.price=0;document.getElementById("orderModal").classList.add("open");document.getElementById("orderModal").setAttribute("aria-hidden","false");nextStep(1);document.querySelectorAll("#serviceChoices .choice").forEach(x=>x.classList.toggle("selected",x.dataset.service===service));if(service){const s=[...document.querySelectorAll("#serviceChoices .choice")].find(x=>x.dataset.service===service);if(s)state.price=Number(s.dataset.price)} updatePackages()}
+function closeOrder(){document.getElementById("orderModal").classList.remove("open");document.getElementById("orderModal").setAttribute("aria-hidden","true")}
+function nextStep(n){state.step=n;document.querySelectorAll(".modal-step").forEach(x=>x.classList.remove("active"));document.getElementById("ms"+n)?.classList.add("active");["st1","st2","st3"].forEach((id,i)=>document.getElementById(id).classList.toggle("active",i<n));if(n===3){document.getElementById("reviewService").textContent=(state.service||"Custom Project")+" · "+(selectedTier||"Custom");document.getElementById("reviewPrice").textContent=state.service==="Automation / Bot"?(selectedTier==="Basic"?"$10/hour starting rate":"Custom quote"):state.price?("$"+state.price.toFixed(2)+" starting price"):"Custom quote"}}
+function submitOrder(){const name=document.getElementById("oName").value||"Client";const email=document.getElementById("oEmail").value||"";const details=document.getElementById("oDetails").value||"";const body=encodeURIComponent(`New project request\n\nService: ${state.service||"Custom Project"}\nStarting price: ${state.price?("$"+state.price):"Custom quote"}\nClient: ${name}\nEmail: ${email}\nDeadline: ${document.getElementById("oDeadline").value}\nFormat: ${document.getElementById("oFormat").value}\nAutomation type: ${state.autoType}\nAutomation scope: ${state.autoScope}\n\nRequirements:\n${details}\n\nPayment: Final price will be confirmed after review. PayPal payment request/invoice will be sent separately.`);window.location.href="mailto:amitsharma.graphics@gmail.com?subject="+encodeURIComponent("New Project Request — "+(state.service||"Custom Project"))+"&body="+body;document.querySelectorAll(".modal-step").forEach(x=>x.classList.remove("active"));document.getElementById("msDone").classList.add("active")}
+function sendBrief(e){e.preventDefault();const files=[...document.getElementById("fFile").files].map(x=>x.name).join(", ");const body=encodeURIComponent(`Project Brief\n\nName: ${fName.value}\nEmail: ${fEmail.value}\nType: ${fType.value}\nBudget: ${fBudget.value}\nDeadline: ${fDeadline.value}\nFormat: ${fFormat.value}\nFiles selected: ${files}\n\nDetails:\n${fDetails.value}`);window.location.href="mailto:amitsharma.graphics@gmail.com?subject="+encodeURIComponent("Website Project Brief — "+fType.value)+"&body="+body}
 </script>
 </body>
 </html>
